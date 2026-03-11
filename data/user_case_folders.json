@@ -1,0 +1,1682 @@
+[
+  {
+    "ecdd_user_case_management_folder_pk": "604f0583-5016-48fb-8ed2-113121c204c4",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u001-malta-134-001",
+    "logged_at": "2026-02-01T09:00:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "fe53b2e2-d088-468f-bd39-b92e0222f869",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u002-malta-135-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "03570f6c-1e63-4db3-bdf9-212b0d6cf1eb",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u002-malta-135-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2fa52565-dec3-40c4-beb6-85f837fb100d",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u003-malta-136-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e28f29b2-b7ec-4547-84cb-580dce892feb",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u003-malta-136-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "16c33cb4-1959-4823-923f-9bebb51077eb",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u003-malta-136-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "24106b7b-ab06-4c69-ad49-d19fa72dac70",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u004-malta-134-004",
+    "logged_at": "2026-02-04T12:15:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6f79a6ab-a818-4059-8740-4a1dd8062bec",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u005-malta-135-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "299cbbac-89b1-4ab0-a07b-5d10c057224d",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u005-malta-135-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d8c99f44-3e67-41bf-8397-6d35bf26978a",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u006-malta-136-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "8ea3c40f-4c16-4a1d-ad00-52ebe255717c",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u006-malta-136-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "76b5505f-bd21-4aa8-bce4-e944450ebb30",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u006-malta-136-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6d1dbf38-9e27-451a-a802-881aa044e06d",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u007-malta-134-007",
+    "logged_at": "2026-02-07T15:30:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ba9b193a-24de-4f25-ae24-ca435e9d7806",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u008-malta-135-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "671ffe32-b3a6-4b04-b28b-f220e63e6e49",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u008-malta-135-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "55ac968b-a045-4499-8002-b4be31fb2261",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u009-malta-136-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d4b05abd-4654-494c-b3e6-645c4fa82e45",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u009-malta-136-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "256f3dae-eddb-436b-ad4f-6f8bb869b5ed",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u009-malta-136-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6c2d1bdf-c19f-4361-b873-e2f1949f9b35",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u010-malta-134-010",
+    "logged_at": "2026-02-10T18:45:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "889b401d-2086-4b12-8014-4d3b348e237f",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u011-malta-135-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "aaf25ee7-a8d6-48ab-8ffc-4e5a40da9eba",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u011-malta-135-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4dd49edf-7fc8-436d-a732-7ab6a23308bc",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u012-malta-136-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "64947859-64f0-4ed0-b63c-99d0c574fb6a",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u012-malta-136-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f450c76d-b291-4a2d-8faa-5a90e9e4945f",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u012-malta-136-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c5a63a0e-c32f-434c-bc1a-e8bb9bdbee7f",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u013-malta-134-003",
+    "logged_at": "2026-02-13T09:00:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f311e257-dea8-4705-a2d6-88722562484a",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u014-malta-135-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e91c5337-f234-487b-aaf3-5406b6c9e0fd",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u014-malta-135-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "66359b24-e1f3-464f-9569-91e6be3ddf6b",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u015-malta-136-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6ebbfc30-4725-41d2-b5d0-8414c73a59fa",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u015-malta-136-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "8637ff70-efde-4351-9375-b06778402fb2",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u015-malta-136-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "8690ad45-b90f-44be-abd6-32b6bd53b1c9",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u016-malta-134-006",
+    "logged_at": "2026-02-16T12:15:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "8f098593-778f-4326-994e-5971294c1d92",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u017-malta-135-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "7f638761-dbcb-4012-bfc7-b3e0e7b56a63",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u017-malta-135-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "aea9c6b5-3d37-4b6d-83f0-95fdd3efe552",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u018-malta-136-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "23282f61-3bdf-445f-88a0-b98381bf718f",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u018-malta-136-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "86875f05-fede-4411-b7a0-d0377a84b1ad",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u018-malta-136-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d79b2662-52e9-45ad-9afc-ff69ec1c56fe",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u019-malta-134-009",
+    "logged_at": "2026-02-19T15:30:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "56facaa8-d76f-4355-ae2b-2081f6f9e847",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u020-malta-135-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "8944cd8f-1b3b-4421-bc76-1775c8c1e0dc",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u020-malta-135-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2f2369ea-4d3f-415d-a681-095c16442b32",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u021-malta-136-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d9026d5c-63eb-48cd-ae36-7f1638fd5af4",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u021-malta-136-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4f08aeaa-176a-4409-a290-c0ab3042dc82",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u021-malta-136-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f2db055a-c03b-41ed-8372-7ebe75c079ed",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u022-malta-134-002",
+    "logged_at": "2026-02-22T18:45:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "83497f1f-633d-462b-855a-c5409051ab4f",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u023-malta-135-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "9f59c6c6-3602-4170-ac83-e6785ce40c38",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u023-malta-135-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "425618b2-aca9-4db6-b967-17a9bedd4d36",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u024-malta-136-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "83987aae-5235-42ad-b88b-342bcb0c73e7",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u024-malta-136-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b3949e78-468a-4f32-915f-fe89a7275cbb",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u024-malta-136-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "9c067079-9d8a-4e9d-b311-f2e72791e7a3",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u025-malta-134-005",
+    "logged_at": "2026-02-25T09:00:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b19e2d30-8da6-4dd2-9aed-d98384f53023",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u026-malta-135-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "facdcc68-06e6-4605-84bd-dc214fa38521",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u026-malta-135-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "439d5460-d667-45d6-ba64-31d3cea54015",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u027-malta-136-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b3b7a743-b32d-4c71-8c2e-1cc70431eec2",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u027-malta-136-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "447b5931-b50e-4b59-8df0-b135abe6b651",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u027-malta-136-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "1160a36c-c20b-49f3-aac0-36c8c5c31493",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u028-malta-134-008",
+    "logged_at": "2026-02-28T12:15:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b9ec5f94-ccc6-4967-9db3-68f4ad874a08",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u029-malta-135-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f86786dd-7f8b-433e-b422-41c3a9c1a992",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u029-malta-135-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "9eb71979-542f-4ad2-9356-d40fe63c20f3",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u030-malta-136-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4d43ad1a-2662-4e43-b157-6329ba2d0747",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u030-malta-136-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "cc545a79-eb72-49b1-93f5-0a4117a7c491",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u030-malta-136-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "malta.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "490308e8-a5c5-4a76-8fa0-0333b1d18e71",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u031-usa-231-001",
+    "logged_at": "2026-02-01T09:00:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "925536cd-1724-4172-931f-c59fc205955c",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u032-usa-232-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "530d0532-7c13-4d4b-9472-f7a8fd187aa6",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u032-usa-232-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "9640f3ba-c28c-4b20-9c91-a5a50b6bda79",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u033-usa-233-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ef9e33d7-3876-4a2d-bb2b-8552dae842a9",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u033-usa-233-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6205e497-10b2-45ff-b728-a81d0e1a372d",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u033-usa-233-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d2e9c124-393e-4223-ac0e-8ed3bdcfa57d",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u034-usa-231-004",
+    "logged_at": "2026-02-04T12:15:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "cdb66d43-df30-47df-8a5e-0fbf18c9467d",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u035-usa-232-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4c5f0945-92fe-46ae-b0f2-1848ea914515",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u035-usa-232-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c9983368-36e4-467e-96b0-9f9222ffe595",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u036-usa-233-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "cefb3ab4-823f-4ef5-abb8-afcc9ce6c392",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u036-usa-233-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "197d3188-7555-49b1-bf3b-6c01564c6181",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u036-usa-233-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e1190414-b1d8-41e1-8feb-b68a5bf0b42f",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u037-usa-231-007",
+    "logged_at": "2026-02-07T15:30:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bb098ea1-2477-455b-903e-b153dec703f4",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u038-usa-232-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "cd31e352-9d31-4ad4-8a4b-bca5c7363c45",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u038-usa-232-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "999d0165-4a4f-4116-835d-6e4478f9a554",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u039-usa-233-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "58b9db8a-e571-43b5-875d-256909f42276",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u039-usa-233-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "3fef293b-c08b-4f53-b5ac-4718c323051e",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u039-usa-233-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "56152107-eaf0-4060-ab30-12de01211395",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u040-usa-231-010",
+    "logged_at": "2026-02-10T18:45:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f1c8b40b-0fe1-4393-9933-ed16a998b504",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u041-usa-232-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bbbff6b4-88af-478d-84ef-44f23cbb4412",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u041-usa-232-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ecf3fa79-34c0-4bb1-bda0-7420e804d661",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u042-usa-233-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2ea77df2-1258-4348-add0-89231c782161",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u042-usa-233-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bc69c36a-f7b0-4dd9-9503-1efed343b343",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u042-usa-233-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "879d14c9-7558-4ce2-a41d-d03485b9e87f",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u043-usa-231-003",
+    "logged_at": "2026-02-13T09:00:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "22c71e50-fce7-40f7-84fb-e32f68f70c74",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u044-usa-232-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "3c6af9d9-e27f-4c3d-aa13-bb892deaf72d",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u044-usa-232-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "95d1d66f-35fe-4bec-9993-620236f320db",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u045-usa-233-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "72f84348-f4c3-4459-b358-623078f0c7e0",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u045-usa-233-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "7b68e915-ab0c-44e0-bdd6-e9fcdda40189",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u045-usa-233-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "934b1600-d710-4a39-8135-3e395b7f1d63",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u046-usa-231-006",
+    "logged_at": "2026-02-16T12:15:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e5da1f0f-4254-42c2-ac73-119c005261a8",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u047-usa-232-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e41389d8-ce18-4f6b-b6a5-deb297e18df5",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u047-usa-232-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f3d12c28-6cef-44fa-95f7-2bb29925845f",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u048-usa-233-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c908e44d-a866-4650-ba13-39732174029f",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u048-usa-233-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "135d89eb-0293-468c-a57c-e5715705d2be",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u048-usa-233-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c9f38803-0cb2-49e3-992f-7db0e86df855",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u049-usa-231-009",
+    "logged_at": "2026-02-19T15:30:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "fe0a5649-f7c2-4a10-93e8-8c8057079956",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u050-usa-232-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "1fbdd812-a20d-4628-8137-576b0c7f081a",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u050-usa-232-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bb5f53e4-a695-4d75-9ed8-b3589ffe8438",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u051-usa-233-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "90203db2-dcd3-48d0-a5ca-0cc15e58241d",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u051-usa-233-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "562933a2-20fe-49ad-ad90-59a861f56211",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u051-usa-233-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "31a522b0-833d-4123-8fc9-41a48ea0a817",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u052-usa-231-002",
+    "logged_at": "2026-02-22T18:45:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "0ea793b0-b00d-4afc-bd0c-fdddcae9f2ef",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u053-usa-232-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4be6fbcf-f0ae-46a9-8547-cf5372a5314f",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u053-usa-232-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4f20f98c-4e60-4534-accf-b98cbdd6cf08",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u054-usa-233-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bd5e2081-d544-4744-bfdb-0fbc361c54cc",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u054-usa-233-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "818a92c5-9440-4514-8db7-362c3fda691a",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u054-usa-233-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "88d90871-2134-4181-86cf-bddc1a601794",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u055-usa-231-005",
+    "logged_at": "2026-02-25T09:00:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "73b07930-7e01-4e5c-b3e5-87a1c788a66f",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u056-usa-232-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e310266c-fd61-4ea5-aecb-97205e2d7fa3",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u056-usa-232-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b7d1b970-e7ed-4962-8ef7-c91c892cad21",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u057-usa-233-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "578ddc80-9bf1-4f07-9452-0e4aa6615ccf",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u057-usa-233-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6a5cc58f-6a45-412e-a3ac-f33fc5b641d5",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u057-usa-233-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "81cdfc73-4c8b-4c20-a0c5-ccaae4d3dfea",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u058-usa-231-008",
+    "logged_at": "2026-02-28T12:15:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "1f485178-50b1-429c-94f7-c5c09cf0995a",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u059-usa-232-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bcb01119-1ec7-427a-bb9e-e39d3155de41",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u059-usa-232-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ce2de687-b6f5-4827-bbbc-c1fdfd509c7f",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u060-usa-233-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "7015798f-b75f-48b3-b4eb-2b153d567250",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u060-usa-233-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "aba8825f-5839-4dac-8513-6a26cca4a550",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u060-usa-233-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "usa.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b2584580-f888-4663-8edc-81e663550864",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u061-australia-13-001",
+    "logged_at": "2026-02-01T09:00:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6d2ff45e-4502-46b2-8869-7b79608ffe2b",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u062-australia-14-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "cc083513-b31a-4b5c-90db-5ef07d443c59",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u062-australia-14-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "81f02deb-dc3c-4a0d-b148-847068f78e79",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u063-australia-15-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2bbc1796-e739-45c9-aef1-d5bcdf93122f",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u063-australia-15-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6005a577-7200-4944-81dc-f340ed17198b",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u063-australia-15-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "0393b5a6-0458-402d-a592-1c777ea78e03",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u064-australia-13-004",
+    "logged_at": "2026-02-04T12:15:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "eaccad59-5af0-4e23-a00f-8caff07915d8",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u065-australia-14-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "351bc3db-fa3b-465e-a8da-78e3626f4ffe",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u065-australia-14-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "da2dc29b-4700-4453-9c84-53e5efb15c78",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u066-australia-15-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "735a9158-61fa-4b42-b46f-666734e0bdaf",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u066-australia-15-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a582e802-1255-433b-a33d-e90303f063c1",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u066-australia-15-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6cd5b9cd-b40b-4e48-ad04-5c5c27631eea",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u067-australia-13-007",
+    "logged_at": "2026-02-07T15:30:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "8575653d-4ed9-48d8-8ef9-ce0886449d22",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u068-australia-14-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "7998e1f5-f2c8-45f0-bb22-ff3d090ec3a1",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u068-australia-14-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "fe2268c9-4831-48a7-8c9d-d065896ec8a3",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u069-australia-15-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c9ce7e83-979e-454f-9eb2-93a2bdb472ba",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u069-australia-15-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b6c13f2b-2090-4b03-a180-a03cfdaf30d7",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u069-australia-15-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ff60ff21-c0fc-4ee1-9ac8-3a5243562fba",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u070-australia-13-010",
+    "logged_at": "2026-02-10T18:45:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "47bcad07-9f34-4b11-860c-5eba992045fa",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u071-australia-14-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "254f90c4-ce16-47b4-a382-f5c1af3776fc",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u071-australia-14-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "72f56562-f9d2-40e8-b2b8-b415ef9dea80",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u072-australia-15-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ccc941d1-0247-4443-a055-39584a2bf9d2",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u072-australia-15-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "cd1221a6-18f3-4961-b97d-b9bd7fe9993d",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u072-australia-15-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "fbd2e303-a747-4110-9e3a-4bccb70c5122",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u073-australia-13-003",
+    "logged_at": "2026-02-13T09:00:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "47917ed2-36ce-4383-a3ea-e5d5972ce209",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u074-australia-14-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "0f65ac9d-f7ba-41d6-ad9c-ad6f8c20d4ef",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u074-australia-14-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "da6d2946-14d3-4125-bbe9-6a493076c4f8",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u075-australia-15-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "1649d4c6-2aae-4525-96a2-92f259ed4491",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u075-australia-15-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "865a9479-1120-4bd3-95bb-f047f508d4f2",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u075-australia-15-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "162c0da0-57cb-4a4f-b85d-85ed9f617723",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u076-australia-13-006",
+    "logged_at": "2026-02-16T12:15:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b1d43aab-6a2b-4b51-8eb5-9a234008bc9f",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u077-australia-14-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "57b9e133-1590-425a-b57e-49c502825e5c",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u077-australia-14-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "92f83933-2d12-4e6d-be68-0aa9c272bd1e",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u078-australia-15-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6308ff4b-24a0-4c9a-a9ce-c8fe1698da7d",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u078-australia-15-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "823a63d0-ffb9-4eb8-9477-8371a1bbe1d2",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u078-australia-15-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "52d64135-d9d0-48ed-a46c-f09948e5afca",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u079-australia-13-009",
+    "logged_at": "2026-02-19T15:30:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ce239dd8-2ad6-4f6b-a469-84f37a79c926",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u080-australia-14-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4e48a2aa-a704-4abd-82b0-87935ac83887",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u080-australia-14-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "62d7cedd-98a6-4cb1-8781-cfbb1d4a2c7d",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u081-australia-15-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "666585af-b416-4f12-9681-28b7370c6414",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u081-australia-15-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "0e3e073c-793f-44c9-85fc-5e1645a60e0c",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u081-australia-15-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a640cd2b-e3d1-4746-b77b-67639c4478f5",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u082-australia-13-002",
+    "logged_at": "2026-02-22T18:45:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "5b44d09d-42ff-43c4-bfb2-1e5785396b4e",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u083-australia-14-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4e9c5cf7-f14f-4565-8111-bcbc192dd94e",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u083-australia-14-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6be1a7aa-e25d-4f31-b968-142ac4cea3bc",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u084-australia-15-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6eb37593-cca5-4912-ad23-9ca1bed0fee7",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u084-australia-15-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bc856bad-b66c-4b39-acc8-94a9cc587c0b",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u084-australia-15-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2d9014b9-bffa-4859-9072-7f21fc30d100",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u085-australia-13-005",
+    "logged_at": "2026-02-25T09:00:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "724422e5-962d-405f-825d-ee752ff37c92",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u086-australia-14-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a7ed1a98-2dba-4f6e-a54b-9348e5de5d7f",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u086-australia-14-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "5322927b-42fe-4885-9377-445a55f05118",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u087-australia-15-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "095cca13-b81d-4254-9702-2e5e636177ca",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u087-australia-15-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c74aa594-efce-42c9-a16b-553b291573fc",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u087-australia-15-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "7f1177bd-be89-4d6e-b0da-1c5423fa5af9",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u088-australia-13-008",
+    "logged_at": "2026-02-28T12:15:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "db6fcbe0-1862-470e-8d47-48b0abedf97b",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u089-australia-14-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a0a46b2a-cf16-4d68-9441-9efbba9674c1",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u089-australia-14-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "0764f3aa-8ccc-41d0-b19c-5245fdaf0ac7",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u090-australia-15-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d265060b-4e14-432e-a191-1ce5577846a5",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u090-australia-15-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "9fca60fc-5c7f-456c-a885-016ee00f6927",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u090-australia-15-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "australia.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ff0d679b-1f52-417c-ad2d-38e07785998c",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u091-gibraltar-83-001",
+    "logged_at": "2026-02-01T09:00:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c46993c2-2cd1-48a9-bfc7-61fdb4f9fdfc",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u092-gibraltar-84-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c196db0b-74a2-4879-8e6f-905c4de68a46",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u092-gibraltar-84-002",
+    "logged_at": "2026-02-02T10:05:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "fb708df0-a2e8-4055-8179-ced84924a822",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u093-gibraltar-85-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "3725f93f-6823-4080-96e9-3c9b7d8b66c8",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u093-gibraltar-85-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d299b343-fbe7-4bc2-85bd-b2e92be1a4d8",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u093-gibraltar-85-003",
+    "logged_at": "2026-02-03T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "bc5d04f0-1ac1-44c9-a892-94bfe88a16d0",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u094-gibraltar-83-004",
+    "logged_at": "2026-02-04T12:15:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "9cf16a77-c8ce-4a81-b0a6-93262b89fc56",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u095-gibraltar-84-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2410c11a-bbc6-46b5-9179-8e8a40338fa3",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u095-gibraltar-84-005",
+    "logged_at": "2026-02-05T13:20:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2085db7c-9727-43b5-b72e-adbcc2bc38aa",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u096-gibraltar-85-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "599702a7-adc9-4ed5-9707-fe974548bf64",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u096-gibraltar-85-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b2a43f2d-2c92-4b41-86a4-262c02572192",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u096-gibraltar-85-006",
+    "logged_at": "2026-02-06T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d58f1775-a16e-44b3-af65-17caa2c0566d",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u097-gibraltar-83-007",
+    "logged_at": "2026-02-07T15:30:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "65ff80a2-42ed-494a-ba6c-4e70fcf86c39",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u098-gibraltar-84-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ffe9c895-e018-43be-8e21-77e417e9e116",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u098-gibraltar-84-008",
+    "logged_at": "2026-02-08T16:35:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "5b2789b1-46bc-47ab-93ee-42c99925b2bb",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u099-gibraltar-85-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "78363424-2925-48d3-b2ae-43f3fa068d29",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u099-gibraltar-85-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f72ecf81-b427-40a7-9f7a-93f357435599",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u099-gibraltar-85-009",
+    "logged_at": "2026-02-09T17:40:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e3f1140a-034f-4313-9bd8-4cc7e496b487",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u100-gibraltar-83-010",
+    "logged_at": "2026-02-10T18:45:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2f8015c8-ddb6-4c8b-80fc-f4ee629ea054",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u101-gibraltar-84-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a0cb52ae-dfbe-4eb4-8c4d-145a9f2c8248",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u101-gibraltar-84-001",
+    "logged_at": "2026-02-11T19:50:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a169cc85-66cd-49b1-9295-c2e620d7b002",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u102-gibraltar-85-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ac0b950d-32ef-48ee-90e5-0d8364bbba7f",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u102-gibraltar-85-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "0cacc041-cee2-4b16-a93f-61bba2e4a933",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u102-gibraltar-85-002",
+    "logged_at": "2026-02-12T20:55:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "a71bb87c-21ca-41f4-a620-807e3a0abe88",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u103-gibraltar-83-003",
+    "logged_at": "2026-02-13T09:00:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "810b4607-fe7f-4ace-a7b7-e35d17043b43",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u104-gibraltar-84-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "02c9fb55-ab20-4bce-b237-f8f55949ae28",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u104-gibraltar-84-004",
+    "logged_at": "2026-02-14T10:05:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "6e5f7a68-f779-44d4-b7f3-749054849240",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u105-gibraltar-85-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "55694727-148f-474d-9d9b-a48f6188ce90",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u105-gibraltar-85-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "94d128b6-9be7-455c-9028-e2c19338a29f",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u105-gibraltar-85-005",
+    "logged_at": "2026-02-15T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ecd9bdab-ed4f-4894-9b84-e0ddd0774f38",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u106-gibraltar-83-006",
+    "logged_at": "2026-02-16T12:15:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "7f3d0a92-1603-4568-9d6e-f79ff9d158d1",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u107-gibraltar-84-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f1461987-9040-4201-a759-1bec1e88cdc8",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u107-gibraltar-84-007",
+    "logged_at": "2026-02-17T13:20:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "64797035-daa3-4104-bd5d-9e4624d5c4bd",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u108-gibraltar-85-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "67de31b8-46bc-46a0-b54f-c188c183eb23",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u108-gibraltar-85-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "35dd2fb4-4b72-4bfe-a955-14671abb68ac",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u108-gibraltar-85-008",
+    "logged_at": "2026-02-18T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "3fbc0bea-2521-459f-b634-e6a6f5b1ba5c",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u109-gibraltar-83-009",
+    "logged_at": "2026-02-19T15:30:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b1d6a89f-7b36-43f5-9e95-ac77f5b1a29a",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u110-gibraltar-84-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2f1c75c5-3fcd-4dea-8383-13bf3031cee8",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u110-gibraltar-84-010",
+    "logged_at": "2026-02-20T16:35:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "fd910391-71dc-41b2-9cdb-c2860ae4a246",
+    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "user_status_pk": "u111-gibraltar-85-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "5f36126a-bd6a-408e-b66d-68c1e5a63081",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u111-gibraltar-85-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "e380539e-7bf4-4101-ada8-106cfd8dcebe",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u111-gibraltar-85-001",
+    "logged_at": "2026-02-21T17:40:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d51155a2-79c4-4945-8c66-7537bfa30470",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u112-gibraltar-83-002",
+    "logged_at": "2026-02-22T18:45:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "115ff591-6171-4f7b-9d07-15127892d776",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u113-gibraltar-84-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "eee3d8c2-74f8-45eb-ae6b-ac811f11b4a9",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u113-gibraltar-84-003",
+    "logged_at": "2026-02-23T19:50:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "466ff504-1e52-4cab-9df7-a1308c7f4fb0",
+    "folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "user_status_pk": "u114-gibraltar-85-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "93651fad-6a55-42ff-8576-a6ed78da56d3",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u114-gibraltar-85-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "64618e3e-085c-46e0-a132-a204f4262783",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u114-gibraltar-85-004",
+    "logged_at": "2026-02-24T20:55:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "ffc1ff89-1dbf-43dd-9a1a-d09d42d047df",
+    "folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "user_status_pk": "u115-gibraltar-83-005",
+    "logged_at": "2026-02-25T09:00:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "c093f359-0a05-4e96-991a-7b4358df1a4f",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u116-gibraltar-84-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "1eb0aaf8-8831-44b9-af63-77911c9e3ce7",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u116-gibraltar-84-006",
+    "logged_at": "2026-02-26T10:05:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "de736928-11b0-4480-bfff-703ef8a7d3a8",
+    "folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "user_status_pk": "u117-gibraltar-85-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "d652ff63-b9ac-4a4f-a7f5-c2f5b701411c",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u117-gibraltar-85-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "52b08392-286d-44e9-b241-ea3716b787ff",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u117-gibraltar-85-007",
+    "logged_at": "2026-02-27T11:10:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "4f46697d-1239-4673-aa94-774c0e6c7881",
+    "folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "user_status_pk": "u118-gibraltar-83-008",
+    "logged_at": "2026-02-28T12:15:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "b0df8017-c384-49c5-a6eb-d11fa3fad912",
+    "folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "user_status_pk": "u119-gibraltar-84-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "82d80946-73d3-46c4-8eba-376aa0bef770",
+    "folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "user_status_pk": "u119-gibraltar-84-009",
+    "logged_at": "2026-02-01T13:20:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "08d4d172-5f65-4b4f-baaf-cdb7d7a4637e",
+    "folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "user_status_pk": "u120-gibraltar-85-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "f1a63970-4822-4dc9-8793-50085e61ed43",
+    "folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "user_status_pk": "u120-gibraltar-85-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  },
+  {
+    "ecdd_user_case_management_folder_pk": "2e045e10-186e-4353-aebb-d150771591b8",
+    "folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "user_status_pk": "u120-gibraltar-85-010",
+    "logged_at": "2026-02-02T14:25:00Z",
+    "updated_by": "gibraltar.compliance@company.com"
+  }
+]

@@ -1,0 +1,345 @@
+package handlers
+
+import (
+	"amltoolmock/models"
+	"amltoolmock/services"
+	"amltoolmock/utils"
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"sort"
+	"strconv"
+	"strings"
+	"time"
+)
+
+// FolderAndStats holds the computed statistics for a single folder.
+type FolderAndStats struct {
+	FolderPK       string     `json:"folder_pk"`
+	FolderName     string     `json:"folder_name"`
+	UserCount      int        `json:"user_count"`
+	OldestUserDate *time.Time `json:"oldest_user_date"` // nil serialises as JSON null
+}
+
+// parseFilterParams extracts the language, country, and region query
+// parameters from the request. It returns an error message string if the
+// country parameter is present but not a valid int64. On success the error
+// string is empty.
+func parseFilterParams(r *http.Request) (language string, countryID *int64, region string, errMsg string) {
+	query := r.URL.Query()
+	language = query.Get("language")
+	region = query.Get("region")
+
+	if countryParam := query.Get("country_id"); countryParam != "" {
+		parsed, err := strconv.ParseInt(countryParam, 10, 64)
+		if err != nil {
+			return "", nil, "", "Invalid country parameter"
+		}
+		countryID = &parsed
+	}
+
+	return language, countryID, region, ""
+}
+
+// computeFolderAndStats calculates the user count and oldest assignment date for
+// a single folder, applying the provided filters.
+//
+// It accepts pre-built lookup structures to avoid repeated O(M) scans:
+//   - assignmentIndex: map from folder PK to its assignment records
+//   - userMap: map from user PK to user status for O(1) user lookups
+//
+// If assignmentIndex or userMap is nil, the function falls back to the
+// per-folder service calls (useful for single-folder lookups where building
+// the full index is not worth it).
+func computeFolderAndStats(
+	ds *services.DataService,
+	folder *models.ECDDCaseManagementFolder,
+	language string, countryID *int64, region string,
+	assignmentIndex map[string][]*models.ECDDUserCaseManagementFolder,
+	userMap map[string]*models.ECDDUserStatus,
+) FolderAndStats {
+	folderID := folder.ECDDCaseManagementFolderPK
+
+	// Get assignments for this folder — from pre-built index or service call
+	var assignments []*models.ECDDUserCaseManagementFolder
+	if assignmentIndex != nil {
+		assignments = assignmentIndex[folderID]
+	} else {
+		assignments = ds.GetUserCaseFoldersByFolderPK(folderID)
+	}
+
+	// Resolve user objects from assignments and apply filters
+	var allUsers []*models.ECDDUserStatus
+	if userMap != nil {
+		for _, a := range assignments {
+			if u, ok := userMap[a.UserStatusPK]; ok {
+				allUsers = append(allUsers, u)
+			}
+		}
+	} else {
+		allUsers = ds.GetUsersByFolderPK(folderID)
+	}
+
+	filtered := FilterUsers(allUsers, language, countryID, region)
+
+	stats := FolderAndStats{
+		FolderPK:   folderID,
+		FolderName: folder.FolderName,
+		UserCount:  len(filtered),
+	}
+
+	if len(filtered) == 0 {
+		return stats
+	}
+
+	// Build a set of filtered user PKs for O(1) lookup when scanning
+	// assignments to find the earliest LoggedAt.
+	filteredSet := make(map[string]struct{}, len(filtered))
+	for _, u := range filtered {
+		filteredSet[u.ECDDUserStatusPK] = struct{}{}
+	}
+
+	// Walk the assignment records and find the earliest LoggedAt among
+	// assignments whose user passed the filters.
+	var oldest *time.Time
+	for _, a := range assignments {
+		if _, ok := filteredSet[a.UserStatusPK]; !ok {
+			continue
+		}
+		t := a.LoggedAt // copy to avoid taking address of loop variable
+		if oldest == nil || t.Before(*oldest) {
+			oldest = &t
+		}
+	}
+	stats.OldestUserDate = oldest
+
+	return stats
+}
+
+// GetAllFolders handles GET /api/v1/folders
+func GetAllFolders(w http.ResponseWriter, r *http.Request) {
+	ds := services.GetDataService()
+	allFolders := ds.GetAllCaseFolders()
+
+	// Parse optional search query param
+	search := r.URL.Query().Get("search")
+
+	if search != "" {
+		searchLower := strings.ToLower(search)
+		filtered := make([]*models.ECDDCaseManagementFolder, 0, len(allFolders))
+		for _, f := range allFolders {
+			if strings.Contains(strings.ToLower(f.FolderName), searchLower) {
+				filtered = append(filtered, f)
+			}
+		}
+		allFolders = filtered
+	}
+
+	// Sort the results
+	sp := utils.GetSortParams(r, "folder_name")
+	sortFolders(allFolders, sp)
+
+	// Optional pagination
+	pp := utils.GetPaginationParams(r)
+	if pp.Enabled {
+		total := len(allFolders)
+		start, end := utils.CalculateOffset(pp.Page, pp.PageSize, total)
+		paged := allFolders[start:end]
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(utils.Paginate(paged, pp, total))
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(allFolders)
+}
+
+// sortFolders sorts a slice of ECDDCaseManagementFolder by the given sort parameters.
+func sortFolders(folders []*models.ECDDCaseManagementFolder, sp utils.SortParams) {
+	desc := sp.IsDescending()
+	sort.Slice(folders, func(i, j int) bool {
+		var less bool
+		switch sp.SortBy {
+		case "folder_name":
+			less = strings.ToLower(folders[i].FolderName) < strings.ToLower(folders[j].FolderName)
+		case "ecdd_case_management_folder_pk":
+			less = folders[i].ECDDCaseManagementFolderPK < folders[j].ECDDCaseManagementFolderPK
+		case "logged_at":
+			less = folders[i].LoggedAt.Before(folders[j].LoggedAt)
+		default:
+			less = strings.ToLower(folders[i].FolderName) < strings.ToLower(folders[j].FolderName)
+		}
+		if desc {
+			return !less
+		}
+		return less
+	})
+}
+
+// GetFolderByID handles GET /api/v1/folders/{id}
+func GetFolderByID(w http.ResponseWriter, r *http.Request) {
+	id := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	ds := services.GetDataService()
+	folder := ds.GetCaseFolderByID(id)
+
+	if folder == nil {
+		utils.WriteJSONError(w, http.StatusNotFound, "Folder not found")
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(folder)
+}
+
+// CreateFolder handles POST /api/v1/folders
+func CreateFolder(w http.ResponseWriter, r *http.Request) {
+	var folder models.ECDDCaseManagementFolder
+	if err := json.NewDecoder(r.Body).Decode(&folder); err != nil {
+		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	ds := services.GetDataService()
+	createdFolder := ds.CreateCaseFolder(&folder)
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(createdFolder)
+}
+
+// UpdateFolder handles PUT /api/v1/folders/{id}
+func UpdateFolder(w http.ResponseWriter, r *http.Request) {
+	id := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	var folder models.ECDDCaseManagementFolder
+	if err := json.NewDecoder(r.Body).Decode(&folder); err != nil {
+		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	ds := services.GetDataService()
+	updatedFolder := ds.UpdateCaseFolder(id, &folder)
+
+	if updatedFolder == nil {
+		utils.WriteJSONError(w, http.StatusNotFound, "Folder not found")
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(updatedFolder)
+}
+
+// GetFolderAndStats handles GET /api/v1/folders/{id}/stats
+// Returns user_count and oldest_user_date for a single folder with optional
+// language, country, and region filters.
+func GetFolderAndStats(w http.ResponseWriter, r *http.Request) {
+	// Extract folder ID from path: /api/v1/folders/{id}/stats
+	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	parts := strings.SplitN(path, "/", 2)
+	if len(parts) < 1 || parts[0] == "" {
+		utils.WriteJSONError(w, http.StatusBadRequest, "Folder ID required")
+		return
+	}
+	folderID := parts[0]
+
+	ds := services.GetDataService()
+	folder := ds.GetCaseFolderByID(folderID)
+	if folder == nil {
+		utils.WriteJSONError(w, http.StatusNotFound, "Folder not found")
+		return
+	}
+
+	language, countryID, region, errMsg := parseFilterParams(r)
+	if errMsg != "" {
+		utils.WriteJSONError(w, http.StatusBadRequest, errMsg)
+		return
+	}
+
+	stats := computeFolderAndStats(ds, folder, language, countryID, region, nil, nil)
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(stats)
+}
+
+// GetAllFolderAndStats handles GET /api/v1/folders/stats
+// Returns an array of stats objects for every folder, with optional
+// language, country, and region filters applied to user counts.
+func GetAllFolderAndStats(w http.ResponseWriter, r *http.Request) {
+	language, countryID, region, errMsg := parseFilterParams(r)
+	if errMsg != "" {
+		utils.WriteJSONError(w, http.StatusBadRequest, errMsg)
+		return
+	}
+
+	ds := services.GetDataService()
+	allFolders := ds.GetAllCaseFolders()
+
+	// Pre-build index and user map once — O(M + U) instead of O(N × 2M)
+	assignmentIndex := ds.GetFolderAssignmentIndex()
+	userMap := ds.GetUserStatusMap()
+
+	results := make([]FolderAndStats, 0, len(allFolders))
+	for _, folder := range allFolders {
+		results = append(results, computeFolderAndStats(ds, folder, language, countryID, region, assignmentIndex, userMap))
+	}
+
+	// Sort the results
+	sp := utils.GetSortParams(r, "folder_name")
+	sortFolderAndStats(results, sp)
+
+	// Optional pagination
+	pp := utils.GetPaginationParams(r)
+	if pp.Enabled {
+		total := len(results)
+		start, end := utils.CalculateOffset(pp.Page, pp.PageSize, total)
+		paged := results[start:end]
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(utils.Paginate(paged, pp, total))
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(results)
+}
+
+// sortFolderAndStats sorts a slice of FolderAndStats by the given sort parameters.
+func sortFolderAndStats(stats []FolderAndStats, sp utils.SortParams) {
+	desc := sp.IsDescending()
+	sort.Slice(stats, func(i, j int) bool {
+		var less bool
+		switch sp.SortBy {
+		case "folder_name":
+			less = strings.ToLower(stats[i].FolderName) < strings.ToLower(stats[j].FolderName)
+		case "folder_pk":
+			less = stats[i].FolderPK < stats[j].FolderPK
+		case "user_count":
+			less = stats[i].UserCount < stats[j].UserCount
+		default:
+			less = strings.ToLower(stats[i].FolderName) < strings.ToLower(stats[j].FolderName)
+		}
+		if desc {
+			return !less
+		}
+		return less
+	})
+}
+
+// DeleteFolder handles DELETE /api/v1/folders/{id}
+// Hard deletes the folder and cascade-deletes all related user_case_folders
+func DeleteFolder(w http.ResponseWriter, r *http.Request) {
+	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	// Strip any trailing path segments (in case routed through handleFolderByID)
+	id := strings.SplitN(path, "/", 2)[0]
+
+	ds := services.GetDataService()
+	success, cascadeCount := ds.DeleteCaseFolder(id)
+
+	if !success {
+		utils.WriteJSONError(w, http.StatusNotFound, "Folder not found")
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]string{
+		"message": fmt.Sprintf("Folder deleted successfully. %d user-folder assignment(s) cascade-deleted.", cascadeCount),
+	})
+}

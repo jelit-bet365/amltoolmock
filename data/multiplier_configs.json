@@ -1,0 +1,52 @@
+[
+  {
+    "ecdd_multiplier_config_pk": "m1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c",
+    "country_id": 1,
+    "state_id": null,
+    "age_multipliers": [18, 19, 20, 21, 22, 23, 24, 25],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-28T14:25:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "m2b3c4d5-e6f7-5a8b-9c0d-1e2f3a4b5c6d",
+    "country_id": 2,
+    "state_id": 33,
+    "age_multipliers": [21, 22, 23, 24, 25],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-27T10:00:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "m3c4d5e6-f7a8-6b9c-0d1e-2f3a4b5c6d7e",
+    "country_id": 3,
+    "state_id": null,
+    "age_multipliers": [18, 19, 20, 21],
+    "status_multiplier": false,
+    "is_active": true,
+    "logged_at": "2026-01-26T09:30:00Z",
+    "updated_by": "risk.officer@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "m4d5e6f7-a8b9-7c0d-1e2f-3a4b5c6d7e8f",
+    "country_id": 4,
+    "state_id": null,
+    "age_multipliers": [19, 20, 21, 22, 23, 24],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-25T14:15:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "m5e6f7a8-b9c0-8d1e-2f3a-4b5c6d7e8f9a",
+    "country_id": 5,
+    "state_id": null,
+    "age_multipliers": [18, 19, 20, 21, 22],
+    "status_multiplier": false,
+    "is_active": true,
+    "logged_at": "2026-01-24T11:45:00Z",
+    "updated_by": "compliance@company.com"
+  }
+]

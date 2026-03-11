@@ -1,0 +1,62 @@
+[
+  {
+    "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "folder_name": "High Risk Customers",
+    "logged_at": "2026-01-15T10:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
+    "folder_name": "Pending Review",
+    "logged_at": "2026-01-15T10:15:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
+    "folder_name": "Suspended Accounts",
+    "logged_at": "2026-01-15T10:30:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
+    "folder_name": "VIP Customers",
+    "logged_at": "2026-01-16T09:00:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
+    "folder_name": "New Accounts Under Review",
+    "logged_at": "2026-01-17T14:20:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
+    "folder_name": "Medium Risk Profile",
+    "logged_at": "2026-01-18T11:45:00Z",
+    "updated_by": "risk.officer@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
+    "folder_name": "Escalated Cases",
+    "logged_at": "2026-01-19T08:30:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
+    "folder_name": "Document Verification Queue",
+    "logged_at": "2026-01-20T13:00:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
+    "folder_name": "Responsible Gambling Concerns",
+    "logged_at": "2026-01-21T10:10:00Z",
+    "updated_by": "rg.team@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
+    "folder_name": "Threshold Breach Monitoring",
+    "logged_at": "2026-01-22T15:25:00Z",
+    "updated_by": "monitoring@company.com"
+  }
+]

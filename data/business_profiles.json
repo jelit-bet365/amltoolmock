@@ -1,0 +1,86 @@
+[
+  {
+    "ecdd_business_profile_pk": "b1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c",
+    "country_id": 1,
+    "state_id": null,
+    "risk_status_id": 2,
+    "average_deposit": 5000.00,
+    "deposit_multiplier": 2.00,
+    "time_period_days": 28,
+    "enabled": true,
+    "logged_at": "2026-01-28T14:25:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_business_profile_pk": "b2b3c4d5-e6f7-5a8b-9c0d-1e2f3a4b5c6d",
+    "country_id": 1,
+    "state_id": null,
+    "risk_status_id": 3,
+    "average_deposit": 3000.00,
+    "deposit_multiplier": 2.50,
+    "time_period_days": 28,
+    "enabled": true,
+    "logged_at": "2026-01-27T11:30:00Z",
+    "updated_by": "risk.officer@company.com"
+  },
+  {
+    "ecdd_business_profile_pk": "b3c4d5e6-f7a8-6b9c-0d1e-2f3a4b5c6d7e",
+    "country_id": 2,
+    "state_id": 33,
+    "risk_status_id": 4,
+    "average_deposit": 10000.00,
+    "deposit_multiplier": 1.50,
+    "time_period_days": 84,
+    "enabled": true,
+    "logged_at": "2026-01-26T09:45:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_business_profile_pk": "b4d5e6f7-a8b9-7c0d-1e2f-3a4b5c6d7e8f",
+    "country_id": 3,
+    "state_id": null,
+    "risk_status_id": 2,
+    "average_deposit": 4000.00,
+    "deposit_multiplier": 2.00,
+    "time_period_days": 28,
+    "enabled": true,
+    "logged_at": "2026-01-25T13:20:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_business_profile_pk": "b5e6f7a8-b9c0-8d1e-2f3a-4b5c6d7e8f9a",
+    "country_id": 4,
+    "state_id": null,
+    "risk_status_id": 3,
+    "average_deposit": 6000.00,
+    "deposit_multiplier": 1.75,
+    "time_period_days": 91,
+    "enabled": true,
+    "logged_at": "2026-01-24T10:55:00Z",
+    "updated_by": "monitoring@company.com"
+  },
+  {
+    "ecdd_business_profile_pk": "b6f7a8b9-c0d1-9e2f-3a4b-5c6d7e8f9a0b",
+    "country_id": 5,
+    "state_id": null,
+    "risk_status_id": 2,
+    "average_deposit": 7000.00,
+    "deposit_multiplier": 2.00,
+    "time_period_days": 28,
+    "enabled": true,
+    "logged_at": "2026-01-23T15:40:00Z",
+    "updated_by": "risk.officer@company.com"
+  },
+  {
+    "ecdd_business_profile_pk": "b7a8b9c0-d1e2-0f3a-4b5c-6d7e8f9a0b1c",
+    "country_id": 6,
+    "state_id": null,
+    "risk_status_id": 4,
+    "average_deposit": 5000.00,
+    "deposit_multiplier": 3.00,
+    "time_period_days": 28,
+    "enabled": true,
+    "logged_at": "2026-01-22T12:25:00Z",
+    "updated_by": "senior.manager@company.com"
+  }
+]
