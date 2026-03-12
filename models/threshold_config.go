@@ -10,6 +10,7 @@ type ECDDThresholdConfig struct {
 	CountryID                 int64     `json:"country_id"`
 	StateID                   *int64    `json:"state_id,omitempty"`
 	Type                      int64     `json:"type"` // 1=Deposit, 2=Net Deposit, 3=Stakes
+	Reinvest                  bool      `json:"reinvest"`
 	Value                     float64   `json:"value"`
 	CurrencyID                int64     `json:"currency_id"`
 	Period                    int64     `json:"period"` // 1=24hrs, 2=28days, 3=84days, 4=91days, 5=182days, 6=365days

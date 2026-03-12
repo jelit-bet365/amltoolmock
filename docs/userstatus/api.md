@@ -68,9 +68,9 @@ Returns an array of user status objects.
 | ecdd_suspension_due_date | string | suspension due date (RFC3339, nullable) | "2026-02-15T00:00:00Z" | false |
 | ecdd_multiplier | float | multiplier value applied to thresholds | 1.00 | true |
 | ecdd_multiplier_rg_flag | bool | RG (Responsible Gambling) flag indicator | false | true |
-| user_lt_engg_threshold_gbp | float | lifetime engagement threshold in GBP | 2047.05 | true |
+| user_lt_net_deposit_threshold_gbp | float | lifetime net deposit threshold in GBP | 2047.05 | true |
 | user_lt_deposit_threshold_gbp | float | lifetime deposit threshold in GBP | 4599.86 | true |
-| user_12month_drop_threshold_gbp | float | 12-month drop threshold in GBP | 1104.47 | true |
+| user_12month_net_deposit_threshold_gbp | float | 12-month net deposit threshold in GBP | 1104.47 | true |
 | info_source | int | information source identifier | 1 | true |
 | sign_off_status | int | sign-off status indicator | 1 | true |
 | date_last_ecdd_sign_off | string | last ECDD sign-off date (RFC3339, nullable) | "2026-01-10T00:00:00Z" | false |
@@ -99,9 +99,9 @@ Returns an array of user status objects.
         "ecdd_review_trigger": 3,
         "ecdd_multiplier": 0.5,
         "ecdd_multiplier_rg_flag": true,
-        "user_lt_engg_threshold_gbp": 2047.05,
+        "user_lt_net_deposit_threshold_gbp": 2047.05,
         "user_lt_deposit_threshold_gbp": 4599.86,
-        "user_12month_drop_threshold_gbp": 1104.47,
+        "user_12month_net_deposit_threshold_gbp": 1104.47,
         "info_source": 1,
         "sign_off_status": 1,
         "date_last_ecdd_sign_off": "2026-01-10T00:00:00Z",
@@ -148,9 +148,9 @@ When `page` or `page_size` query parameters are provided, the response is wrappe
             "ecdd_review_trigger": 3,
             "ecdd_multiplier": 0.5,
             "ecdd_multiplier_rg_flag": true,
-            "user_lt_engg_threshold_gbp": 2047.05,
+            "user_lt_net_deposit_threshold_gbp": 2047.05,
             "user_lt_deposit_threshold_gbp": 4599.86,
-            "user_12month_drop_threshold_gbp": 1104.47,
+            "user_12month_net_deposit_threshold_gbp": 1104.47,
             "info_source": 1,
             "sign_off_status": 1,
             "date_last_ecdd_sign_off": "2026-01-10T00:00:00Z",
@@ -234,9 +234,9 @@ Returns a single user status object (see [Get All User Statuses](#get-all-user-s
     "ecdd_review_trigger": 3,
     "ecdd_multiplier": 0.5,
     "ecdd_multiplier_rg_flag": true,
-    "user_lt_engg_threshold_gbp": 2047.05,
+    "user_lt_net_deposit_threshold_gbp": 2047.05,
     "user_lt_deposit_threshold_gbp": 4599.86,
-    "user_12month_drop_threshold_gbp": 1104.47,
+    "user_12month_net_deposit_threshold_gbp": 1104.47,
     "info_source": 1,
     "sign_off_status": 1,
     "date_last_ecdd_sign_off": "2026-01-10T00:00:00Z",
@@ -323,9 +323,9 @@ Full user status object. All fields are replaced.
 | ecdd_suspension_due_date | string | suspension due date (RFC3339, nullable) | "2026-02-15T00:00:00Z" | false |
 | ecdd_multiplier | float | multiplier value applied to thresholds | 1.00 | true |
 | ecdd_multiplier_rg_flag | bool | RG flag indicator | false | true |
-| user_lt_engg_threshold_gbp | float | lifetime engagement threshold in GBP | 5000.00 | true |
+| user_lt_net_deposit_threshold_gbp | float | lifetime net deposit threshold in GBP | 5000.00 | true |
 | user_lt_deposit_threshold_gbp | float | lifetime deposit threshold in GBP | 10000.00 | true |
-| user_12month_drop_threshold_gbp | float | 12-month drop threshold in GBP | 2500.00 | true |
+| user_12month_net_deposit_threshold_gbp | float | 12-month net deposit threshold in GBP | 2500.00 | true |
 | info_source | int | information source identifier | 1 | true |
 | sign_off_status | int | sign-off status indicator | 1 | true |
 | date_last_ecdd_sign_off | string | last ECDD sign-off date (RFC3339, nullable) | "2026-01-20T00:00:00Z" | false |
@@ -351,9 +351,9 @@ Full user status object. All fields are replaced.
     "ecdd_review_trigger": 3,
     "ecdd_multiplier": 1.00,
     "ecdd_multiplier_rg_flag": false,
-    "user_lt_engg_threshold_gbp": 5000.00,
+    "user_lt_net_deposit_threshold_gbp": 5000.00,
     "user_lt_deposit_threshold_gbp": 10000.00,
-    "user_12month_drop_threshold_gbp": 2500.00,
+    "user_12month_net_deposit_threshold_gbp": 2500.00,
     "info_source": 1,
     "sign_off_status": 1,
     "ecdd_rg_review_status": 1,

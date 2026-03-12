@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// GetAllThresholds handles GET /api/v1/thresholds
+// GetAllThresholds handles GET /api/ecdd/thresholdconfig
 func GetAllThresholds(w http.ResponseWriter, r *http.Request) {
 	ds := services.GetDataService()
 	allThresholds := ds.GetAllThresholdConfigs()
@@ -95,9 +95,9 @@ func sortThresholds(thresholds []*models.ECDDThresholdConfig, sp utils.SortParam
 	})
 }
 
-// GetThresholdByID handles GET /api/v1/thresholds/{id}
+// GetThresholdByID handles GET /api/ecdd/thresholdconfig/{id}
 func GetThresholdByID(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/thresholds/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/thresholdconfig/")
 
 	ds := services.GetDataService()
 	threshold := ds.GetThresholdConfigByID(id)
@@ -111,7 +111,7 @@ func GetThresholdByID(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(threshold)
 }
 
-// CreateThreshold handles POST /api/v1/thresholds
+// CreateThreshold handles POST /api/ecdd/thresholdconfig
 func CreateThreshold(w http.ResponseWriter, r *http.Request) {
 	var threshold models.ECDDThresholdConfig
 
@@ -128,9 +128,9 @@ func CreateThreshold(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(createdThreshold)
 }
 
-// UpdateThreshold handles PUT /api/v1/thresholds/{id}
+// UpdateThreshold handles PUT /api/ecdd/thresholdconfig/{id}
 func UpdateThreshold(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/thresholds/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/thresholdconfig/")
 
 	var threshold models.ECDDThresholdConfig
 	if err := json.NewDecoder(r.Body).Decode(&threshold); err != nil {
@@ -150,10 +150,10 @@ func UpdateThreshold(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updatedThreshold)
 }
 
-// PatchThreshold handles PATCH /api/v1/thresholds/{id}
+// PatchThreshold handles PATCH /api/ecdd/thresholdconfig/{id}
 // Performs a partial update by merging the request body onto the existing record
 func PatchThreshold(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/thresholds/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/thresholdconfig/")
 
 	ds := services.GetDataService()
 	existing := ds.GetThresholdConfigByID(id)
@@ -178,9 +178,9 @@ func PatchThreshold(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updated)
 }
 
-// DeleteThreshold handles DELETE /api/v1/thresholds/{id}
+// DeleteThreshold handles DELETE /api/ecdd/thresholdconfig/{id}
 func DeleteThreshold(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/thresholds/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/thresholdconfig/")
 
 	ds := services.GetDataService()
 	success := ds.DeleteThresholdConfig(id)

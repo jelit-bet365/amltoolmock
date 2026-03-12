@@ -17,9 +17,9 @@ This document describes the data schema and mock data generation patterns for th
 | ecdd_suspension_due_date | DATE | | Suspension due date for the user | 2026-02-15 |
 | ecdd_multiplier | NUMERIC | | Multiplier value applied to thresholds | 1.00 |
 | ecdd_multiplier_rg_flag | BOOL | | RG (Responsible Gambling) flag indicator | FALSE |
-| user_lt_engg_threshold_gbp | NUMERIC | | Lifetime engagement threshold in GBP | 5000.00 |
+| user_lt_net_deposit_threshold_gbp | NUMERIC | | Lifetime net deposit threshold in GBP | 5000.00 |
 | user_lt_deposit_threshold_gbp | NUMERIC | | Lifetime deposit threshold in GBP | 10000.00 |
-| user_12month_drop_threshold_gbp | NUMERIC | | 12-month drop threshold in GBP | 2500.00 |
+| user_12month_net_deposit_threshold_gbp | NUMERIC | | 12-month net deposit threshold in GBP | 2500.00 |
 | info_source | INT64 | | Information source identifier | 4 |
 | sign_off_status | INT64 | | Sign-off status indicator | 1 |
 | date_last_ecdd_sign_off | DATE | | Last ECDD sign-off date | 2026-01-20 |
@@ -80,9 +80,9 @@ Example: `u001-malta-134-001`
 | ecdd_suspension_due_date | set only when `ecdd_status` cycles to 5 | date in Feb 2026 or null |
 | ecdd_multiplier | 0.50 every 4th user, 1.00 otherwise | 0.50, 1.00 |
 | ecdd_multiplier_rg_flag | true every 4th user | true/false |
-| user_lt_engg_threshold_gbp | base 2000 + increments + random | 2000 - 17000 |
+| user_lt_net_deposit_threshold_gbp | base 2000 + increments + random | 2000 - 17000 |
 | user_lt_deposit_threshold_gbp | base 4000 + increments + random | 4000 - 34000 |
-| user_12month_drop_threshold_gbp | base 1000 + increments + random | 1000 - 8500 |
+| user_12month_net_deposit_threshold_gbp | base 1000 + increments + random | 1000 - 8500 |
 | info_source | cycled | 1-8 |
 | sign_off_status | cycled | 1-3 |
 | date_last_ecdd_sign_off | set every 3rd user | date in Jan-Feb 2026 or null |
@@ -117,9 +117,9 @@ All float/numeric values are rounded to 2 decimal places.
     "ecdd_suspension_due_date": null,
     "ecdd_multiplier": 0.5,
     "ecdd_multiplier_rg_flag": true,
-    "user_lt_engg_threshold_gbp": 2047.05,
+    "user_lt_net_deposit_threshold_gbp": 2047.05,
     "user_lt_deposit_threshold_gbp": 4599.86,
-    "user_12month_drop_threshold_gbp": 1104.47,
+    "user_12month_net_deposit_threshold_gbp": 1104.47,
     "info_source": 1,
     "sign_off_status": 1,
     "date_last_ecdd_sign_off": "2026-01-10T00:00:00Z",

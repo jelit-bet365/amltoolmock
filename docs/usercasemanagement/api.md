@@ -35,18 +35,18 @@ GET
 
 | query string parameter | description | type | example | required |
 |----|----|----|----|----|
-| folder_pk | folder primary key to filter by | string | a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d | false |
+| case_management_folder_pk | folder primary key to filter by | string | a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d | false |
 | user_status_pk | user status primary key to filter by | string | u001-malta-134-001 | false |
 | sort_by | field to sort results by | string | logged_at | false |
 | sort_dir | sort direction | string | asc | false |
 | page | page number for pagination (starts at 1) | int | 1 | false |
 | page_size | number of results per page (max 100, default 20) | int | 20 | false |
 
-**sort_by valid values:** ecdd_user_case_management_folder_pk, folder_pk, user_status_pk, logged_at
+**sort_by valid values:** ecdd_user_case_management_folder_pk, case_management_folder_pk, user_status_pk, logged_at
 
 **sort_dir valid values:** asc, desc (default: asc)
 
-**Filtering:** `folder_pk` and `user_status_pk` can be combined (AND logic).
+**Filtering:** `case_management_folder_pk` and `user_status_pk` can be combined (AND logic).
 
 ### Response 200
 
@@ -61,7 +61,7 @@ Returns an array of assignment objects. Returns an empty array when no results m
 | parameter | type | description | example | required |
 |----|----|----|----|----|
 | ecdd_user_case_management_folder_pk | string | spanner generated UUID primary key | "604f0583-5016-48fb-8ed2-113121c204c4" | true |
-| folder_pk | string | foreign key referencing ECDDCaseManagementFolder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
+| case_management_folder_pk | string | foreign key referencing ECDDCaseManagementFolder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | user_status_pk | string | foreign key referencing ECDDUserStatus | "u001-malta-134-001" | true |
 | logged_at | string | timestamp when the row was last logged/modified (RFC3339) | "2026-02-01T09:00:00Z" | true |
 | updated_by | string | username of the person who last updated this record | "malta.compliance@company.com" | true |
@@ -72,7 +72,7 @@ Returns an array of assignment objects. Returns an empty array when no results m
 [
     {
         "ecdd_user_case_management_folder_pk": "604f0583-5016-48fb-8ed2-113121c204c4",
-        "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+        "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
         "user_status_pk": "u001-malta-134-001",
         "logged_at": "2026-02-01T09:00:00Z",
         "updated_by": "malta.compliance@company.com"
@@ -101,7 +101,7 @@ When `page` or `page_size` query parameters are provided, the response is wrappe
     "data": [
         {
             "ecdd_user_case_management_folder_pk": "604f0583-5016-48fb-8ed2-113121c204c4",
-            "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+            "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
             "user_status_pk": "u001-malta-134-001",
             "logged_at": "2026-02-01T09:00:00Z",
             "updated_by": "malta.compliance@company.com"
@@ -152,7 +152,7 @@ content-type: application/json
 
 | parameter | type | description | example | required |
 |----|----|----|----|----|
-| folder_pk | string | foreign key referencing ECDDCaseManagementFolder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
+| case_management_folder_pk | string | foreign key referencing ECDDCaseManagementFolder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | user_status_pk | string | foreign key referencing ECDDUserStatus | "u001-malta-134-001" | true |
 | updated_by | string | username of the person creating this record | "malta.compliance@company.com" | true |
 
@@ -160,7 +160,7 @@ content-type: application/json
 
 ```json
 {
-    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "user_status_pk": "u001-malta-134-001",
     "updated_by": "malta.compliance@company.com"
 }
@@ -179,7 +179,7 @@ Returns the created assignment object with server-generated fields.
 | parameter | type | description | example | required |
 |----|----|----|----|----|
 | ecdd_user_case_management_folder_pk | string | spanner generated UUID primary key | "604f0583-5016-48fb-8ed2-113121c204c4" | true |
-| folder_pk | string | foreign key referencing ECDDCaseManagementFolder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
+| case_management_folder_pk | string | foreign key referencing ECDDCaseManagementFolder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | user_status_pk | string | foreign key referencing ECDDUserStatus | "u001-malta-134-001" | true |
 | logged_at | string | timestamp when the row was created (RFC3339) | "2026-02-01T09:00:00Z" | true |
 | updated_by | string | username of the person who created this record | "malta.compliance@company.com" | true |
@@ -189,7 +189,7 @@ Returns the created assignment object with server-generated fields.
 ```json
 {
     "ecdd_user_case_management_folder_pk": "604f0583-5016-48fb-8ed2-113121c204c4",
-    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "user_status_pk": "u001-malta-134-001",
     "logged_at": "2026-02-01T09:00:00Z",
     "updated_by": "malta.compliance@company.com"
@@ -304,7 +304,7 @@ content-type: application/json
 
 DELETE
 
-> http://`<ecddapi>`/api/ecdd/usercasemanagement?folder_pk={folder_pk}
+> http://`<ecddapi>`/api/ecdd/usercasemanagement?case_management_folder_pk={case_management_folder_pk}
 
 #### Headers
 
@@ -318,7 +318,7 @@ DELETE
 
 | query string parameter | description | type | example | required |
 |----|----|----|----|----|
-| folder_pk | the folder primary key whose assignments should be deleted | string | a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d | true |
+| case_management_folder_pk | the folder primary key whose assignments should be deleted | string | a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d | true |
 
 ### Response 200
 
@@ -353,7 +353,7 @@ content-type: application/json
 ##### Example
 
 ```json
-{"error": "folder_pk query parameter is required"}
+{"error": "case_management_folder_pk query parameter is required"}
 ```
 
 ### Response 405
@@ -410,7 +410,7 @@ GET
 
 **sort_dir valid values:** asc, desc (default: asc)
 
-**region valid values:** MALTA (country_ids: 134, 135, 136), USA (country_ids: 231, 232, 233), AUSTRALIA (country_ids: 13, 14, 15), GIBRALTAR (country_ids: 83, 84, 85)
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
 
 **Note:** This endpoint always returns a paginated response (default page=1, pageSize=10).
 
@@ -448,9 +448,9 @@ Returns a paginated list of user status objects assigned to the folder. See [ECD
             "ecdd_review_trigger": 3,
             "ecdd_multiplier": 0.5,
             "ecdd_multiplier_rg_flag": true,
-            "user_lt_engg_threshold_gbp": 2047.05,
+            "user_lt_net_deposit_threshold_gbp": 2047.05,
             "user_lt_deposit_threshold_gbp": 4599.86,
-            "user_12month_drop_threshold_gbp": 1104.47,
+            "user_12month_net_deposit_threshold_gbp": 1104.47,
             "info_source": 1,
             "sign_off_status": 1,
             "date_last_ecdd_sign_off": "2026-01-10T00:00:00Z",
@@ -811,7 +811,7 @@ GET
 | country_id | filter by country ID | int | 134 | false |
 | region | filter by region name | string | MALTA | false |
 
-**region valid values:** MALTA (country_ids: 134, 135, 136), USA (country_ids: 231, 232, 233), AUSTRALIA (country_ids: 13, 14, 15), GIBRALTAR (country_ids: 83, 84, 85)
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
 
 ### Response 200
 
@@ -827,6 +827,7 @@ Returns a single folder stats object.
 |----|----|----|----|----|
 | folder_pk | string | primary key of the folder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
 | user_count | int | number of users assigned to the folder | 42 | true |
 | oldest_user_date | string | logged_at timestamp of the oldest user assignment (RFC3339, nullable) | "2026-01-15T10:00:00Z" | false |
 
@@ -836,6 +837,7 @@ Returns a single folder stats object.
 {
     "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "folder_name": "High Risk Customers",
+    "region": "MALTA",
     "user_count": 42,
     "oldest_user_date": "2026-01-15T10:00:00Z"
 }
@@ -903,7 +905,9 @@ GET
 
 **sort_dir valid values:** asc, desc (default: asc)
 
-**region valid values:** MALTA (country_ids: 134, 135, 136), USA (country_ids: 231, 232, 233), AUSTRALIA (country_ids: 13, 14, 15), GIBRALTAR (country_ids: 83, 84, 85)
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
+
+**Note:** When `region` is specified, only folders belonging to that region are returned. Both folders and their user counts are filtered to the specified region.
 
 ### Response 200
 
@@ -919,6 +923,7 @@ Returns an array of folder stats objects.
 |----|----|----|----|----|
 | folder_pk | string | primary key of the folder | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
 | user_count | int | number of users assigned to the folder | 42 | true |
 | oldest_user_date | string | logged_at timestamp of the oldest user assignment (RFC3339, nullable) | "2026-01-15T10:00:00Z" | false |
 
@@ -929,6 +934,7 @@ Returns an array of folder stats objects.
     {
         "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
         "folder_name": "High Risk Customers",
+        "region": "MALTA",
         "user_count": 42,
         "oldest_user_date": "2026-01-15T10:00:00Z"
     }
@@ -957,6 +963,7 @@ When `page` or `page_size` query parameters are provided, the response is wrappe
         {
             "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
             "folder_name": "High Risk Customers",
+            "region": "MALTA",
             "user_count": 42,
             "oldest_user_date": "2026-01-15T10:00:00Z"
         }

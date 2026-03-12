@@ -1,62 +1,1082 @@
 [
   {
-    "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
-    "folder_name": "High Risk Customers",
-    "logged_at": "2026-01-15T10:00:00Z",
+    "ecdd_case_management_folder_pk": "d363add1-b47d-48dd-8859-53fd65a7bb84",
+    "folder_name": "MT - Unusual Activity Reports",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-01T08:00:00Z",
     "updated_by": "admin@company.com"
   },
   {
-    "ecdd_case_management_folder_pk": "b2c3d4e5-f6a7-5b6c-9d0e-1f2a3b4c5d6e",
-    "folder_name": "Pending Review",
-    "logged_at": "2026-01-15T10:15:00Z",
-    "updated_by": "admin@company.com"
+    "ecdd_case_management_folder_pk": "54384d61-b63d-418b-b45c-0b4af62ede2d",
+    "folder_name": "MT - NEW Population - ECDD",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-01T09:13:00Z",
+    "updated_by": "compliance@company.com"
   },
   {
-    "ecdd_case_management_folder_pk": "c3d4e5f6-a7b8-6c7d-0e1f-2a3b4c5d6e7f",
-    "folder_name": "Suspended Accounts",
-    "logged_at": "2026-01-15T10:30:00Z",
-    "updated_by": "admin@company.com"
-  },
-  {
-    "ecdd_case_management_folder_pk": "d4e5f6a7-b8c9-7d8e-1f2a-3b4c5d6e7f8a",
-    "folder_name": "VIP Customers",
-    "logged_at": "2026-01-16T09:00:00Z",
+    "ecdd_case_management_folder_pk": "bc26ab06-7719-412f-a613-17759da3b1ff",
+    "folder_name": "MT - NEW Population - OMT",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-01T10:26:00Z",
     "updated_by": "manager@company.com"
   },
   {
-    "ecdd_case_management_folder_pk": "e5f6a7b8-c9d0-8e9f-2a3b-4c5d6e7f8a9b",
-    "folder_name": "New Accounts Under Review",
-    "logged_at": "2026-01-17T14:20:00Z",
-    "updated_by": "compliance@company.com"
-  },
-  {
-    "ecdd_case_management_folder_pk": "f6a7b8c9-d0e1-9f0a-3b4c-5d6e7f8a9b0c",
-    "folder_name": "Medium Risk Profile",
-    "logged_at": "2026-01-18T11:45:00Z",
-    "updated_by": "risk.officer@company.com"
-  },
-  {
-    "ecdd_case_management_folder_pk": "a7b8c9d0-e1f2-0a1b-4c5d-6e7f8a9b0c1d",
-    "folder_name": "Escalated Cases",
-    "logged_at": "2026-01-19T08:30:00Z",
+    "ecdd_case_management_folder_pk": "7ac4b382-2859-4b68-9298-1db64b4358e8",
+    "folder_name": "MT - Report Required - OMT",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-01T11:39:00Z",
     "updated_by": "senior.manager@company.com"
   },
   {
-    "ecdd_case_management_folder_pk": "b8c9d0e1-f2a3-1b2c-5d6e-7f8a9b0c1d2e",
-    "folder_name": "Document Verification Queue",
-    "logged_at": "2026-01-20T13:00:00Z",
+    "ecdd_case_management_folder_pk": "2a94319d-923c-4817-91cb-f1f216d3ba53",
+    "folder_name": "MT - Report Required - ECDD",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-02T12:52:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "89402a28-a9c2-4168-98c4-669ccabd8887",
+    "folder_name": "MT - OMT - Monitoring",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-02T13:05:00Z",
     "updated_by": "compliance@company.com"
   },
   {
-    "ecdd_case_management_folder_pk": "c9d0e1f2-a3b4-2c3d-6e7f-8a9b0c1d2e3f",
-    "folder_name": "Responsible Gambling Concerns",
-    "logged_at": "2026-01-21T10:10:00Z",
-    "updated_by": "rg.team@company.com"
+    "ecdd_case_management_folder_pk": "bdbbb0d0-5c10-4594-8a62-e3670fd0979c",
+    "folder_name": "MT - OMT - TL Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-02T14:18:00Z",
+    "updated_by": "manager@company.com"
   },
   {
-    "ecdd_case_management_folder_pk": "d0e1f2a3-b4c5-3d4e-7f8a-9b0c1d2e3f4a",
-    "folder_name": "Threshold Breach Monitoring",
-    "logged_at": "2026-01-22T15:25:00Z",
-    "updated_by": "monitoring@company.com"
+    "ecdd_case_management_folder_pk": "3eea3943-329b-4deb-96db-a45e09159f8e",
+    "folder_name": "MT - OMT - Sup Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-02T15:31:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "42fa57cb-c586-43cb-98db-f6efe50d2eea",
+    "folder_name": "MT - OMT - MGMT Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-03T16:44:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "38d7b9ad-0f54-4292-b579-0ada77614ecf",
+    "folder_name": "MT - ROW - ISO Required (TL)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-03T17:57:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "c44f6323-d037-4f5b-8b07-4a1129deca20",
+    "folder_name": "MT - ROW - ISO Required (Sup)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-03T08:10:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "7840ebaf-6e15-47ba-b4bc-0267d9e6371c",
+    "folder_name": "MT - ROW - ISO Required (MGMT)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-03T09:23:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "6a9972ee-63c8-4581-ac99-ee80a4153356",
+    "folder_name": "MT - ROW - MIC Complete",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-04T10:36:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "57c44728-2ce2-4334-81e5-b8c52046e786",
+    "folder_name": "MT - ROW - EV Pending Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-04T11:49:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "cbf003bb-a23e-48b1-a7cb-b75833124fd0",
+    "folder_name": "MT - ROW - EV Satisfactory Review (TL)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-04T12:02:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "fe0bfd35-044c-4709-a668-f8c615c4c7f4",
+    "folder_name": "MT - ROW - EV Satisfactory Review (Sup)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-04T13:15:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "a86b18a7-b8c5-43ab-bde6-e0824dcd1e5a",
+    "folder_name": "MT - ROW - EV Satisfactory Review (DM)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-05T14:28:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "6a71e849-d394-43f1-8ec6-80ee853311b9",
+    "folder_name": "MT - ROW - EV Satisfactory Review (MAN)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-05T15:41:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "d1b8e588-3d7d-4289-8aa9-fc8e06de9d17",
+    "folder_name": "MT - ROW - FSO Review (Specialist)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-05T16:54:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "60c408f3-0aaa-460e-bf57-87ca379c8df7",
+    "folder_name": "MT - ROW - FSO Review (TL)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-05T17:07:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b3886227-beaf-4121-9e5e-fc79267df34a",
+    "folder_name": "MT - ROW - FSO Review (Sup)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-06T08:20:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "84e9a7fb-475e-4147-bcb2-bc052a58be15",
+    "folder_name": "MT - ROW - FSO Review (MGMT)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-06T09:33:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "90b663cb-60e9-4017-b342-210b7ddcfd2f",
+    "folder_name": "MT - ROW - Priority Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-06T10:46:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "9e14f54c-b43e-4c52-b9bd-d21e01706d56",
+    "folder_name": "MT - UKO - ISO Required",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-06T11:59:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b3704b3d-aa32-4721-b452-5d89fb120f24",
+    "folder_name": "MT - UKO - EV Pending Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-07T12:12:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "6e2ed492-bb20-433d-9840-7ac54d872a5b",
+    "folder_name": "MT - UKO - EV Satisfactory Review (Sup)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-07T13:25:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "db346bbb-25a0-44a7-9e28-c4da8e1382ab",
+    "folder_name": "MT - UKO - EV Satisfactory Review (DM)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-07T14:38:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "9005123e-8a47-45e5-b024-a88c3a668ff5",
+    "folder_name": "MT - UKO - EV Satisfactory Review (MAN)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-07T15:51:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "47d9ce06-c20d-4702-a667-390321d903e1",
+    "folder_name": "MT - UKO - FSO Review (Sup)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-08T16:04:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "88ae66b8-a165-4529-a731-5173bf804eb8",
+    "folder_name": "MT - UKO - FSO Review (MGMT)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-08T17:17:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "9956e8be-6259-454f-9e3b-83d8a61ec7a2",
+    "folder_name": "MT - UKO - Priority Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-08T08:30:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b7c7aa3d-7115-4e7d-865a-612c35a9da09",
+    "folder_name": "MT - UKO - 14 Day Ev Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-08T09:43:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "17b6a13b-542c-4e4d-a0ac-b7ea37d92445",
+    "folder_name": "MT - UKO - FSO Monitoring",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-09T10:56:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "5fd44cb1-fc86-41e2-8b41-e1664d0633d3",
+    "folder_name": "MT - CX - MIC Pending",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-09T11:09:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "5469112d-748b-4951-a575-b3076e9af1df",
+    "folder_name": "MT - CX - High Value",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-09T12:22:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "0fd46ebc-dca5-4e8a-8867-9bbe3ead08bc",
+    "folder_name": "MT - CX - Contact Monitoring",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-09T13:35:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "eb7bc50a-8123-47a3-8e72-60635707d1aa",
+    "folder_name": "MT - CX - Balance Review (Team Leader)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-10T14:48:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b8599398-d1c2-419b-a2d2-6e9b3e0f363c",
+    "folder_name": "MT - CX - Balance Review (Supervisor)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-10T15:01:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "034862a2-76fc-4ca7-8bd8-d8d90970b362",
+    "folder_name": "MT - CX - Balance Review (MGMT)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-10T16:14:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "e41eb9c5-8cbc-4d14-9a16-ca1e5c393335",
+    "folder_name": "MT - CX - Expedited Review (Specialist)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-10T17:27:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "4ed50f3a-7ea7-41f7-afc6-495a65229039",
+    "folder_name": "MT - CX - Expedited Review (Team Leader)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-11T08:40:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "90158df4-ef7d-4c47-abae-fb4f1e603e33",
+    "folder_name": "MT - CX - Expedited Review (Supervisor)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-11T09:53:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "0b5066bd-b872-4f98-8a2f-39466a2d7348",
+    "folder_name": "MT - CX - Expedited Review (MGMT)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-11T10:06:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "8370a231-facd-4bbe-b423-5aa9ac3c643a",
+    "folder_name": "MT - CX - Initial Contact",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-11T11:19:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "9602cc57-b346-4a95-8286-0eb5fbabea32",
+    "folder_name": "MT - CX - FIC Follow-Up",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-12T12:32:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "6aa181c6-c378-4a4a-b3a2-ed26fea166e9",
+    "folder_name": "MT - CX - Final Review Complete",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-12T13:45:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "5dc45e9d-60d3-45a8-88e3-d9e667d75a75",
+    "folder_name": "MT - CX - Documents Pending",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-12T14:58:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "e8dfae3a-4512-48dc-8234-677e74c1d6f9",
+    "folder_name": "MT - CX - Admissions Pending",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-12T15:11:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "15609f45-754f-4668-a3b8-2a06b190726f",
+    "folder_name": "MT - CX - Suspension",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-13T16:24:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "8f909e65-9a49-4c10-9ca7-953359079b24",
+    "folder_name": "MT - CX - Awaiting Evidence Summary (POI)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-13T17:37:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "cc12704e-cfc4-45fc-9841-046757617766",
+    "folder_name": "MT - CX - Awaiting Evidence Summary (FOF)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-13T08:50:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "a7f712cb-50a9-45b8-a61c-f8f7cabe3b58",
+    "folder_name": "MT - CX - Awaiting Evidence Summary (Other)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-13T09:03:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "ae3b9ca0-fca4-4097-99b3-1c3cf339f823",
+    "folder_name": "MT - CX - Call Back (Specialist)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-14T10:16:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "393cd309-5a8d-4688-988d-d24951d9247e",
+    "folder_name": "MT - CX - Call Back (TL and Above)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-14T11:29:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "e5626b1d-9bb0-45e1-9444-32bdbcb371b9",
+    "folder_name": "MT - CDD ID Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-14T12:42:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "6b54157c-bd89-4664-8474-c112115b7330",
+    "folder_name": "MT - Senior MGMT Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-14T13:55:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "74d60d3d-08b2-4ccf-a476-a8d44eee6db1",
+    "folder_name": "MT - SCO Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T14:08:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "811fa80c-f674-4414-a839-430900d0d56f",
+    "folder_name": "MT - MLRO Review",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T15:21:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "75fc6b48-0886-442a-a11a-1b430104d88f",
+    "folder_name": "MT - MLRO Monitoring",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T16:34:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "e0b3f1e2-1f22-4508-b99a-c35e82ddc751",
+    "folder_name": "MT - Pending Closure",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T17:47:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "ca3d30be-c169-4111-ac82-7440a8cd8e3b",
+    "folder_name": "MT - Reference",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T08:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "fbbbd58a-bbe1-446f-8c0e-3772c8af818d",
+    "folder_name": "MT - Pending QA",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T09:13:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "97e30269-bb30-4746-8155-1d4d3fcdd87e",
+    "folder_name": "MT - Process Review (Cat 1)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T10:26:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "4411c82e-8b0c-4dee-bf2f-5a52caa39319",
+    "folder_name": "MT - Process Review (Cat 2)",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T11:39:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "559f8e01-f967-4919-8f8c-3c904f27ae53",
+    "folder_name": "ECDD Household",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T12:52:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "47ea2904-7567-4d29-8490-d1fd4b5dfb71",
+    "folder_name": "ECDD Auto Suspend",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T13:05:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "f3e651ab-c46f-47a8-9989-02c5ff506fbf",
+    "folder_name": "Details Changed",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T14:18:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "1c481d53-1751-423d-afcd-077573f2ed4c",
+    "folder_name": "NEW Population - AML Reports",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T15:31:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "dade087b-0f4e-4044-ae66-82415769995f",
+    "folder_name": "US - Unusual Activity Reports",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T08:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "5e14f1e1-2e61-4acb-b18e-a11e8eafa79f",
+    "folder_name": "US - NEW Population - ECDD",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T09:13:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "e68f585e-42fd-4193-99ea-ec7b41b0d9c2",
+    "folder_name": "US - Report Required – ECDD",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T10:26:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "4a9fd1fd-052e-4617-8dc0-c01ea522e465",
+    "folder_name": "US - ISO Required (Specialist)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T11:39:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "4b5d631f-c3ae-4902-bf28-c6f03b98c954",
+    "folder_name": "US - ISO Required (TL)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T12:52:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "3096f880-5589-448f-ac9f-b925f30353d0",
+    "folder_name": "US - ISO Required (Sup)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T13:05:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "f023cfea-be4a-48ae-961b-8f19be83046e",
+    "folder_name": "US - ISO Required (MGMT)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T14:18:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "f9c0ccab-2af7-4b04-900b-14f48f80f6f4",
+    "folder_name": "US - MIC Pending Customer",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-16T15:31:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "36f6df47-fa84-4af1-9343-786d6922a08c",
+    "folder_name": "US - MIC Complete",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T16:44:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "50205932-aba7-40d5-b594-e98ff24806de",
+    "folder_name": "US - Post Contact Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T17:57:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "695fc1f6-7036-45ec-b109-42b47c5eb1a7",
+    "folder_name": "US - No Contact Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T08:10:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "881ddc94-aaad-4a7e-bcae-65df50f42e02",
+    "folder_name": "US - Awaiting Documents",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-17T09:23:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "181ada6f-9fb9-468f-b38e-7c5849aed141",
+    "folder_name": "US - EV Pending Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-18T10:36:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "eff85b92-ffe7-469a-8757-5e940207168b",
+    "folder_name": "US - EV Satisfactory Review (TL)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-18T11:49:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "a01d1c29-4507-40a2-9e13-659f073fb0ee",
+    "folder_name": "US - EV Satisfactory Review (Sup)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-18T12:02:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "02a4544f-0ed3-4963-bdcb-5becc1bd074c",
+    "folder_name": "US - EV Satisfactory Review (DM)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-18T13:15:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "0c28a0be-597f-4bdf-bf48-e7cf0e81a8be",
+    "folder_name": "US - EV Satisfactory Review (MAN)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-19T14:28:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "2e3febe0-4580-4259-8b2e-a22985edf243",
+    "folder_name": "US - FSO Review (Specialist)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-19T15:41:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "ee946620-ae8c-4e98-9edd-299bac51b06c",
+    "folder_name": "US - FSO Review (TL)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-19T16:54:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "65c127a2-a723-4d55-89fe-b051ca5cbca5",
+    "folder_name": "US - FSO Review (Sup)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-19T17:07:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b1db6400-10f3-435d-9c9c-1ebf42ca1848",
+    "folder_name": "US - FSO Review (MGMT)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T08:20:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "ceb4d2da-5be7-4769-8483-a78366e3b8c1",
+    "folder_name": "US - Process Review (Cat 1)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T09:33:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "ee2d3875-add7-4d4f-91a3-977546c631bc",
+    "folder_name": "US - Process Review (Cat 2)",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T10:46:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "fddd50b4-acb1-4df1-bb6c-33dad036effe",
+    "folder_name": "US - AML Report Pending",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T11:59:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "ccbc73e4-07e6-49c2-9e60-28e0ad7f2de2",
+    "folder_name": "US - AML Report Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T12:12:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "c4b694b2-e570-4f06-b195-32a827505c7a",
+    "folder_name": "US - TMP Report Pending",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T13:25:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "be88a282-575e-4ce1-856c-0c4ff0491aaa",
+    "folder_name": "US - TMP Report Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T14:38:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "546715c9-85b5-44cd-8023-54f798ec4f5b",
+    "folder_name": "US - AML Specialist Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T15:51:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b67a7830-26b5-4f03-aec9-4d49f613e859",
+    "folder_name": "US - AML Team Leader Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T16:04:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "a2ced06b-7aaa-45de-a78f-d76b99288797",
+    "folder_name": "US - SCO Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T17:17:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "c92a30f7-9d47-445c-bbef-c7c3b0c4bba4",
+    "folder_name": "US - Pending Closure",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T08:30:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "9ad64324-e40e-43fb-8192-ddc9b8b693f9",
+    "folder_name": "US - Details Changed",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T09:43:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "cb384fd1-3219-4429-b9d2-20d0bebe5db8",
+    "folder_name": "US - ID Review",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-23T10:56:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "507df0d9-913e-4fa2-a724-482d00293358",
+    "folder_name": "ECDD Auto Suspend",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-23T11:09:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "18eec6b1-85f0-410e-b03c-1b68a7b81600",
+    "folder_name": "Details Changed",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-23T12:22:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "8479ce60-5378-4f6c-97a9-3c099e711791",
+    "folder_name": "NEW Population - AML Reports",
+    "region": "USA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-23T13:35:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "b2694ae8-9d67-4f74-98b7-073e2b927a47",
+    "folder_name": "AU - Unusual Activity Reports",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T08:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "1b81b811-0bff-4c1a-87a4-80b10ddcaa16",
+    "folder_name": "AU - NEW Population - ECDD",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T09:13:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "88db585d-451d-4fa7-848b-3e8ca25631ef",
+    "folder_name": "AU - Report Required - ECDD",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T10:26:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "c55d7fbd-54d0-4b0e-985f-0914c227636b",
+    "folder_name": "AU - ISO Required",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-20T11:39:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "18a87219-b66f-47a0-9f3c-28277d1624bd",
+    "folder_name": "AU - Pending Contact",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T12:52:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "49ecdcd3-ffce-4333-a001-0f9b6780b0ec",
+    "folder_name": "AU - Evidence Review Required",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T13:05:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "81fb9769-2bcd-43a5-be20-219fc0e7f632",
+    "folder_name": "AU - FSO Required",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T14:18:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "cfe88eac-f63b-41e9-b784-88642023189b",
+    "folder_name": "AU - Monitoring",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-21T15:31:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "0b85bd35-80ee-4a54-91c2-043d43d782d6",
+    "folder_name": "AU - CRO Review",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T16:44:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "f48d94d9-5f3f-402b-8c1b-c2e16441a7fa",
+    "folder_name": "ECDD Auto Suspend",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T17:57:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "0c65e76e-bdc6-4887-bb6f-6a37df923419",
+    "folder_name": "Details Changed",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T08:10:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "de75daab-cac4-4503-ac0e-077423063722",
+    "folder_name": "NEW Population - AML Reports",
+    "region": "AUSTRALIA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-22T09:23:00Z",
+    "updated_by": "senior.manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "8322a797-9c84-4634-a02a-d079eea6ee0a",
+    "folder_name": "GIB - Unusual Activity Reports",
+    "region": "GIBRALTAR",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-25T08:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "21db10b2-473d-48f0-ac9e-b638f0ee359d",
+    "folder_name": "ECDD Auto Suspend",
+    "region": "GIBRALTAR",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-25T09:13:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "27c82a57-5e7b-4dae-8463-356031dac61d",
+    "folder_name": "Details Changed",
+    "region": "GIBRALTAR",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-25T10:26:00Z",
+    "updated_by": "manager@company.com"
+  },
+  {
+    "ecdd_case_management_folder_pk": "4af754ca-d258-4917-bff0-6ab879958b27",
+    "folder_name": "NEW Population - AML Reports",
+    "region": "GIBRALTAR",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-25T11:39:00Z",
+    "updated_by": "senior.manager@company.com"
   }
 ]

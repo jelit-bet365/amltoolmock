@@ -157,9 +157,9 @@ Get list of all users (120 total - 30 per region).
     "ecdd_suspension_due_date": null,
     "ecdd_multiplier": 0.50,
     "ecdd_multiplier_rg_flag": true,
-    "user_lt_engg_threshold_gbp": 2500.00,
+    "user_lt_net_deposit_threshold_gbp": 2500.00,
     "user_lt_deposit_threshold_gbp": 5000.00,
-    "user_12month_drop_threshold_gbp": 1250.00,
+    "user_12month_net_deposit_threshold_gbp": 1250.00,
     "info_source": 1,
     "sign_off_status": 1,
     "date_last_ecdd_sign_off": "2026-01-10T00:00:00Z",
@@ -491,7 +491,7 @@ Get list of all user-folder assignments.
 [
   {
     "ecdd_user_case_management_folder_pk": "uf1a2b3c-d4e5-6f7a-8b9c-0d1e2f3a4b5c",
-    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "user_status_pk": "u001-malta-134-001",
     "logged_at": "2026-01-20T10:00:00Z",
     "updated_by": "compliance@company.com"
@@ -508,7 +508,7 @@ Assign a user to a folder.
 **Request Body:**
 ```json
 {
-  "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+  "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
   "user_status_pk": "u001-malta-134-001",
   "updated_by": "admin@company.com"
 }
@@ -643,7 +643,7 @@ export const userFolderAPI = {
   assign: (folderId, userId, updatedBy) => apiFetch('/api/v1/user-folders', {
     method: 'POST',
     body: JSON.stringify({
-      folder_pk: folderId,
+      case_management_folder_pk: folderId,
       user_status_pk: userId,
       updated_by: updatedBy
     })
@@ -721,9 +721,9 @@ export interface ECDDUserStatus {
   ecdd_suspension_due_date: string | null;
   ecdd_multiplier: number;
   ecdd_multiplier_rg_flag: boolean;
-  user_lt_engg_threshold_gbp: number;
+  user_lt_net_deposit_threshold_gbp: number;
   user_lt_deposit_threshold_gbp: number;
-  user_12month_drop_threshold_gbp: number;
+  user_12month_net_deposit_threshold_gbp: number;
   info_source: number;
   sign_off_status: number;
   date_last_ecdd_sign_off: string | null;
@@ -774,7 +774,7 @@ export interface ECDDCaseManagementFolder {
 
 export interface ECDDUserCaseManagementFolder {
   ecdd_user_case_management_folder_pk: string;
-  folder_pk: string;
+  case_management_folder_pk: string;
   user_status_pk: string;
   logged_at: string;
   updated_by: string;

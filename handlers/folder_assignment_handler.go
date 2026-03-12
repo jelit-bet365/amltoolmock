@@ -10,13 +10,13 @@ import (
 	"strings"
 )
 
-// GetAllFolderAssignments handles GET /api/v1/folder-assignments
+// GetAllFolderAssignments handles GET /api/ecdd/usercasemanagement
 func GetAllFolderAssignments(w http.ResponseWriter, r *http.Request) {
 	ds := services.GetDataService()
 
 	// Parse optional query params
 	query := r.URL.Query()
-	folderID := query.Get("folder_pk")
+	folderID := query.Get("case_management_folder_pk")
 	userID := query.Get("user_status_pk")
 
 	var assignments []*models.ECDDUserCaseManagementFolder
@@ -70,7 +70,7 @@ func sortFolderAssignments(assignments []*models.ECDDUserCaseManagementFolder, s
 		switch sp.SortBy {
 		case "ecdd_user_case_management_folder_pk":
 			less = assignments[i].ECDDUserCaseManagementFolderPK < assignments[j].ECDDUserCaseManagementFolderPK
-		case "folder_pk":
+		case "case_management_folder_pk":
 			less = assignments[i].FolderPK < assignments[j].FolderPK
 		case "user_status_pk":
 			less = assignments[i].UserStatusPK < assignments[j].UserStatusPK
@@ -86,7 +86,7 @@ func sortFolderAssignments(assignments []*models.ECDDUserCaseManagementFolder, s
 	})
 }
 
-// CreateFolderAssignment handles POST /api/v1/folder-assignments
+// CreateFolderAssignment handles POST /api/ecdd/usercasemanagement
 func CreateFolderAssignment(w http.ResponseWriter, r *http.Request) {
 	var assignment models.ECDDUserCaseManagementFolder
 	if err := json.NewDecoder(r.Body).Decode(&assignment); err != nil {
@@ -102,9 +102,9 @@ func CreateFolderAssignment(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(createdAssignment)
 }
 
-// DeleteFolderAssignment handles DELETE /api/v1/folder-assignments/{id}
+// DeleteFolderAssignment handles DELETE /api/ecdd/usercasemanagement/{id}
 func DeleteFolderAssignment(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/folder-assignments/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/")
 	ds := services.GetDataService()
 	success := ds.DeleteUserCaseFolder(id)
 
@@ -117,11 +117,11 @@ func DeleteFolderAssignment(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{"message": "Assignment deleted successfully"})
 }
 
-// DeleteFolderAssignmentsByFolder handles DELETE /api/v1/folder-assignments?folder_pk=
+// DeleteFolderAssignmentsByFolder handles DELETE /api/ecdd/usercasemanagement?case_management_folder_pk=
 func DeleteFolderAssignmentsByFolder(w http.ResponseWriter, r *http.Request) {
-	folderID := r.URL.Query().Get("folder_pk")
+	folderID := r.URL.Query().Get("case_management_folder_pk")
 	if folderID == "" {
-		utils.WriteJSONError(w, http.StatusBadRequest, "folder_pk query parameter is required")
+		utils.WriteJSONError(w, http.StatusBadRequest, "case_management_folder_pk query parameter is required")
 		return
 	}
 

@@ -22,28 +22,28 @@ func main() {
 	mux := http.NewServeMux()
 
 	// User Status endpoints
-	mux.HandleFunc("/api/v1/users", handleUsers)
-	mux.HandleFunc("/api/v1/users/", handleUserByID)
+	mux.HandleFunc("/api/ecdd/userstatus", handleUsers)
+	mux.HandleFunc("/api/ecdd/userstatus/", handleUserByID)
 
 	// Threshold Config endpoints
-	mux.HandleFunc("/api/v1/thresholds", handleThresholds)
-	mux.HandleFunc("/api/v1/thresholds/", handleThresholdByID)
+	mux.HandleFunc("/api/ecdd/thresholdconfig", handleThresholds)
+	mux.HandleFunc("/api/ecdd/thresholdconfig/", handleThresholdByID)
 
-	// Case Folder endpoints
-	mux.HandleFunc("/api/v1/folders", handleFolders)
-	mux.HandleFunc("/api/v1/folders/", handleFolderByID)
+	// Case Management Folder endpoints (folder CRUD only)
+	mux.HandleFunc("/api/ecdd/casemanagementfolder", handleFolders)
+	mux.HandleFunc("/api/ecdd/casemanagementfolder/", handleCaseManagementFolderByID)
 
 	// Multiplier Config endpoints
-	mux.HandleFunc("/api/v1/multipliers", handleMultipliers)
-	mux.HandleFunc("/api/v1/multipliers/", handleMultiplierByID)
+	mux.HandleFunc("/api/ecdd/multiplierconfig", handleMultipliers)
+	mux.HandleFunc("/api/ecdd/multiplierconfig/", handleMultiplierByID)
 
 	// Business Profile endpoints
-	mux.HandleFunc("/api/v1/business-profiles", handleBusinessProfiles)
-	mux.HandleFunc("/api/v1/business-profiles/", handleBusinessProfileByID)
+	mux.HandleFunc("/api/ecdd/businessprofile", handleBusinessProfiles)
+	mux.HandleFunc("/api/ecdd/businessprofile/", handleBusinessProfileByID)
 
-	// Folder Assignment endpoints
-	mux.HandleFunc("/api/v1/folder-assignments", handleFolderAssignments)
-	mux.HandleFunc("/api/v1/folder-assignments/", handleFolderAssignmentByID)
+	// User Case Management endpoints (folder assignments, folder users, folder stats, bulk ops)
+	mux.HandleFunc("/api/ecdd/usercasemanagement", handleFolderAssignments)
+	mux.HandleFunc("/api/ecdd/usercasemanagement/", handleUserCaseManagement)
 
 	// Health check
 	mux.HandleFunc("/health", middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
@@ -52,50 +52,50 @@ func main() {
 	}))
 
 	port := ":3001"
-	fmt.Printf("\n🚀 ECDD Mock API Server starting on port %s\n", port)
-	fmt.Println("📝 API Documentation: http://localhost:3001/health")
-	fmt.Println("\n Available endpoints:")
-	fmt.Println("  - GET    /api/v1/users")
-	fmt.Println("  - GET    /api/v1/users/{id}")
-	fmt.Println("  - POST   /api/v1/users")
-	fmt.Println("  - PUT    /api/v1/users/{id}")
-	fmt.Println("  - PATCH  /api/v1/users/{id}")
-	fmt.Println("  - DELETE /api/v1/users/{id}")
-	fmt.Println("  - GET    /api/v1/users/{id}/folders")
-	fmt.Println("  - GET    /api/v1/thresholds")
-	fmt.Println("  - GET    /api/v1/thresholds/{id}")
-	fmt.Println("  - POST   /api/v1/thresholds")
-	fmt.Println("  - PUT    /api/v1/thresholds/{id}")
-	fmt.Println("  - PATCH  /api/v1/thresholds/{id}")
-	fmt.Println("  - DELETE /api/v1/thresholds/{id}")
-	fmt.Println("  - GET    /api/v1/folders")
-	fmt.Println("  - GET    /api/v1/folders/{id}")
-	fmt.Println("  - GET    /api/v1/folders/{id}/users")
-	fmt.Println("  - GET    /api/v1/folders/{id}/stats")
-	fmt.Println("  - GET    /api/v1/folders/stats")
-	fmt.Println("  - DELETE /api/v1/folders/{id}/users/{user_id}")
-	fmt.Println("  - POST   /api/v1/folders/{id}/users/bulk-delete")
-	fmt.Println("  - POST   /api/v1/folders/{id}/users/bulk-add")
-	fmt.Println("  - POST   /api/v1/folders")
-	fmt.Println("  - PUT    /api/v1/folders/{id}")
-	fmt.Println("  - DELETE /api/v1/folders/{id}")
-	fmt.Println("  - GET    /api/v1/multipliers")
-	fmt.Println("  - GET    /api/v1/multipliers/{id}")
-	fmt.Println("  - POST   /api/v1/multipliers")
-	fmt.Println("  - PUT    /api/v1/multipliers/{id}")
-	fmt.Println("  - PATCH  /api/v1/multipliers/{id}")
-	fmt.Println("  - DELETE /api/v1/multipliers/{id}")
-	fmt.Println("  - GET    /api/v1/business-profiles")
-	fmt.Println("  - GET    /api/v1/business-profiles/{id}")
-	fmt.Println("  - POST   /api/v1/business-profiles")
-	fmt.Println("  - PUT    /api/v1/business-profiles/{id}")
-	fmt.Println("  - PATCH  /api/v1/business-profiles/{id}")
-	fmt.Println("  - DELETE /api/v1/business-profiles/{id}")
-	fmt.Println("  - GET    /api/v1/folder-assignments")
-	fmt.Println("  - POST   /api/v1/folder-assignments")
-	fmt.Println("  - DELETE /api/v1/folder-assignments?folder_pk=")
-	fmt.Println("  - DELETE /api/v1/folder-assignments/{id}")
-	fmt.Println("\n✨ Server ready!")
+	fmt.Printf("\nECDD Mock API Server starting on port %s\n", port)
+	fmt.Println("API Documentation: http://localhost:3001/health")
+	fmt.Println("\nAvailable endpoints:")
+	fmt.Println("  - GET    /api/ecdd/userstatus")
+	fmt.Println("  - GET    /api/ecdd/userstatus/{userstatuspk}")
+	fmt.Println("  - POST   /api/ecdd/userstatus")
+	fmt.Println("  - PUT    /api/ecdd/userstatus/{userstatuspk}")
+	fmt.Println("  - PATCH  /api/ecdd/userstatus/{userstatuspk}")
+	fmt.Println("  - DELETE /api/ecdd/userstatus/{userstatuspk}")
+	fmt.Println("  - GET    /api/ecdd/userstatus/{userstatuspk}/folders")
+	fmt.Println("  - GET    /api/ecdd/thresholdconfig")
+	fmt.Println("  - GET    /api/ecdd/thresholdconfig/{thresholdconfigpk}")
+	fmt.Println("  - POST   /api/ecdd/thresholdconfig")
+	fmt.Println("  - PUT    /api/ecdd/thresholdconfig/{thresholdconfigpk}")
+	fmt.Println("  - PATCH  /api/ecdd/thresholdconfig/{thresholdconfigpk}")
+	fmt.Println("  - DELETE /api/ecdd/thresholdconfig/{thresholdconfigpk}")
+	fmt.Println("  - GET    /api/ecdd/casemanagementfolder")
+	fmt.Println("  - GET    /api/ecdd/casemanagementfolder/{folderpk}")
+	fmt.Println("  - POST   /api/ecdd/casemanagementfolder")
+	fmt.Println("  - PUT    /api/ecdd/casemanagementfolder/{folderpk}")
+	fmt.Println("  - DELETE /api/ecdd/casemanagementfolder/{folderpk}")
+	fmt.Println("  - GET    /api/ecdd/multiplierconfig")
+	fmt.Println("  - GET    /api/ecdd/multiplierconfig/{multiplierconfigpk}")
+	fmt.Println("  - POST   /api/ecdd/multiplierconfig")
+	fmt.Println("  - PUT    /api/ecdd/multiplierconfig/{multiplierconfigpk}")
+	fmt.Println("  - PATCH  /api/ecdd/multiplierconfig/{multiplierconfigpk}")
+	fmt.Println("  - DELETE /api/ecdd/multiplierconfig/{multiplierconfigpk}")
+	fmt.Println("  - GET    /api/ecdd/businessprofile")
+	fmt.Println("  - GET    /api/ecdd/businessprofile/{businessprofilepk}")
+	fmt.Println("  - POST   /api/ecdd/businessprofile")
+	fmt.Println("  - PUT    /api/ecdd/businessprofile/{businessprofilepk}")
+	fmt.Println("  - PATCH  /api/ecdd/businessprofile/{businessprofilepk}")
+	fmt.Println("  - DELETE /api/ecdd/businessprofile/{businessprofilepk}")
+	fmt.Println("  - GET    /api/ecdd/usercasemanagement")
+	fmt.Println("  - POST   /api/ecdd/usercasemanagement")
+	fmt.Println("  - DELETE /api/ecdd/usercasemanagement?folder_pk=")
+	fmt.Println("  - DELETE /api/ecdd/usercasemanagement/{usercasemanagementpk}")
+	fmt.Println("  - GET    /api/ecdd/usercasemanagement/folder/{folderpk}/users")
+	fmt.Println("  - DELETE /api/ecdd/usercasemanagement/folder/{folderpk}/users/{userstatuspk}")
+	fmt.Println("  - POST   /api/ecdd/usercasemanagement/folder/{folderpk}/users/bulk-delete")
+	fmt.Println("  - POST   /api/ecdd/usercasemanagement/folder/{folderpk}/users/bulk-add")
+	fmt.Println("  - GET    /api/ecdd/usercasemanagement/folder/{folderpk}/stats")
+	fmt.Println("  - GET    /api/ecdd/usercasemanagement/stats")
+	fmt.Println("\nServer ready!")
 
 	log.Fatal(http.ListenAndServe(port, mux))
 }
@@ -118,14 +118,14 @@ func handleUsers(w http.ResponseWriter, r *http.Request) {
 
 func handleUserByID(w http.ResponseWriter, r *http.Request) {
 	handler := middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
-		path := strings.TrimPrefix(r.URL.Path, "/api/v1/users/")
+		path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/userstatus/")
 		if path == "" {
 			utils.WriteJSONError(w, http.StatusBadRequest, "ID required")
 			return
 		}
 
 		// Support nested user routes:
-		//   GET /api/v1/users/{id}/folders
+		//   GET /api/ecdd/userstatus/{userstatuspk}/folders
 		if strings.Contains(path, "/") {
 			parts := strings.SplitN(path, "/", 2)
 			if len(parts) == 2 && parts[1] == "folders" {
@@ -170,7 +170,7 @@ func handleThresholds(w http.ResponseWriter, r *http.Request) {
 
 func handleThresholdByID(w http.ResponseWriter, r *http.Request) {
 	handler := middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
-		if strings.TrimPrefix(r.URL.Path, "/api/v1/thresholds/") == "" {
+		if strings.TrimPrefix(r.URL.Path, "/api/ecdd/thresholdconfig/") == "" {
 			utils.WriteJSONError(w, http.StatusBadRequest, "ID required")
 			return
 		}
@@ -204,83 +204,17 @@ func handleFolders(w http.ResponseWriter, r *http.Request) {
 	handler(w, r)
 }
 
-func handleFolderByID(w http.ResponseWriter, r *http.Request) {
+// handleCaseManagementFolderByID handles folder CRUD only:
+//
+//	GET    /api/ecdd/casemanagementfolder/{folderpk}
+//	PUT    /api/ecdd/casemanagementfolder/{folderpk}
+//	DELETE /api/ecdd/casemanagementfolder/{folderpk}
+func handleCaseManagementFolderByID(w http.ResponseWriter, r *http.Request) {
 	handler := middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
-		path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+		path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/casemanagementfolder/")
 		if path == "" {
 			utils.WriteJSONError(w, http.StatusBadRequest, "ID required")
 			return
-		}
-
-		// GET /api/v1/folders/stats — bulk stats for all folders
-		if path == "stats" {
-			if r.Method == http.MethodGet {
-				handlers.GetAllFolderAndStats(w, r)
-				return
-			}
-			utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
-			return
-		}
-
-		// Support nested folder routes:
-		//   GET    /api/v1/folders/{id}/users
-		//   DELETE /api/v1/folders/{id}/users/{user_id}
-		//   POST   /api/v1/folders/{id}/users/bulk-delete
-		//   GET    /api/v1/folders/{id}/stats
-		if strings.Contains(path, "/") {
-			parts := strings.SplitN(path, "/", 4)
-			if len(parts) >= 2 {
-				switch parts[1] {
-				case "stats":
-					// GET /api/v1/folders/{id}/stats — stats for a single folder
-					if r.Method == http.MethodGet {
-						handlers.GetFolderAndStats(w, r)
-						return
-					}
-					utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
-					return
-
-				case "users":
-					switch len(parts) {
-					case 2:
-						// /api/v1/folders/{id}/users
-						if r.Method == http.MethodGet {
-							handlers.GetFolderUsers(w, r)
-							return
-						}
-						utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
-						return
-					case 3:
-						if parts[2] == "bulk-delete" {
-							// /api/v1/folders/{id}/users/bulk-delete
-							if r.Method == http.MethodPost {
-								handlers.BulkDeleteFolderUsers(w, r)
-								return
-							}
-							utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
-							return
-						}
-						if parts[2] == "bulk-add" {
-							// /api/v1/folders/{id}/users/bulk-add
-							if r.Method == http.MethodPost {
-								handlers.BulkAddFolderUsers(w, r)
-								return
-							}
-							utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
-							return
-						}
-						// /api/v1/folders/{id}/users/{user_id}
-						if parts[2] != "" {
-							if r.Method == http.MethodDelete {
-								handlers.DeleteFolderUser(w, r)
-								return
-							}
-							utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
-							return
-						}
-					}
-				}
-			}
 		}
 
 		switch r.Method {
@@ -313,7 +247,7 @@ func handleMultipliers(w http.ResponseWriter, r *http.Request) {
 
 func handleMultiplierByID(w http.ResponseWriter, r *http.Request) {
 	handler := middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
-		if strings.TrimPrefix(r.URL.Path, "/api/v1/multipliers/") == "" {
+		if strings.TrimPrefix(r.URL.Path, "/api/ecdd/multiplierconfig/") == "" {
 			utils.WriteJSONError(w, http.StatusBadRequest, "ID required")
 			return
 		}
@@ -349,7 +283,7 @@ func handleBusinessProfiles(w http.ResponseWriter, r *http.Request) {
 
 func handleBusinessProfileByID(w http.ResponseWriter, r *http.Request) {
 	handler := middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
-		if strings.TrimPrefix(r.URL.Path, "/api/v1/business-profiles/") == "" {
+		if strings.TrimPrefix(r.URL.Path, "/api/ecdd/businessprofile/") == "" {
 			utils.WriteJSONError(w, http.StatusBadRequest, "ID required")
 			return
 		}
@@ -385,18 +319,106 @@ func handleFolderAssignments(w http.ResponseWriter, r *http.Request) {
 	handler(w, r)
 }
 
-func handleFolderAssignmentByID(w http.ResponseWriter, r *http.Request) {
+// handleUserCaseManagement routes all sub-paths under /api/ecdd/usercasemanagement/:
+//
+//	DELETE /api/ecdd/usercasemanagement/{usercasemanagementpk}
+//	GET    /api/ecdd/usercasemanagement/stats
+//	GET    /api/ecdd/usercasemanagement/folder/{folderpk}/users
+//	DELETE /api/ecdd/usercasemanagement/folder/{folderpk}/users/{userstatuspk}
+//	POST   /api/ecdd/usercasemanagement/folder/{folderpk}/users/bulk-delete
+//	POST   /api/ecdd/usercasemanagement/folder/{folderpk}/users/bulk-add
+//	GET    /api/ecdd/usercasemanagement/folder/{folderpk}/stats
+func handleUserCaseManagement(w http.ResponseWriter, r *http.Request) {
 	handler := middleware.CORS(func(w http.ResponseWriter, r *http.Request) {
-		if strings.TrimPrefix(r.URL.Path, "/api/v1/folder-assignments/") == "" {
-			utils.WriteJSONError(w, http.StatusBadRequest, "ID required")
+		path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/")
+		if path == "" {
+			utils.WriteJSONError(w, http.StatusBadRequest, "ID or sub-path required")
 			return
 		}
-		switch r.Method {
-		case http.MethodDelete:
-			handlers.DeleteFolderAssignment(w, r)
-		default:
+
+		// GET /api/ecdd/usercasemanagement/stats — bulk stats for all folders
+		if path == "stats" {
+			if r.Method == http.MethodGet {
+				handlers.GetAllFolderAndStats(w, r)
+				return
+			}
 			utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+			return
 		}
+
+		// Routes under /api/ecdd/usercasemanagement/folder/{folderpk}/...
+		if strings.HasPrefix(path, "folder/") {
+			// Strip the "folder/" prefix so parts[0] == folderpk
+			folderPath := strings.TrimPrefix(path, "folder/")
+			parts := strings.SplitN(folderPath, "/", 4)
+
+			if len(parts) >= 2 {
+				switch parts[1] {
+				case "stats":
+					// GET /api/ecdd/usercasemanagement/folder/{folderpk}/stats
+					if r.Method == http.MethodGet {
+						handlers.GetFolderAndStats(w, r)
+						return
+					}
+					utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+					return
+
+				case "users":
+					switch len(parts) {
+					case 2:
+						// GET /api/ecdd/usercasemanagement/folder/{folderpk}/users
+						if r.Method == http.MethodGet {
+							handlers.GetFolderUsers(w, r)
+							return
+						}
+						utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+						return
+					case 3:
+						switch parts[2] {
+						case "bulk-delete":
+							// POST /api/ecdd/usercasemanagement/folder/{folderpk}/users/bulk-delete
+							if r.Method == http.MethodPost {
+								handlers.BulkDeleteFolderUsers(w, r)
+								return
+							}
+							utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+							return
+						case "bulk-add":
+							// POST /api/ecdd/usercasemanagement/folder/{folderpk}/users/bulk-add
+							if r.Method == http.MethodPost {
+								handlers.BulkAddFolderUsers(w, r)
+								return
+							}
+							utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+							return
+						default:
+							// DELETE /api/ecdd/usercasemanagement/folder/{folderpk}/users/{userstatuspk}
+							if parts[2] != "" {
+								if r.Method == http.MethodDelete {
+									handlers.DeleteFolderUser(w, r)
+									return
+								}
+								utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+								return
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// DELETE /api/ecdd/usercasemanagement/{usercasemanagementpk}
+		// path has no slashes — it is a plain PK
+		if !strings.Contains(path, "/") && path != "" {
+			if r.Method == http.MethodDelete {
+				handlers.DeleteFolderAssignment(w, r)
+				return
+			}
+			utils.WriteJSONError(w, http.StatusMethodNotAllowed, "Method not allowed")
+			return
+		}
+
+		utils.WriteJSONError(w, http.StatusNotFound, "Route not found")
 	})
 	handler(w, r)
 }

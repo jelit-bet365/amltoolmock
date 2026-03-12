@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-// GetAllUsers handles GET /api/v1/users
+// GetAllUsers handles GET /api/ecdd/userstatus
 func GetAllUsers(w http.ResponseWriter, r *http.Request) {
 	ds := services.GetDataService()
 	allUsers := ds.GetAllUserStatuses()
@@ -108,9 +108,9 @@ func sortUsers(users []*models.ECDDUserStatus, sp utils.SortParams) {
 	})
 }
 
-// GetUserByID handles GET /api/v1/users/{id}
+// GetUserByID handles GET /api/ecdd/userstatus/{id}
 func GetUserByID(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/users/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/userstatus/")
 
 	ds := services.GetDataService()
 	user := ds.GetUserStatusByID(id)
@@ -124,7 +124,7 @@ func GetUserByID(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(user)
 }
 
-// CreateUser handles POST /api/v1/users
+// CreateUser handles POST /api/ecdd/userstatus
 func CreateUser(w http.ResponseWriter, r *http.Request) {
 	var user models.ECDDUserStatus
 
@@ -141,9 +141,9 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(createdUser)
 }
 
-// UpdateUser handles PUT /api/v1/users/{id}
+// UpdateUser handles PUT /api/ecdd/userstatus/{id}
 func UpdateUser(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/users/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/userstatus/")
 
 	var user models.ECDDUserStatus
 	if err := json.NewDecoder(r.Body).Decode(&user); err != nil {
@@ -163,10 +163,10 @@ func UpdateUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updatedUser)
 }
 
-// PatchUser handles PATCH /api/v1/users/{id}
+// PatchUser handles PATCH /api/ecdd/userstatus/{id}
 // Performs a partial update by merging the request body onto the existing record
 func PatchUser(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/users/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/userstatus/")
 
 	ds := services.GetDataService()
 	existing := ds.GetUserStatusByID(id)
@@ -191,10 +191,10 @@ func PatchUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updated)
 }
 
-// DeleteUser handles DELETE /api/v1/users/{id}
+// DeleteUser handles DELETE /api/ecdd/userstatus/{id}
 // Hard deletes the user and cascade-deletes all related user_case_folders
 func DeleteUser(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/users/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/userstatus/")
 
 	ds := services.GetDataService()
 	success, cascadeCount := ds.DeleteUserStatus(id)
@@ -210,11 +210,11 @@ func DeleteUser(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-// GetUserFolders handles GET /api/v1/users/{id}/folders
+// GetUserFolders handles GET /api/ecdd/userstatus/{id}/folders
 // Returns the list of folders that a user is assigned to.
 func GetUserFolders(w http.ResponseWriter, r *http.Request) {
-	// Extract user ID from path: /api/v1/users/{id}/folders
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/users/")
+	// Extract user ID from path: /api/ecdd/userstatus/{id}/folders
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/userstatus/")
 	parts := strings.SplitN(path, "/", 2)
 	if len(parts) < 1 || parts[0] == "" {
 		utils.WriteJSONError(w, http.StatusBadRequest, "User ID required")

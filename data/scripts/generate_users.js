@@ -87,9 +87,9 @@ Object.keys(regions).forEach(regionKey => {
       ecdd_suspension_due_date: (i % 5 === 4) ? `2026-02-${15 + (i % 10)}T00:00:00Z` : null,
       ecdd_multiplier: (i % 4 === 0) ? 0.50 : 1.00,
       ecdd_multiplier_rg_flag: i % 4 === 0,
-      user_lt_engg_threshold_gbp: 2000 + (i * 500) + (Math.random() * 1000),
+      user_lt_net_deposit_threshold_gbp: 2000 + (i * 500) + (Math.random() * 1000),
       user_lt_deposit_threshold_gbp: 4000 + (i * 1000) + (Math.random() * 2000),
-      user_12month_drop_threshold_gbp: 1000 + (i * 250) + (Math.random() * 500),
+      user_12month_net_deposit_threshold_gbp: 1000 + (i * 250) + (Math.random() * 500),
       info_source: (i % 8) + 1,
       sign_off_status: (i % 3) + 1,
       date_last_ecdd_sign_off: (i % 3 === 0) ? `2026-0${(i % 2) + 1}-${String(10 + (i % 18)).padStart(2, '0')}T00:00:00Z` : null,
@@ -106,9 +106,9 @@ Object.keys(regions).forEach(regionKey => {
     
     // Round numbers to 2 decimal places
     user.ecdd_threshold = Math.round(user.ecdd_threshold * 100) / 100;
-    user.user_lt_engg_threshold_gbp = Math.round(user.user_lt_engg_threshold_gbp * 100) / 100;
+    user.user_lt_net_deposit_threshold_gbp = Math.round(user.user_lt_net_deposit_threshold_gbp * 100) / 100;
     user.user_lt_deposit_threshold_gbp = Math.round(user.user_lt_deposit_threshold_gbp * 100) / 100;
-    user.user_12month_drop_threshold_gbp = Math.round(user.user_12month_drop_threshold_gbp * 100) / 100;
+    user.user_12month_net_deposit_threshold_gbp = Math.round(user.user_12month_net_deposit_threshold_gbp * 100) / 100;
     
     users.push(user);
     userIndex++;

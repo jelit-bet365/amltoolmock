@@ -7,7 +7,7 @@ This document describes the data schema and mock data generation patterns for th
 | Column Name | Column Type | Index | Description | Example |
 |---|---|---|---|---|
 | ecdd_user_case_management_folder_pk | STRING | Primary Index | Spanner generated random UUID | 604f0583-5016-48fb-8ed2-113121c204c4 |
-| folder_pk | STRING | | Foreign key referencing ECDDCaseManagementFolder | a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d |
+| case_management_folder_pk | STRING | | Foreign key referencing ECDDCaseManagementFolder | a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d |
 | user_status_pk | STRING | | Foreign key referencing ECDDUserStatus | u001-malta-134-001 |
 | logged_at | TIMESTAMP | | Timestamp when the row was last logged/modified | 2026-02-01T09:00:00Z |
 | updated_by | STRING(255) | | Username of the person who last updated/added/modified this record | malta.compliance@company.com |
@@ -38,7 +38,7 @@ Each record uses a randomly generated UUID (e.g. `604f0583-5016-48fb-8ed2-113121
 | Field | Pattern |
 |---|---|
 | ecdd_user_case_management_folder_pk | random UUID per record |
-| folder_pk | cycled from available ECDDCaseManagementFolder PKs in `data/case_folders.json` |
+| case_management_folder_pk | cycled from available ECDDCaseManagementFolder PKs in `data/case_folders.json` |
 | user_status_pk | references the `ecdd_user_status_pk` from `data/user_statuses.json` |
 | logged_at | matches the `logged_at` of the corresponding user status record |
 | updated_by | matches the `updated_by` of the corresponding user status record |
@@ -52,7 +52,7 @@ Not applicable — no numeric fields in this table.
 ```json
 {
     "ecdd_user_case_management_folder_pk": "604f0583-5016-48fb-8ed2-113121c204c4",
-    "folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "user_status_pk": "u001-malta-134-001",
     "logged_at": "2026-02-01T09:00:00Z",
     "updated_by": "malta.compliance@company.com"

@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// GetAllMultipliers handles GET /api/v1/multipliers
+// GetAllMultipliers handles GET /api/ecdd/multiplierconfig
 func GetAllMultipliers(w http.ResponseWriter, r *http.Request) {
 	ds := services.GetDataService()
 	allMultipliers := ds.GetAllMultiplierConfigs()
@@ -80,9 +80,9 @@ func sortMultipliers(multipliers []*models.ECDDMultiplierConfig, sp utils.SortPa
 	})
 }
 
-// GetMultiplierByID handles GET /api/v1/multipliers/{id}
+// GetMultiplierByID handles GET /api/ecdd/multiplierconfig/{id}
 func GetMultiplierByID(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/multipliers/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/multiplierconfig/")
 	ds := services.GetDataService()
 	multiplier := ds.GetMultiplierConfigByID(id)
 
@@ -95,7 +95,7 @@ func GetMultiplierByID(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(multiplier)
 }
 
-// CreateMultiplier handles POST /api/v1/multipliers
+// CreateMultiplier handles POST /api/ecdd/multiplierconfig
 func CreateMultiplier(w http.ResponseWriter, r *http.Request) {
 	var multiplier models.ECDDMultiplierConfig
 	if err := json.NewDecoder(r.Body).Decode(&multiplier); err != nil {
@@ -111,9 +111,9 @@ func CreateMultiplier(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(createdMultiplier)
 }
 
-// UpdateMultiplier handles PUT /api/v1/multipliers/{id}
+// UpdateMultiplier handles PUT /api/ecdd/multiplierconfig/{id}
 func UpdateMultiplier(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/multipliers/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/multiplierconfig/")
 	var multiplier models.ECDDMultiplierConfig
 	if err := json.NewDecoder(r.Body).Decode(&multiplier); err != nil {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
@@ -132,10 +132,10 @@ func UpdateMultiplier(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updatedMultiplier)
 }
 
-// PatchMultiplier handles PATCH /api/v1/multipliers/{id}
+// PatchMultiplier handles PATCH /api/ecdd/multiplierconfig/{id}
 // Performs a partial update by merging the request body onto the existing record
 func PatchMultiplier(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/multipliers/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/multiplierconfig/")
 
 	ds := services.GetDataService()
 	existing := ds.GetMultiplierConfigByID(id)
@@ -160,9 +160,9 @@ func PatchMultiplier(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updated)
 }
 
-// DeleteMultiplier handles DELETE /api/v1/multipliers/{id}
+// DeleteMultiplier handles DELETE /api/ecdd/multiplierconfig/{id}
 func DeleteMultiplier(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/multipliers/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/multiplierconfig/")
 
 	ds := services.GetDataService()
 	success := ds.DeleteMultiplierConfig(id)

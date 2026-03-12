@@ -17,6 +17,7 @@ import (
 type FolderAndStats struct {
 	FolderPK       string     `json:"folder_pk"`
 	FolderName     string     `json:"folder_name"`
+	Region         string     `json:"region"`
 	UserCount      int        `json:"user_count"`
 	OldestUserDate *time.Time `json:"oldest_user_date"` // nil serialises as JSON null
 }
@@ -85,6 +86,7 @@ func computeFolderAndStats(
 	stats := FolderAndStats{
 		FolderPK:   folderID,
 		FolderName: folder.FolderName,
+		Region:     folder.Region,
 		UserCount:  len(filtered),
 	}
 
@@ -116,7 +118,7 @@ func computeFolderAndStats(
 	return stats
 }
 
-// GetAllFolders handles GET /api/v1/folders
+// GetAllFolders handles GET /api/ecdd/casemanagementfolder
 func GetAllFolders(w http.ResponseWriter, r *http.Request) {
 	ds := services.GetDataService()
 	allFolders := ds.GetAllCaseFolders()
@@ -129,6 +131,17 @@ func GetAllFolders(w http.ResponseWriter, r *http.Request) {
 		filtered := make([]*models.ECDDCaseManagementFolder, 0, len(allFolders))
 		for _, f := range allFolders {
 			if strings.Contains(strings.ToLower(f.FolderName), searchLower) {
+				filtered = append(filtered, f)
+			}
+		}
+		allFolders = filtered
+	}
+
+	// Filter by region (case-insensitive)
+	if regionParam := r.URL.Query().Get("region"); regionParam != "" {
+		filtered := make([]*models.ECDDCaseManagementFolder, 0, len(allFolders))
+		for _, f := range allFolders {
+			if strings.EqualFold(f.Region, regionParam) {
 				filtered = append(filtered, f)
 			}
 		}
@@ -166,6 +179,8 @@ func sortFolders(folders []*models.ECDDCaseManagementFolder, sp utils.SortParams
 			less = folders[i].ECDDCaseManagementFolderPK < folders[j].ECDDCaseManagementFolderPK
 		case "logged_at":
 			less = folders[i].LoggedAt.Before(folders[j].LoggedAt)
+		case "region":
+			less = strings.ToLower(folders[i].Region) < strings.ToLower(folders[j].Region)
 		default:
 			less = strings.ToLower(folders[i].FolderName) < strings.ToLower(folders[j].FolderName)
 		}
@@ -176,9 +191,9 @@ func sortFolders(folders []*models.ECDDCaseManagementFolder, sp utils.SortParams
 	})
 }
 
-// GetFolderByID handles GET /api/v1/folders/{id}
+// GetFolderByID handles GET /api/ecdd/casemanagementfolder/{id}
 func GetFolderByID(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/casemanagementfolder/")
 	ds := services.GetDataService()
 	folder := ds.GetCaseFolderByID(id)
 
@@ -191,7 +206,7 @@ func GetFolderByID(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(folder)
 }
 
-// CreateFolder handles POST /api/v1/folders
+// CreateFolder handles POST /api/ecdd/casemanagementfolder
 func CreateFolder(w http.ResponseWriter, r *http.Request) {
 	var folder models.ECDDCaseManagementFolder
 	if err := json.NewDecoder(r.Body).Decode(&folder); err != nil {
@@ -207,9 +222,9 @@ func CreateFolder(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(createdFolder)
 }
 
-// UpdateFolder handles PUT /api/v1/folders/{id}
+// UpdateFolder handles PUT /api/ecdd/casemanagementfolder/{id}
 func UpdateFolder(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/casemanagementfolder/")
 	var folder models.ECDDCaseManagementFolder
 	if err := json.NewDecoder(r.Body).Decode(&folder); err != nil {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
@@ -228,12 +243,12 @@ func UpdateFolder(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updatedFolder)
 }
 
-// GetFolderAndStats handles GET /api/v1/folders/{id}/stats
+// GetFolderAndStats handles GET /api/ecdd/usercasemanagement/folder/{id}/stats
 // Returns user_count and oldest_user_date for a single folder with optional
 // language, country, and region filters.
 func GetFolderAndStats(w http.ResponseWriter, r *http.Request) {
-	// Extract folder ID from path: /api/v1/folders/{id}/stats
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	// Extract folder ID from path: /api/ecdd/usercasemanagement/folder/{id}/stats
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/folder/")
 	parts := strings.SplitN(path, "/", 2)
 	if len(parts) < 1 || parts[0] == "" {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Folder ID required")
@@ -260,7 +275,7 @@ func GetFolderAndStats(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(stats)
 }
 
-// GetAllFolderAndStats handles GET /api/v1/folders/stats
+// GetAllFolderAndStats handles GET /api/ecdd/usercasemanagement/stats
 // Returns an array of stats objects for every folder, with optional
 // language, country, and region filters applied to user counts.
 func GetAllFolderAndStats(w http.ResponseWriter, r *http.Request) {
@@ -272,6 +287,17 @@ func GetAllFolderAndStats(w http.ResponseWriter, r *http.Request) {
 
 	ds := services.GetDataService()
 	allFolders := ds.GetAllCaseFolders()
+
+	// Filter folders by region before computing stats
+	if region != "" {
+		filtered := make([]*models.ECDDCaseManagementFolder, 0, len(allFolders))
+		for _, f := range allFolders {
+			if strings.EqualFold(f.Region, region) {
+				filtered = append(filtered, f)
+			}
+		}
+		allFolders = filtered
+	}
 
 	// Pre-build index and user map once — O(M + U) instead of O(N × 2M)
 	assignmentIndex := ds.GetFolderAssignmentIndex()
@@ -313,6 +339,8 @@ func sortFolderAndStats(stats []FolderAndStats, sp utils.SortParams) {
 			less = stats[i].FolderPK < stats[j].FolderPK
 		case "user_count":
 			less = stats[i].UserCount < stats[j].UserCount
+		case "region":
+			less = strings.ToLower(stats[i].Region) < strings.ToLower(stats[j].Region)
 		default:
 			less = strings.ToLower(stats[i].FolderName) < strings.ToLower(stats[j].FolderName)
 		}
@@ -323,10 +351,10 @@ func sortFolderAndStats(stats []FolderAndStats, sp utils.SortParams) {
 	})
 }
 
-// DeleteFolder handles DELETE /api/v1/folders/{id}
+// DeleteFolder handles DELETE /api/ecdd/casemanagementfolder/{id}
 // Hard deletes the folder and cascade-deletes all related user_case_folders
 func DeleteFolder(w http.ResponseWriter, r *http.Request) {
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/casemanagementfolder/")
 	// Strip any trailing path segments (in case routed through handleFolderByID)
 	id := strings.SplitN(path, "/", 2)[0]
 

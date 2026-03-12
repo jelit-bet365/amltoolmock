@@ -16,9 +16,9 @@ type ECDDUserStatus struct {
 	ECDDSuspensionDueDate       *time.Time `json:"ecdd_suspension_due_date,omitempty"`
 	ECDDMultiplier              float64    `json:"ecdd_multiplier"`
 	ECDDMultiplierRGFlag        bool       `json:"ecdd_multiplier_rg_flag"`
-	UserLtEnggThresholdGBP      float64    `json:"user_lt_engg_threshold_gbp"`
-	UserLtDepositThresholdGBP   float64    `json:"user_lt_deposit_threshold_gbp"`
-	User12MonthDropThresholdGBP float64    `json:"user_12month_drop_threshold_gbp"`
+	UserLtNetDepositThresholdGBP   float64    `json:"user_lt_net_deposit_threshold_gbp"`
+	UserLtDepositThresholdGBP     float64    `json:"user_lt_deposit_threshold_gbp"`
+	User12MonthNetDepositThresholdGBP float64 `json:"user_12month_net_deposit_threshold_gbp"`
 	InfoSource                  int64      `json:"info_source"`
 	SignOffStatus               int64      `json:"sign_off_status"`
 	DateLastECDDSignOff         *time.Time `json:"date_last_ecdd_sign_off,omitempty"`

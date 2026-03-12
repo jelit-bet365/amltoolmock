@@ -1,52 +1,207 @@
 [
   {
-    "ecdd_multiplier_config_pk": "m1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c",
-    "country_id": 1,
+    "ecdd_multiplier_config_pk": "d5bcb910-70ea-4f3b-b0ef-fd3793c93d34",
+    "country_id": 197,
     "state_id": null,
-    "age_multipliers": [18, 19, 20, 21, 22, 23, 24, 25],
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
     "status_multiplier": true,
     "is_active": true,
-    "logged_at": "2026-01-28T14:25:00Z",
+    "logged_at": "2026-01-03T10:00:00Z",
     "updated_by": "admin@company.com"
   },
   {
-    "ecdd_multiplier_config_pk": "m2b3c4d5-e6f7-5a8b-9c0d-1e2f3a4b5c6d",
-    "country_id": 2,
+    "ecdd_multiplier_config_pk": "8bbc3df8-7f8c-4520-b61c-9b7ba4b7209f",
+    "country_id": 95,
+    "state_id": null,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-03T10:30:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "0a6a68c2-cf07-427a-9348-0e42f1986fec",
+    "country_id": 120,
+    "state_id": null,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "status_multiplier": false,
+    "is_active": true,
+    "logged_at": "2026-01-03T11:00:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "46a168a8-b49f-461c-b94c-6aef5fd09377",
+    "country_id": 75,
+    "state_id": null,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-03T11:30:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "7246ae54-8245-400c-b71c-e28244c1f9b4",
+    "country_id": 97,
+    "state_id": null,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "status_multiplier": false,
+    "is_active": true,
+    "logged_at": "2026-01-03T12:00:00Z",
+    "updated_by": "compliance@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "c26514c6-6ae2-4189-a087-525e939be6a4",
+    "country_id": 198,
+    "state_id": 2,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "status_multiplier": false,
+    "is_active": true,
+    "logged_at": "2026-01-04T09:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "ffed8d19-de09-4d80-aae3-fe1254c576d3",
+    "country_id": 198,
+    "state_id": 3,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-04T09:30:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "baa95388-1ed4-4fb1-ae37-6f74452c9c9e",
+    "country_id": 198,
     "state_id": 33,
-    "age_multipliers": [21, 22, 23, 24, 25],
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
     "status_multiplier": true,
     "is_active": true,
-    "logged_at": "2026-01-27T10:00:00Z",
+    "logged_at": "2026-01-04T10:00:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "09c411e4-f474-44a0-a19b-933cbe9a539d",
+    "country_id": 198,
+    "state_id": 16,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-04T10:30:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "a7895f23-d43e-4278-a973-4d5d2ce0cea1",
+    "country_id": 13,
+    "state_id": null,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-04T11:00:00Z",
     "updated_by": "compliance@company.com"
   },
   {
-    "ecdd_multiplier_config_pk": "m3c4d5e6-f7a8-6b9c-0d1e-2f3a4b5c6d7e",
-    "country_id": 3,
+    "ecdd_multiplier_config_pk": "913e27aa-35f2-4476-aaac-dcb9705aafdc",
+    "country_id": 36,
     "state_id": null,
-    "age_multipliers": [18, 19, 20, 21],
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "status_multiplier": true,
+    "is_active": true,
+    "logged_at": "2026-01-04T11:30:00Z",
+    "updated_by": "admin@company.com"
+  },
+  {
+    "ecdd_multiplier_config_pk": "24a0d9a9-1a72-4902-87c5-0a85e3053e50",
+    "country_id": 28,
+    "state_id": null,
+    "age_multipliers": [
+      18,
+      19,
+      20,
+      21
+    ],
     "status_multiplier": false,
     "is_active": true,
-    "logged_at": "2026-01-26T09:30:00Z",
+    "logged_at": "2026-01-04T12:00:00Z",
     "updated_by": "risk.officer@company.com"
-  },
-  {
-    "ecdd_multiplier_config_pk": "m4d5e6f7-a8b9-7c0d-1e2f-3a4b5c6d7e8f",
-    "country_id": 4,
-    "state_id": null,
-    "age_multipliers": [19, 20, 21, 22, 23, 24],
-    "status_multiplier": true,
-    "is_active": true,
-    "logged_at": "2026-01-25T14:15:00Z",
-    "updated_by": "manager@company.com"
-  },
-  {
-    "ecdd_multiplier_config_pk": "m5e6f7a8-b9c0-8d1e-2f3a-4b5c6d7e8f9a",
-    "country_id": 5,
-    "state_id": null,
-    "age_multipliers": [18, 19, 20, 21, 22],
-    "status_multiplier": false,
-    "is_active": true,
-    "logged_at": "2026-01-24T11:45:00Z",
-    "updated_by": "compliance@company.com"
   }
 ]

@@ -31,14 +31,17 @@ GET
 | query string parameter | description | type | example | required |
 |----|----|----|----|----|
 | search | filter by folder name (case-insensitive substring match) | string | High Risk | false |
+| region | filter by region name | string | MALTA | false |
 | sort_by | field to sort results by | string | folder_name | false |
 | sort_dir | sort direction | string | asc | false |
 | page | page number for pagination (starts at 1) | int | 1 | false |
 | page_size | number of results per page (max 100, default 20) | int | 20 | false |
 
-**sort_by valid values:** folder_name, ecdd_case_management_folder_pk, logged_at
+**sort_by valid values:** folder_name, ecdd_case_management_folder_pk, logged_at, region
 
 **sort_dir valid values:** asc, desc (default: asc)
+
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
 
 ### Response 200
 
@@ -54,8 +57,13 @@ Returns an array of case management folder objects.
 |----|----|----|----|----|
 | ecdd_case_management_folder_pk | string | spanner generated UUID primary key | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
+| country_id | int | country identifier (nullable) | null | false |
+| state_id | int | state identifier (nullable) | null | false |
 | logged_at | string | timestamp when the row was last logged/modified (RFC3339) | "2026-01-15T10:00:00Z" | true |
 | updated_by | string | username of the person who last updated this record | "admin@company.com" | true |
+
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
 
 ##### Example
 
@@ -64,6 +72,9 @@ Returns an array of case management folder objects.
     {
         "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
         "folder_name": "High Risk Customers",
+        "region": "MALTA",
+        "country_id": null,
+        "state_id": null,
         "logged_at": "2026-01-15T10:00:00Z",
         "updated_by": "admin@company.com"
     }
@@ -92,6 +103,9 @@ When `page` or `page_size` query parameters are provided, the response is wrappe
         {
             "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
             "folder_name": "High Risk Customers",
+            "region": "MALTA",
+            "country_id": null,
+            "state_id": null,
             "logged_at": "2026-01-15T10:00:00Z",
             "updated_by": "admin@company.com"
         }
@@ -149,7 +163,17 @@ GET
 
 content-type: application/json
 
-Returns a single case management folder object (see [Get All Folders](#get-all-folders) response body for field definitions).
+Returns a single case management folder object.
+
+| parameter | type | description | example | required |
+|----|----|----|----|----|
+| ecdd_case_management_folder_pk | string | spanner generated UUID primary key | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
+| folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
+| country_id | int | country identifier (nullable) | null | false |
+| state_id | int | state identifier (nullable) | null | false |
+| logged_at | string | timestamp when the row was last logged/modified (RFC3339) | "2026-01-15T10:00:00Z" | true |
+| updated_by | string | username of the person who last updated this record | "admin@company.com" | true |
 
 ##### Example
 
@@ -157,6 +181,9 @@ Returns a single case management folder object (see [Get All Folders](#get-all-f
 {
     "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "folder_name": "High Risk Customers",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
     "logged_at": "2026-01-15T10:00:00Z",
     "updated_by": "admin@company.com"
 }
@@ -215,13 +242,21 @@ content-type: application/json
 | parameter | type | description | example | required |
 |----|----|----|----|----|
 | folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
+| country_id | int | country identifier (nullable) | null | false |
+| state_id | int | state identifier (nullable) | null | false |
 | updated_by | string | username of the person creating this record | "admin@company.com" | true |
+
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
 
 ##### Example
 
 ```json
 {
     "folder_name": "High Risk Customers",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
     "updated_by": "admin@company.com"
 }
 ```
@@ -240,6 +275,9 @@ Returns the created case management folder object with the server-generated prim
 |----|----|----|----|----|
 | ecdd_case_management_folder_pk | string | spanner generated UUID primary key | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
 | folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
+| country_id | int | country identifier (nullable) | null | false |
+| state_id | int | state identifier (nullable) | null | false |
 | logged_at | string | timestamp when the row was created (RFC3339) | "2026-01-15T10:00:00Z" | true |
 | updated_by | string | username of the person who created this record | "admin@company.com" | true |
 
@@ -249,6 +287,9 @@ Returns the created case management folder object with the server-generated prim
 {
     "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
     "folder_name": "High Risk Customers",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
     "logged_at": "2026-01-15T10:00:00Z",
     "updated_by": "admin@company.com"
 }
@@ -315,13 +356,21 @@ Full folder object. All fields are replaced.
 | parameter | type | description | example | required |
 |----|----|----|----|----|
 | folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
+| country_id | int | country identifier (nullable) | null | false |
+| state_id | int | state identifier (nullable) | null | false |
 | updated_by | string | username of the person updating this record | "admin@company.com" | true |
+
+**region valid values:** MALTA, GIBRALTAR, USA, AUSTRALIA
 
 ##### Example
 
 ```json
 {
     "folder_name": "High Risk Customers",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
     "updated_by": "admin@company.com"
 }
 ```
@@ -335,6 +384,30 @@ Full folder object. All fields are replaced.
 content-type: application/json
 
 Returns the updated case management folder object.
+
+| parameter | type | description | example | required |
+|----|----|----|----|----|
+| ecdd_case_management_folder_pk | string | spanner generated UUID primary key | "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d" | true |
+| folder_name | string | name of the folder | "High Risk Customers" | true |
+| region | string | region name for the folder | "MALTA" | true |
+| country_id | int | country identifier (nullable) | null | false |
+| state_id | int | state identifier (nullable) | null | false |
+| logged_at | string | timestamp when the row was last modified (RFC3339) | "2026-01-15T10:00:00Z" | true |
+| updated_by | string | username of the person who last updated this record | "admin@company.com" | true |
+
+##### Example
+
+```json
+{
+    "ecdd_case_management_folder_pk": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+    "folder_name": "High Risk Customers",
+    "region": "MALTA",
+    "country_id": null,
+    "state_id": null,
+    "logged_at": "2026-01-15T10:00:00Z",
+    "updated_by": "admin@company.com"
+}
+```
 
 ### Response 400
 

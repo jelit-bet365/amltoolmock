@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// GetAllBusinessProfiles handles GET /api/v1/business-profiles
+// GetAllBusinessProfiles handles GET /api/ecdd/businessprofile
 func GetAllBusinessProfiles(w http.ResponseWriter, r *http.Request) {
 	ds := services.GetDataService()
 	allProfiles := ds.GetAllBusinessProfiles()
@@ -93,9 +93,9 @@ func sortBusinessProfiles(profiles []*models.ECDDBusinessProfile, sp utils.SortP
 	})
 }
 
-// GetBusinessProfileByID handles GET /api/v1/business-profiles/{id}
+// GetBusinessProfileByID handles GET /api/ecdd/businessprofile/{id}
 func GetBusinessProfileByID(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/business-profiles/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/businessprofile/")
 	ds := services.GetDataService()
 	profile := ds.GetBusinessProfileByID(id)
 
@@ -108,7 +108,7 @@ func GetBusinessProfileByID(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(profile)
 }
 
-// CreateBusinessProfile handles POST /api/v1/business-profiles
+// CreateBusinessProfile handles POST /api/ecdd/businessprofile
 func CreateBusinessProfile(w http.ResponseWriter, r *http.Request) {
 	var profile models.ECDDBusinessProfile
 	if err := json.NewDecoder(r.Body).Decode(&profile); err != nil {
@@ -124,9 +124,9 @@ func CreateBusinessProfile(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(createdProfile)
 }
 
-// UpdateBusinessProfile handles PUT /api/v1/business-profiles/{id}
+// UpdateBusinessProfile handles PUT /api/ecdd/businessprofile/{id}
 func UpdateBusinessProfile(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/business-profiles/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/businessprofile/")
 	var profile models.ECDDBusinessProfile
 	if err := json.NewDecoder(r.Body).Decode(&profile); err != nil {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
@@ -145,10 +145,10 @@ func UpdateBusinessProfile(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updatedProfile)
 }
 
-// PatchBusinessProfile handles PATCH /api/v1/business-profiles/{id}
+// PatchBusinessProfile handles PATCH /api/ecdd/businessprofile/{id}
 // Performs a partial update by merging the request body onto the existing record
 func PatchBusinessProfile(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/business-profiles/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/businessprofile/")
 
 	ds := services.GetDataService()
 	existing := ds.GetBusinessProfileByID(id)
@@ -173,9 +173,9 @@ func PatchBusinessProfile(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(updated)
 }
 
-// DeleteBusinessProfile handles DELETE /api/v1/business-profiles/{id}
+// DeleteBusinessProfile handles DELETE /api/ecdd/businessprofile/{id}
 func DeleteBusinessProfile(w http.ResponseWriter, r *http.Request) {
-	id := strings.TrimPrefix(r.URL.Path, "/api/v1/business-profiles/")
+	id := strings.TrimPrefix(r.URL.Path, "/api/ecdd/businessprofile/")
 
 	ds := services.GetDataService()
 	success := ds.DeleteBusinessProfile(id)

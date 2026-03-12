@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"amltoolmock/models"
+	regionpkg "amltoolmock/enums/region"
 	"amltoolmock/services"
 	"amltoolmock/utils"
 	"encoding/json"
@@ -10,16 +11,6 @@ import (
 	"strconv"
 	"strings"
 )
-
-// RegionCountries maps region names to the set of country IDs that belong to
-// each region. This is shared between GetFolderUsers and the folder stats
-// handlers to keep the mapping consistent.
-var RegionCountries = map[string][]int{
-	"MALTA":     {134, 135, 136},
-	"USA":       {231, 232, 233},
-	"AUSTRALIA": {13, 14, 15},
-	"GIBRALTAR": {83, 84, 85},
-}
 
 // FilterUsers applies optional language, country, and region filters to a
 // slice of users and returns only those that match all provided criteria.
@@ -34,15 +25,13 @@ func FilterUsers(users []*models.ECDDUserStatus, language string, countryID *int
 			continue
 		}
 		if region != "" {
-			if allowedCountries, ok := RegionCountries[region]; ok {
-				found := false
-				for _, allowedID := range allowedCountries {
-					if int(user.CountryID) == allowedID {
-						found = true
-						break
-					}
+			countries := regionpkg.GetCountriesForRegion(regionpkg.Region(region))
+			if len(countries) > 0 {
+				allowed := make(map[int]struct{}, len(countries))
+				for _, id := range countries {
+					allowed[id] = struct{}{}
 				}
-				if !found {
+				if _, ok := allowed[int(user.CountryID)]; !ok {
 					continue
 				}
 			}
@@ -52,10 +41,10 @@ func FilterUsers(users []*models.ECDDUserStatus, language string, countryID *int
 	return filtered
 }
 
-// GetFolderUsers handles GET /api/v1/folders/{id}/users with optional filters and pagination
+// GetFolderUsers handles GET /api/ecdd/usercasemanagement/folder/{id}/users with optional filters and pagination
 func GetFolderUsers(w http.ResponseWriter, r *http.Request) {
-	// Expect path format: /api/v1/folders/{id}/users
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	// Expect path format: /api/ecdd/usercasemanagement/folder/{id}/users
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/folder/")
 	parts := strings.SplitN(path, "/", 2)
 	if len(parts) != 2 || parts[0] == "" || parts[1] != "users" {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid folder users path")
@@ -152,13 +141,13 @@ func sortFolderUsers(users []*models.ECDDUserStatus, sp utils.SortParams) {
 	})
 }
 
-// DeleteFolderUser handles DELETE /api/v1/folders/{id}/users/{user_id}
+// DeleteFolderUser handles DELETE /api/ecdd/usercasemanagement/folder/{id}/users/{user_id}
 func DeleteFolderUser(w http.ResponseWriter, r *http.Request) {
-	// Expect path format: /api/v1/folders/{folder_id}/users/{user_id}
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	// Expect path format: /api/ecdd/usercasemanagement/folder/{folder_id}/users/{user_id}
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/folder/")
 	parts := strings.Split(path, "/")
 	if len(parts) != 3 || parts[0] == "" || parts[1] != "users" || parts[2] == "" {
-		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid path, expected /api/v1/folders/{id}/users/{user_id}")
+		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid path, expected /api/ecdd/usercasemanagement/folder/{id}/users/{user_id}")
 		return
 	}
 	folderID := parts[0]
@@ -176,13 +165,13 @@ func DeleteFolderUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{"message": "User removed from folder successfully"})
 }
 
-// BulkDeleteFolderUsers handles POST /api/v1/folders/{id}/users/bulk-delete
+// BulkDeleteFolderUsers handles POST /api/ecdd/usercasemanagement/folder/{id}/users/bulk-delete
 func BulkDeleteFolderUsers(w http.ResponseWriter, r *http.Request) {
-	// Expect path format: /api/v1/folders/{folder_id}/users/bulk-delete
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	// Expect path format: /api/ecdd/usercasemanagement/folder/{folder_id}/users/bulk-delete
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/folder/")
 	parts := strings.Split(path, "/")
 	if len(parts) != 3 || parts[0] == "" || parts[1] != "users" || parts[2] != "bulk-delete" {
-		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid path, expected /api/v1/folders/{id}/users/bulk-delete")
+		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid path, expected /api/ecdd/usercasemanagement/folder/{id}/users/bulk-delete")
 		return
 	}
 	folderID := parts[0]
@@ -231,15 +220,15 @@ func BulkDeleteFolderUsers(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
-// BulkAddFolderUsers handles POST /api/v1/folders/{id}/users/bulk-add
+// BulkAddFolderUsers handles POST /api/ecdd/usercasemanagement/folder/{id}/users/bulk-add
 // Assigns multiple users to a folder in a single atomic request.
 // Skips duplicates (users already assigned to the folder).
 func BulkAddFolderUsers(w http.ResponseWriter, r *http.Request) {
-	// Expect path format: /api/v1/folders/{folder_id}/users/bulk-add
-	path := strings.TrimPrefix(r.URL.Path, "/api/v1/folders/")
+	// Expect path format: /api/ecdd/usercasemanagement/folder/{folder_id}/users/bulk-add
+	path := strings.TrimPrefix(r.URL.Path, "/api/ecdd/usercasemanagement/folder/")
 	parts := strings.Split(path, "/")
 	if len(parts) != 3 || parts[0] == "" || parts[1] != "users" || parts[2] != "bulk-add" {
-		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid path, expected /api/v1/folders/{id}/users/bulk-add")
+		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid path, expected /api/ecdd/usercasemanagement/folder/{id}/users/bulk-add")
 		return
 	}
 	folderID := parts[0]

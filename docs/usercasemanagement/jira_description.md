@@ -8,7 +8,7 @@ h3. Endpoints
 |GET|/api/ecdd/usercasemanagement|List all assignments with optional filtering, sorting, and pagination|
 |POST|/api/ecdd/usercasemanagement|Create a new user-folder assignment|
 |DELETE|/api/ecdd/usercasemanagement/\{usercasemanagementpk\}|Delete a single assignment by its primary key|
-|DELETE|/api/ecdd/usercasemanagement?folder_pk=\{folder_pk\}|Delete all assignments for a given folder|
+|DELETE|/api/ecdd/usercasemanagement?case_management_folder_pk=\{case_management_folder_pk\}|Delete all assignments for a given folder|
 |GET|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users|Get users assigned to a folder (always paginated)|
 |DELETE|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users/\{userstatuspk\}|Remove a single user from a folder|
 |POST|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users/bulk-delete|Bulk remove users from a folder|

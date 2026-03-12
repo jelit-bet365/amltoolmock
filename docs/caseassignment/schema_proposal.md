@@ -48,7 +48,7 @@ The mock backend uses **in-memory maps** (`map[string]*Model`) with a singleton 
 
 Foreign keys are stored as plain strings referencing the PK of another table. There is no formal FK enforcement in the mock -- validation is done at the application level. Example from `ECDDUserCaseManagementFolder`:
 ```go
-FolderPK     string `json:"folder_pk"`       // FK to ECDDCaseManagementFolder
+FolderPK     string `json:"case_management_folder_pk"`  // FK to ECDDCaseManagementFolder
 UserStatusPK string `json:"user_status_pk"`  // FK to ECDDUserStatus
 ```
 
