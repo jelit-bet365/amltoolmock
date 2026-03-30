@@ -19,8 +19,8 @@ func GetAllBusinessProfiles(w http.ResponseWriter, r *http.Request) {
 	// Parse optional query params
 	query := r.URL.Query()
 	enabledParam := query.Get("enabled")
-	countryParam := query.Get("country_id")
-	riskStatusParam := query.Get("risk_status_id")
+	countryParam := query.Get("countryId")
+	riskStatusParam := query.Get("riskStatusId")
 
 	// Filter business profiles based on query params
 	filtered := make([]*models.ECDDBusinessProfile, 0, len(allProfiles))
@@ -47,7 +47,7 @@ func GetAllBusinessProfiles(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "ecdd_business_profile_pk")
+	sp := utils.GetSortParams(r, "ecddBusinessProfilePk")
 	sortBusinessProfiles(filtered, sp)
 
 	// Optional pagination
@@ -71,17 +71,17 @@ func sortBusinessProfiles(profiles []*models.ECDDBusinessProfile, sp utils.SortP
 	sort.Slice(profiles, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "ecdd_business_profile_pk":
+		case "ecddBusinessProfilePk":
 			less = profiles[i].ECDDBusinessProfilePK < profiles[j].ECDDBusinessProfilePK
-		case "country_id":
+		case "countryId":
 			less = profiles[i].CountryID < profiles[j].CountryID
-		case "risk_status_id":
+		case "riskStatusId":
 			less = profiles[i].RiskStatusID < profiles[j].RiskStatusID
-		case "average_deposit":
+		case "averageDeposit":
 			less = profiles[i].AverageDeposit < profiles[j].AverageDeposit
-		case "deposit_multiplier":
+		case "depositMultiplier":
 			less = profiles[i].DepositMultiplier < profiles[j].DepositMultiplier
-		case "logged_at":
+		case "loggedAt":
 			less = profiles[i].LoggedAt.Before(profiles[j].LoggedAt)
 		default:
 			less = profiles[i].ECDDBusinessProfilePK < profiles[j].ECDDBusinessProfilePK

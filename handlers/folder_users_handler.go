@@ -15,10 +15,10 @@ import (
 // FilterUsers applies optional language, country, and region filters to a
 // slice of users and returns only those that match all provided criteria.
 // Pass empty string / nil to skip a filter.
-func FilterUsers(users []*models.ECDDUserStatus, language string, countryID *int64, region string) []*models.ECDDUserStatus {
+func FilterUsers(users []*models.ECDDUserStatus, language *int64, countryID *int64, region string) []*models.ECDDUserStatus {
 	filtered := make([]*models.ECDDUserStatus, 0, len(users))
 	for _, user := range users {
-		if language != "" && !strings.EqualFold(user.Language, language) {
+		if language != nil && user.Language != *language {
 			continue
 		}
 		if countryID != nil && user.CountryID != *countryID {
@@ -54,12 +54,20 @@ func GetFolderUsers(w http.ResponseWriter, r *http.Request) {
 
 	// Parse query parameters
 	query := r.URL.Query()
-	language := query.Get("language")
-	countryParam := query.Get("country_id")
 	region := query.Get("region")
 
+	var language *int64
+	if langParam := query.Get("language"); langParam != "" {
+		parsed, err := strconv.ParseInt(langParam, 10, 64)
+		if err != nil {
+			utils.WriteJSONError(w, http.StatusBadRequest, "Invalid language parameter")
+			return
+		}
+		language = &parsed
+	}
+
 	var countryID *int64
-	if countryParam != "" {
+	if countryParam := query.Get("countryId"); countryParam != "" {
 		if parsed, err := strconv.ParseInt(countryParam, 10, 64); err == nil {
 			countryID = &parsed
 		} else {
@@ -75,7 +83,7 @@ func GetFolderUsers(w http.ResponseWriter, r *http.Request) {
 	filtered := FilterUsers(allUsers, language, countryID, region)
 
 	// Sort BEFORE pagination so page boundaries are consistent
-	sp := utils.GetSortParams(r, "user_id")
+	sp := utils.GetSortParams(r, "userId")
 	sortFolderUsers(filtered, sp)
 
 	total := len(filtered)
@@ -115,21 +123,21 @@ func sortFolderUsers(users []*models.ECDDUserStatus, sp utils.SortParams) {
 	sort.Slice(users, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "user_id":
+		case "userId":
 			less = users[i].UserID < users[j].UserID
-		case "user_name":
+		case "userName":
 			less = strings.ToLower(users[i].UserName) < strings.ToLower(users[j].UserName)
-		case "country_id":
+		case "countryId":
 			less = users[i].CountryID < users[j].CountryID
-		case "ecdd_status":
+		case "ecddStatus":
 			less = users[i].ECDDStatus < users[j].ECDDStatus
-		case "ecdd_threshold":
+		case "ecddThreshold":
 			less = users[i].ECDDThreshold < users[j].ECDDThreshold
-		case "ecdd_multiplier":
+		case "ecddMultiplier":
 			less = users[i].ECDDMultiplier < users[j].ECDDMultiplier
-		case "logged_at":
+		case "loggedAt":
 			less = users[i].LoggedAt.Before(users[j].LoggedAt)
-		case "ecdd_user_status_pk":
+		case "ecddUserStatusPk":
 			less = users[i].ECDDUserStatusPK < users[j].ECDDUserStatusPK
 		default:
 			less = users[i].UserID < users[j].UserID
@@ -178,8 +186,8 @@ func BulkDeleteFolderUsers(w http.ResponseWriter, r *http.Request) {
 
 	// Parse request body
 	var reqBody struct {
-		UserIDs   []string `json:"user_status_pks"`
-		UpdatedBy string   `json:"updated_by"`
+		UserIDs   []string `json:"ecddUserStatusPks"`
+		UpdatedBy string   `json:"updatedBy"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&reqBody); err != nil {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
@@ -187,14 +195,14 @@ func BulkDeleteFolderUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(reqBody.UserIDs) == 0 {
-		utils.WriteJSONError(w, http.StatusBadRequest, "user_status_pks array is required and must not be empty")
+		utils.WriteJSONError(w, http.StatusBadRequest, "ecddUserStatusPks array is required and must not be empty")
 		return
 	}
 
 	ds := services.GetDataService()
 	deletedCount, failedIDs := ds.BulkDeleteUserCaseFoldersByFolderPKAndUserStatusPKs(folderID, reqBody.UserIDs)
 
-	// Ensure failed_user_status_pks is always an array in JSON, never null
+	// Ensure failedEcddUserStatusPks is always an array in JSON, never null
 	if failedIDs == nil {
 		failedIDs = []string{}
 	}
@@ -206,9 +214,9 @@ func BulkDeleteFolderUsers(w http.ResponseWriter, r *http.Request) {
 
 	response := struct {
 		Message       string   `json:"message"`
-		DeletedCount  int      `json:"deleted_count"`
-		FailedCount   int      `json:"failed_count"`
-		FailedUserIDs []string `json:"failed_user_status_pks"`
+		DeletedCount  int      `json:"deletedCount"`
+		FailedCount   int      `json:"failedCount"`
+		FailedUserIDs []string `json:"failedEcddUserStatusPks"`
 	}{
 		Message:       message,
 		DeletedCount:  deletedCount,
@@ -235,8 +243,8 @@ func BulkAddFolderUsers(w http.ResponseWriter, r *http.Request) {
 
 	// Parse request body
 	var reqBody struct {
-		UserIDs   []string `json:"user_ids"`
-		UpdatedBy string   `json:"updated_by"`
+		UserIDs   []string `json:"userIds"`
+		UpdatedBy string   `json:"updatedBy"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&reqBody); err != nil {
 		utils.WriteJSONError(w, http.StatusBadRequest, "Invalid request body")
@@ -244,7 +252,7 @@ func BulkAddFolderUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(reqBody.UserIDs) == 0 {
-		utils.WriteJSONError(w, http.StatusBadRequest, "user_ids array is required and must not be empty")
+		utils.WriteJSONError(w, http.StatusBadRequest, "userIds array is required and must not be empty")
 		return
 	}
 
@@ -258,7 +266,7 @@ func BulkAddFolderUsers(w http.ResponseWriter, r *http.Request) {
 
 	created, skipped := ds.BulkCreateUserCaseFolders(folderID, reqBody.UserIDs, reqBody.UpdatedBy)
 
-	// Ensure skipped_user_ids is always an array in JSON, never null
+	// Ensure skippedUserIds is always an array in JSON, never null
 	if skipped == nil {
 		skipped = []string{}
 	}
@@ -270,9 +278,9 @@ func BulkAddFolderUsers(w http.ResponseWriter, r *http.Request) {
 
 	response := struct {
 		Message      string   `json:"message"`
-		CreatedCount int      `json:"created_count"`
-		SkippedCount int      `json:"skipped_count"`
-		SkippedIDs   []string `json:"skipped_user_ids"`
+		CreatedCount int      `json:"createdCount"`
+		SkippedCount int      `json:"skippedCount"`
+		SkippedIDs   []string `json:"skippedUserIds"`
 	}{
 		Message:      message,
 		CreatedCount: len(created),

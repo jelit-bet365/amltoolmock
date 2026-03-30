@@ -16,8 +16,8 @@ func GetAllFolderAssignments(w http.ResponseWriter, r *http.Request) {
 
 	// Parse optional query params
 	query := r.URL.Query()
-	folderID := query.Get("case_management_folder_pk")
-	userID := query.Get("user_status_pk")
+	folderID := query.Get("ecddCaseManagementFolderPk")
+	userID := query.Get("ecddUserStatusPk")
 
 	var assignments []*models.ECDDUserCaseManagementFolder
 
@@ -44,7 +44,7 @@ func GetAllFolderAssignments(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "ecdd_user_case_management_folder_pk")
+	sp := utils.GetSortParams(r, "ecddUserCaseManagementFolderPk")
 	sortFolderAssignments(assignments, sp)
 
 	// Optional pagination
@@ -68,13 +68,13 @@ func sortFolderAssignments(assignments []*models.ECDDUserCaseManagementFolder, s
 	sort.Slice(assignments, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "ecdd_user_case_management_folder_pk":
+		case "ecddUserCaseManagementFolderPk":
 			less = assignments[i].ECDDUserCaseManagementFolderPK < assignments[j].ECDDUserCaseManagementFolderPK
-		case "case_management_folder_pk":
+		case "ecddCaseManagementFolderPk":
 			less = assignments[i].FolderPK < assignments[j].FolderPK
-		case "user_status_pk":
+		case "ecddUserStatusPk":
 			less = assignments[i].UserStatusPK < assignments[j].UserStatusPK
-		case "logged_at":
+		case "loggedAt":
 			less = assignments[i].LoggedAt.Before(assignments[j].LoggedAt)
 		default:
 			less = assignments[i].ECDDUserCaseManagementFolderPK < assignments[j].ECDDUserCaseManagementFolderPK
@@ -117,11 +117,11 @@ func DeleteFolderAssignment(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{"message": "Assignment deleted successfully"})
 }
 
-// DeleteFolderAssignmentsByFolder handles DELETE /api/ecdd/usercasemanagement?case_management_folder_pk=
+// DeleteFolderAssignmentsByFolder handles DELETE /api/ecdd/usercasemanagement?ecddCaseManagementFolderPk=
 func DeleteFolderAssignmentsByFolder(w http.ResponseWriter, r *http.Request) {
-	folderID := r.URL.Query().Get("case_management_folder_pk")
+	folderID := r.URL.Query().Get("ecddCaseManagementFolderPk")
 	if folderID == "" {
-		utils.WriteJSONError(w, http.StatusBadRequest, "case_management_folder_pk query parameter is required")
+		utils.WriteJSONError(w, http.StatusBadRequest, "ecddCaseManagementFolderPk query parameter is required")
 		return
 	}
 

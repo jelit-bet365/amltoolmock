@@ -22,74 +22,60 @@ const (
 	countryUS        = 198
 	countryAustralia = 13
 
-	// --- Malta-REGULATED countries (23 total) ---
-	countryAustria       = 14
-	countryCroatia       = 50
-	countryFinland       = 68
-	countryGhana         = 76
-	countryHungary       = 89
-	countryIceland       = 90
-	countryIreland       = 95
-	countryIvoryCoast    = 48
-	countryIndia         = 91 // correct: 91 (92 = Indonesia)
-	countryKenya         = 102
-	countryLatvia        = 108
-	countryLiechtenstein = 113
-	countryLithuania     = 114
-	countryLuxembourg    = 115
-	countryMalta         = 120
-	countryNewZealand    = 138 // correct: 138 (140 = Niger)
-	countryNicaragua     = 139
-	countryNorway        = 143 // correct: 143
-	countrySlovakia      = 172
-	countrySlovenia      = 167
-	countryTanzania      = 185
-	countryTonga         = 188
-	countryWesternSamoa  = 206
-
-	// --- Malta-LICENSED countries (20 total) ---
-	countryUK                  = 197
-	countrySpain               = 171
-	countryItaly               = 97
-	countryDenmark             = 54
-	countryGreenland           = 218
-	countrySweden              = 181
-	countryEstonia             = 64
-	countryBulgaria            = 31
-	countryCyprus              = 51
-	countryGreece              = 78
-	countryGermany             = 75
-	countryNetherlands         = 135
-	countryCzechRepublic       = 52
-	countryMexico              = 126
-	countryCanadaOntario       = 272
+	// --- Malta countries (37 total) ---
+	countryAustria             = 14
 	countryBuenosAiresCity     = 270
 	countryBuenosAiresProvince = 271
-	countryFrance              = 70
-	countrySwitzerland         = 174
-	countryJapan               = 99
+	countryBulgaria            = 31
+	countryCroatia             = 50
+	countryCyprus              = 51
+	countryDenmark             = 54
+	countryEstonia             = 64
+	countryFinland             = 68
+	countryGermany             = 75
+	countryGreece              = 78
+	countryGreenland           = 218
+	countryHungary             = 89
+	countryIceland             = 90
+	countryIreland             = 95
+	countryItaly               = 97
+	countryIvoryCoast          = 48
+	countryKenya               = 102
+	countryLatvia              = 108
+	countryLiechtenstein       = 113
+	countryLithuania           = 114
+	countryLuxembourg          = 115
+	countryMalta               = 120
+	countryMexico              = 126
+	countryNetherlands         = 135
+	countryNewZealand          = 138
+	countryCanadaOntario       = 272
+	countrySerbia              = 240
+	countrySlovakia            = 172
+	countrySlovenia            = 167
+	countrySpain               = 171
+	countrySweden              = 181
+	countryTanzania            = 185
+	countryTonga               = 188
+	countryUK                  = 197
+	countryWesternSamoa        = 206
 
-	// --- Gibraltar-regulated countries (subset for mock data) ---
-	countryBrazil       = 28 // correct: 28 not 29
-	countryCanada       = 36
-	countryGibraltar    = 77
-	countryUAE          = 196
-	countryArgentina    = 10
-	countrySouthKorea   = 104
-	countryTurkey       = 190
-	countryNigeria      = 141
-	countrySouthAfrica  = 169
-	countryChile        = 41
-	countryPeru         = 150
-	countryEgypt        = 59
-	countryThailand     = 186
-	countryMalaysia     = 121
-	countryPakistan     = 145
-	countryMorocco      = 130
-	countryJordanGib    = 100
-	countrySenegal      = 163
-	countryBarbados     = 19
-	countryTrinidadTob  = 193
+	// --- Gibraltar countries (subset for mock data) ---
+	countryBrazil        = 28
+	countryCanada        = 36
+	countryGibraltar     = 77
+	countryArgentina     = 10
+	countryNigeria       = 141
+	countryChile         = 41
+	countryPeru          = 150
+	countryEgypt         = 59
+	countryThailand      = 186
+	countryMorocco       = 130
+	countryJordanGib     = 100
+	countryBarbados      = 19
+	countryTrinidadTob   = 193
+	countrySwitzerland   = 174
+	countryCuracao       = 260
 )
 
 // US state IDs (from countrystate enum)
@@ -138,103 +124,103 @@ const (
 // ---------------------------------------------------------------------------
 
 type CaseFolder struct {
-	PK         string `json:"ecdd_case_management_folder_pk"`
-	FolderName string `json:"folder_name"`
+	PK         string `json:"ecddCaseManagementFolderPk"`
+	FolderName string `json:"folderName"`
 	Region     string `json:"region"`
-	CountryID  *int64 `json:"country_id"`
-	StateID    *int64 `json:"state_id"`
-	LoggedAt   string `json:"logged_at"`
-	UpdatedBy  string `json:"updated_by"`
+	CountryID  *int64 `json:"countryId"`
+	StateID    *int64 `json:"stateId"`
+	LoggedAt   string `json:"loggedAt"`
+	UpdatedBy  string `json:"updatedBy"`
 }
 
 type ThresholdConfig struct {
-	PK                     string  `json:"ecdd_threshold_config_pk"`
+	PK                     string  `json:"ecddThresholdConfigPk"`
 	Title                  string  `json:"title"`
-	IsActive               bool    `json:"is_active"`
-	CountryID              int64   `json:"country_id"`
-	StateID                *int64  `json:"state_id"`
+	IsActive               bool    `json:"isActive"`
+	CountryID              int64   `json:"countryId"`
+	StateID                *int64  `json:"stateId"`
 	Type                   int64   `json:"type"`
 	Reinvest               bool    `json:"reinvest"`
 	Value                  float64 `json:"value"`
-	CurrencyID             int64   `json:"currency_id"`
+	CurrencyID             int64   `json:"currencyId"`
 	Period                 int64   `json:"period"`
-	UseMultipliers         bool    `json:"use_multipliers"`
-	UseRGFlag              bool    `json:"use_rg_flag"`
-	ApplyAllStatuses       bool    `json:"apply_all_statuses"`
+	UseMultipliers         bool    `json:"useMultipliers"`
+	UseRGFlag              bool    `json:"useRgFlag"`
+	ApplyAllStatuses       bool    `json:"applyAllStatuses"`
 	Backfill               bool    `json:"backfill"`
 	Hierarchy              int64   `json:"hierarchy"`
-	ECDDStatus             int64   `json:"ecdd_status"`
-	ECDDReviewStatus       int64   `json:"ecdd_review_status"`
-	ECDDReportStatus       int64   `json:"ecdd_report_status"`
-	SignOffStatus          int64   `json:"sign_off_status"`
-	CustomerRiskLevel      int64   `json:"customer_risk_level"`
-	NDL28DayGBP            float64 `json:"ndl_28_day_gbp"`
-	NDLMonthlyGBP          float64 `json:"ndl_monthly_gbp"`
-	CaseManagementFolderPK *string `json:"case_management_folder_pk"`
-	LoggedAt               string  `json:"logged_at"`
-	UpdatedBy              string  `json:"updated_by"`
+	ECDDStatus             int64   `json:"ecddStatus"`
+	ECDDReviewStatus       int64   `json:"ecddReviewStatus"`
+	ECDDReportStatus       int64   `json:"ecddReportStatus"`
+	SignOffStatus          int64   `json:"signOffStatus"`
+	CustomerRiskLevel      int64   `json:"customerRiskLevel"`
+	NDL28DayGBP            float64 `json:"ndl28DayGbp"`
+	NDLMonthlyGBP          float64 `json:"ndlMonthlyGbp"`
+	CaseManagementFolderPK *string `json:"ecddCaseManagementFolderPk"`
+	LoggedAt               string  `json:"loggedAt"`
+	UpdatedBy              string  `json:"updatedBy"`
 }
 
 type UserStatus struct {
-	PK                          string  `json:"ecdd_user_status_pk"`
-	UserID                      int64   `json:"user_id"`
-	UserName                    string  `json:"user_name"`
-	CountryID                   int64   `json:"country_id"`
-	StateID                     *int64  `json:"state_id"`
-	Language                    string  `json:"language"`
-	ECDDStatus                  int64   `json:"ecdd_status"`
-	ECDDThreshold               float64 `json:"ecdd_threshold"`
-	ECDDReviewTrigger           int64   `json:"ecdd_review_trigger"`
-	ECDDSuspensionDueDate       *string `json:"ecdd_suspension_due_date"`
-	ECDDMultiplier              float64 `json:"ecdd_multiplier"`
-	ECDDMultiplierRGFlag        bool    `json:"ecdd_multiplier_rg_flag"`
-	UserLtNetDepositThresholdGBP      float64 `json:"user_lt_net_deposit_threshold_gbp"`
-	UserLtDepositThresholdGBP   float64 `json:"user_lt_deposit_threshold_gbp"`
-	User12MonthNetDepositThresholdGBP float64 `json:"user_12month_net_deposit_threshold_gbp"`
-	InfoSource                  int64   `json:"info_source"`
-	SignOffStatus               int64   `json:"sign_off_status"`
-	DateLastECDDSignOff         *string `json:"date_last_ecdd_sign_off"`
-	ECDDRGReviewStatus          int64   `json:"ecdd_rg_review_status"`
-	DateLastECDDRGSignOff       *string `json:"date_last_ecdd_rg_sign_off"`
-	ECDDReportStatus            int64   `json:"ecdd_report_status"`
-	ECDDReviewStatus            int64   `json:"ecdd_review_status"`
-	ECDDDocumentStatus          int64   `json:"ecdd_document_status"`
-	ECDDEscalationStatus        int64   `json:"ecdd_escalation_status"`
-	UARStatus                   int64   `json:"uar_status"`
-	LoggedAt                    string  `json:"logged_at"`
-	UpdatedBy                   string  `json:"updated_by"`
+	PK                          string  `json:"ecddUserStatusPk"`
+	UserID                      int64   `json:"userId"`
+	UserName                    string  `json:"userName"`
+	CountryID                   int64   `json:"countryId"`
+	StateID                     *int64  `json:"stateId"`
+	Language                    int64   `json:"languageId"`
+	ECDDStatus                  int64   `json:"ecddStatus"`
+	ECDDThreshold               float64 `json:"ecddThreshold"`
+	ECDDReviewTrigger           int64   `json:"ecddReviewTrigger"`
+	ECDDSuspensionDueDate       *string `json:"ecddSuspensionDueDate"`
+	ECDDMultiplier              float64 `json:"ecddMultiplier"`
+	ECDDMultiplierRGFlag        bool    `json:"ecddMultiplierRgFlag"`
+	UserLtNetDepositThresholdGBP      float64 `json:"userLtNetDepositThresholdGbp"`
+	UserLtDepositThresholdGBP   float64 `json:"userLtDepositThresholdGbp"`
+	User12MonthNetDepositThresholdGBP float64 `json:"user12monthNetDepositThresholdGbp"`
+	InfoSource                  int64   `json:"infoSource"`
+	SignOffStatus               int64   `json:"signOffStatus"`
+	DateLastECDDSignOff         *string `json:"dateLastEcddSignOff"`
+	ECDDRGReviewStatus          int64   `json:"ecddRgReviewStatus"`
+	DateLastECDDRGSignOff       *string `json:"dateLastEcddRgSignOff"`
+	ECDDReportStatus            int64   `json:"ecddReportStatus"`
+	ECDDReviewStatus            int64   `json:"ecddReviewStatus"`
+	ECDDDocumentStatus          int64   `json:"ecddDocumentStatus"`
+	ECDDEscalationStatus        int64   `json:"ecddEscalationStatus"`
+	UARStatus                   int64   `json:"uarStatus"`
+	LoggedAt                    string  `json:"loggedAt"`
+	UpdatedBy                   string  `json:"updatedBy"`
 }
 
 type MultiplierConfig struct {
-	PK               string  `json:"ecdd_multiplier_config_pk"`
-	CountryID        int64   `json:"country_id"`
-	StateID          *int64  `json:"state_id"`
-	AgeMultipliers   []int64 `json:"age_multipliers"`
-	StatusMultiplier bool    `json:"status_multiplier"`
-	IsActive         bool    `json:"is_active"`
-	LoggedAt         string  `json:"logged_at"`
-	UpdatedBy        string  `json:"updated_by"`
+	PK               string  `json:"ecddMultiplierConfigPk"`
+	CountryID        int64   `json:"countryId"`
+	StateID          *int64  `json:"stateId"`
+	AgeMultipliers   []int64 `json:"ageMultipliers"`
+	StatusMultiplier bool    `json:"statusMultiplier"`
+	IsActive         bool    `json:"isActive"`
+	LoggedAt         string  `json:"loggedAt"`
+	UpdatedBy        string  `json:"updatedBy"`
 }
 
 type BusinessProfile struct {
-	PK                string  `json:"ecdd_business_profile_pk"`
-	CountryID         int64   `json:"country_id"`
-	StateID           *int64  `json:"state_id"`
-	RiskStatusID      int64   `json:"risk_status_id"`
-	AverageDeposit    float64 `json:"average_deposit"`
-	DepositMultiplier float64 `json:"deposit_multiplier"`
-	TimePeriodDays    int64   `json:"time_period_days"`
+	PK                string  `json:"ecddBusinessProfilePk"`
+	CountryID         int64   `json:"countryId"`
+	StateID           *int64  `json:"stateId"`
+	RiskStatusID      int64   `json:"riskStatusId"`
+	AverageDeposit    float64 `json:"averageDeposit"`
+	DepositMultiplier float64 `json:"depositMultiplier"`
+	TimePeriodDays    int64   `json:"timePeriodDays"`
 	Enabled           bool    `json:"enabled"`
-	LoggedAt          string  `json:"logged_at"`
-	UpdatedBy         string  `json:"updated_by"`
+	LoggedAt          string  `json:"loggedAt"`
+	UpdatedBy         string  `json:"updatedBy"`
 }
 
 type UserCaseFolder struct {
-	PK                     string `json:"ecdd_user_case_management_folder_pk"`
-	CaseManagementFolderPK string `json:"case_management_folder_pk"`
-	UserStatusPK           string `json:"user_status_pk"`
-	LoggedAt               string `json:"logged_at"`
-	UpdatedBy              string `json:"updated_by"`
+	PK                     string `json:"ecddUserCaseManagementFolderPk"`
+	CaseManagementFolderPK string `json:"ecddCaseManagementFolderPk"`
+	UserStatusPK           string `json:"ecddUserStatusPk"`
+	LoggedAt               string `json:"loggedAt"`
+	UpdatedBy              string `json:"updatedBy"`
 }
 
 // ---------------------------------------------------------------------------
@@ -271,57 +257,54 @@ func regionForCountry(cid int) string {
 		return regionAustralia
 	}
 
-	maltaRegulated := map[int]bool{
-		countryAustria: true, countryCroatia: true, countryFinland: true, countryGhana: true,
-		countryHungary: true, countryIceland: true, countryIreland: true, countryIvoryCoast: true,
-		countryIndia: true, countryKenya: true, countryLatvia: true, countryLiechtenstein: true,
-		countryLithuania: true, countryLuxembourg: true, countryMalta: true, countryNewZealand: true,
-		countryNicaragua: true, countryNorway: true, countrySlovakia: true, countrySlovenia: true,
-		countryTanzania: true, countryTonga: true, countryWesternSamoa: true,
+	maltaCountries := map[int]bool{
+		countryAustria: true, countryBuenosAiresCity: true, countryBuenosAiresProvince: true,
+		countryBulgaria: true, countryCroatia: true, countryCyprus: true,
+		countryDenmark: true, countryEstonia: true, countryFinland: true,
+		countryGermany: true, countryGreece: true, countryGreenland: true,
+		countryHungary: true, countryIceland: true, countryIreland: true,
+		countryItaly: true, countryIvoryCoast: true, countryKenya: true,
+		countryLatvia: true, countryLiechtenstein: true, countryLithuania: true,
+		countryLuxembourg: true, countryMalta: true, countryMexico: true,
+		countryNetherlands: true, countryNewZealand: true, countryCanadaOntario: true,
+		countrySerbia: true, countrySlovakia: true, countrySlovenia: true,
+		countrySpain: true, countrySweden: true, countryTanzania: true,
+		countryTonga: true, countryUK: true, countryWesternSamoa: true,
 	}
-	maltaLicensed := map[int]bool{
-		countryUK: true, countrySpain: true, countryItaly: true, countryDenmark: true,
-		countryGreenland: true, countrySweden: true, countryEstonia: true, countryBulgaria: true,
-		countryCyprus: true, countryGreece: true, countryGermany: true, countryNetherlands: true,
-		countryCzechRepublic: true, countryMexico: true, countryCanadaOntario: true,
-		countryBuenosAiresCity: true, countryBuenosAiresProvince: true,
-		countryFrance: true, countrySwitzerland: true, countryJapan: true,
-	}
-	if maltaRegulated[cid] || maltaLicensed[cid] {
+	if maltaCountries[cid] {
 		return regionMalta
 	}
 	return regionGibraltar
 }
 
-// languageForCountry returns a realistic ISO 639-1 language code.
-func languageForCountry(cid int) string {
-	m := map[int]string{
-		countryUK: "EN", countryIreland: "EN", countryUS: "EN", countryAustralia: "EN",
-		countryCanada: "EN", countryNewZealand: "EN", countryGibraltar: "EN",
-		countryMalta: "MT", countryFinland: "FI", countrySweden: "SV",
-		countryDenmark: "DA", countryNorway: "NO", countryIceland: "IS",
-		countryGermany: "DE", countryAustria: "DE", countrySwitzerland: "DE",
-		countryLiechtenstein: "DE", countryFrance: "FR", countryLuxembourg: "FR",
-		countryItaly: "IT", countrySpain: "ES", countryGreece: "EL",
-		countryCzechRepublic: "CS", countryHungary: "HU", countrySlovakia: "SK",
-		countrySlovenia: "SL", countryCroatia: "HR", countryBulgaria: "BG",
-		countryEstonia: "ET", countryLatvia: "LV", countryLithuania: "LT",
-		countryCyprus: "EL", countryNetherlands: "NL", countryIndia: "EN",
-		countryJapan: "JA", countryBrazil: "PT", countryArgentina: "ES",
-		countryMexico: "ES", countryBuenosAiresCity: "ES", countryBuenosAiresProvince: "ES",
-		countrySouthKorea: "KO", countryTurkey: "TR", countryUAE: "AR",
-		countryNigeria: "EN", countrySouthAfrica: "EN", countryKenya: "EN",
-		countryGhana: "EN", countryTanzania: "EN", countryEgypt: "AR",
-		countryThailand: "TH", countryMalaysia: "MS", countryPakistan: "UR",
-		countryMorocco: "AR", countryJordanGib: "AR", countrySenegal: "FR",
-		countryBarbados: "EN", countryTrinidadTob: "EN", countryChile: "ES",
-		countryPeru: "ES", countryIvoryCoast: "FR", countryNicaragua: "ES",
-		countryCanadaOntario: "EN",
+// languageForCountry returns a language ID matching gopkgs/enums/languages.
+func languageForCountry(cid int) int64 {
+	m := map[int]int64{
+		countryUK: 1, countryIreland: 1, countryUS: 32, countryAustralia: 30,
+		countryCanada: 1, countryNewZealand: 1, countryGibraltar: 1,
+		countryMalta: 1, countryFinland: 8, countrySweden: 8,
+		countryDenmark: 7, countryIceland: 9,
+		countryGermany: 5, countryAustria: 5, countrySwitzerland: 5,
+		countryLiechtenstein: 5, countryLuxembourg: 4,
+		countryItaly: 6, countrySpain: 3, countryGreece: 20,
+		countryHungary: 25, countrySlovakia: 26,
+		countrySlovenia: 6, countryCroatia: 37, countryBulgaria: 19,
+		countryEstonia: 29, countryLatvia: 1, countryLithuania: 1,
+		countryCyprus: 20, countryNetherlands: 28,
+		countryBrazil: 33, countryArgentina: 3,
+		countryMexico: 36, countryBuenosAiresCity: 36, countryBuenosAiresProvince: 36,
+		countryNigeria: 1, countryKenya: 1,
+		countryTanzania: 1, countryEgypt: 1,
+		countryThailand: 1,
+		countryMorocco: 4, countryJordanGib: 1,
+		countryBarbados: 1, countryTrinidadTob: 1, countryChile: 3,
+		countryPeru: 36, countryIvoryCoast: 4,
+		countryCanadaOntario: 1, countrySerbia: 37,
 	}
 	if lang, ok := m[cid]; ok {
 		return lang
 	}
-	return "EN"
+	return 1
 }
 
 // ---------------------------------------------------------------------------
@@ -729,8 +712,8 @@ func generateThresholds(fbr map[string][]string) []ThresholdConfig {
 			LoggedAt: ts(2026, 1, 23, 12, 50), UpdatedBy: "monitoring@company.com",
 		},
 		{
-			PK: newUUID(), Title: "UAE 91-Day Deposit 45K", IsActive: true,
-			CountryID: countryUAE, Type: 1, Value: 45000, CurrencyID: currGBP, Period: 4,
+			PK: newUUID(), Title: "Switzerland 91-Day Deposit 45K", IsActive: true,
+			CountryID: countrySwitzerland, Type: 1, Value: 45000, CurrencyID: currGBP, Period: 4,
 			UseRGFlag: true, Hierarchy: 20,
 			ECDDStatus: 2, ECDDReviewStatus: 3, ECDDReportStatus: 2, SignOffStatus: 1,
 			CustomerRiskLevel: 3, NDL28DayGBP: 7000, NDLMonthlyGBP: 27000,
@@ -804,7 +787,7 @@ func generateBusinessProfiles() []BusinessProfile {
 		{countryCanada, nil, 3, 650, 1.8, 182, true, ts(2026, 1, 2, 16, 0), "risk.officer@company.com"},
 		{countryBrazil, nil, 4, 550, 1.6, 28, true, ts(2026, 1, 2, 16, 30), "risk.officer@company.com"},
 		{countryGibraltar, nil, 2, 480, 1.3, 365, true, ts(2026, 1, 2, 17, 0), "compliance@company.com"},
-		{countryUAE, nil, 3, 900, 2.2, 28, true, ts(2026, 1, 2, 17, 30), "risk.officer@company.com"},
+		{countrySwitzerland, nil, 3, 900, 2.2, 28, true, ts(2026, 1, 2, 17, 30), "risk.officer@company.com"},
 	}
 
 	profiles := make([]BusinessProfile, len(defs))
@@ -835,7 +818,7 @@ type userSpec struct {
 	userName  string
 	countryID int64
 	stateID   *int64
-	language  string
+	language  int64
 }
 
 func generateUsers() []UserStatus {
@@ -1043,7 +1026,7 @@ func buildUserSpecs() []userSpec {
 		// Netherlands (3)
 		{"Daan de Vries", countryNetherlands}, {"Emma Bakker", countryNetherlands}, {"Bram Visser", countryNetherlands},
 		// Other Malta-regulated (4)
-		{"Lukas Kovacs", countryHungary}, {"Eva Novak", countryCzechRepublic},
+		{"Lukas Kovacs", countryHungary}, {"Nikola Jovanovic", countrySerbia},
 		{"Antanas Kazlauskas", countryLithuania}, {"Janis Ozolins", countryLatvia},
 	}
 
@@ -1102,7 +1085,7 @@ func buildUserSpecs() []userSpec {
 			userName:  usNames[i],
 			countryID: countryUS,
 			stateID:   &sv,
-			language:  "EN",
+			language:  32,
 		})
 	}
 
@@ -1143,14 +1126,14 @@ func buildUserSpecs() []userSpec {
 			userName:  auNames[i],
 			countryID: countryAustralia,
 			stateID:   &sv,
-			language:  "EN",
+			language:  30,
 		})
 	}
 
 	// =========================================================================
 	// GIBRALTAR region — 35 users
-	// Country mix: Canada=8, Brazil=7, Gibraltar=4, UAE=4, SouthAfrica=3,
-	//              Nigeria=3, Argentina=2, Turkey=2, Chile=2
+	// Country mix: Canada=8, Brazil=7, Gibraltar=4, Switzerland=4, Morocco=3,
+	//              Nigeria=3, Argentina=2, Peru=2, Chile=2
 	// =========================================================================
 	type gibUser struct {
 		name      string
@@ -1170,19 +1153,19 @@ func buildUserSpecs() []userSpec {
 		// Gibraltar (4)
 		{"Sebastian Garcia", countryGibraltar}, {"Laura Fischer", countryGibraltar},
 		{"Thomas Baglietto", countryGibraltar}, {"Claire Montegriffo", countryGibraltar},
-		// UAE (4)
-		{"Mohammed Al-Hassan", countryUAE}, {"Fatima Al-Rashid", countryUAE},
-		{"Ahmed Al-Maktoum", countryUAE}, {"Layla Khalid", countryUAE},
-		// South Africa (3)
-		{"Thabo Molefe", countrySouthAfrica}, {"Zanele Dlamini", countrySouthAfrica},
-		{"Johan van der Merwe", countrySouthAfrica},
+		// Switzerland (4)
+		{"Hans Müller", countrySwitzerland}, {"Anna Weber", countrySwitzerland},
+		{"Markus Schmid", countrySwitzerland}, {"Laura Keller", countrySwitzerland},
+		// Morocco (3)
+		{"Youssef Benali", countryMorocco}, {"Amina El Idrissi", countryMorocco},
+		{"Karim Tazi", countryMorocco},
 		// Nigeria (3)
 		{"Chukwuma Okonkwo", countryNigeria}, {"Aisha Bello", countryNigeria},
 		{"Emeka Nwankwo", countryNigeria},
 		// Argentina (2)
 		{"Mateo Fernandez", countryArgentina}, {"Valentina Moreno", countryArgentina},
-		// Turkey (2)
-		{"Mehmet Yilmaz", countryTurkey}, {"Ayse Demir", countryTurkey},
+		// Peru (2)
+		{"Miguel Torres", countryPeru}, {"Rosa Quispe", countryPeru},
 		// Chile (2)
 		{"Ignacio Vargas", countryChile}, {"Catalina Rojas", countryChile},
 	}

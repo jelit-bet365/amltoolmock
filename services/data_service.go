@@ -137,9 +137,9 @@ func (ds *DataService) loadUserStatuses() error {
 
 	for i := range statuses {
 		// Ensure language is always populated so frontend doesn't need to hardcode it
-		if statuses[i].Language == "" {
-			// For the mock service we default to EN if not provided in JSON
-			statuses[i].Language = "EN"
+		if statuses[i].Language == 0 {
+			// For the mock service we default to English (1) if not provided in JSON
+			statuses[i].Language = 1
 		}
 		ds.UserStatuses[statuses[i].ECDDUserStatusPK] = &statuses[i]
 	}

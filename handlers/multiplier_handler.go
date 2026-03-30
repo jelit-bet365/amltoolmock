@@ -18,8 +18,8 @@ func GetAllMultipliers(w http.ResponseWriter, r *http.Request) {
 
 	// Parse optional query params
 	query := r.URL.Query()
-	isActiveParam := query.Get("is_active")
-	countryParam := query.Get("country_id")
+	isActiveParam := query.Get("isActive")
+	countryParam := query.Get("countryId")
 
 	// Filter multipliers based on query params
 	filtered := make([]*models.ECDDMultiplierConfig, 0, len(allMultipliers))
@@ -40,7 +40,7 @@ func GetAllMultipliers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "ecdd_multiplier_config_pk")
+	sp := utils.GetSortParams(r, "ecddMultiplierConfigPk")
 	sortMultipliers(filtered, sp)
 
 	// Optional pagination
@@ -64,11 +64,11 @@ func sortMultipliers(multipliers []*models.ECDDMultiplierConfig, sp utils.SortPa
 	sort.Slice(multipliers, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "ecdd_multiplier_config_pk":
+		case "ecddMultiplierConfigPk":
 			less = multipliers[i].ECDDMultiplierConfigPK < multipliers[j].ECDDMultiplierConfigPK
-		case "country_id":
+		case "countryId":
 			less = multipliers[i].CountryID < multipliers[j].CountryID
-		case "logged_at":
+		case "loggedAt":
 			less = multipliers[i].LoggedAt.Before(multipliers[j].LoggedAt)
 		default:
 			less = multipliers[i].ECDDMultiplierConfigPK < multipliers[j].ECDDMultiplierConfigPK

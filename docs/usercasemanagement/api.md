@@ -1,12 +1,13 @@
 # ECDD User Case Management API
 
-The ECDD User Case Management API provides endpoints for managing user-to-folder assignments in the ECDD system. It supports listing assignments with filtering, sorting, and pagination, creating and deleting assignments (single and bulk), retrieving users assigned to folders, and folder assignment statistics. All operations target the ECDDUserCaseManagementFolder Spanner table.
+The ECDD User Case Management API provides endpoints for managing user-to-folder assignments in the ECDD system. It supports listing assignments with filtering, sorting, and pagination, creating and deleting assignments (single and bulk), retrieving users assigned to folders, retrieving folders assigned to a user, and folder assignment statistics. All operations target the ECDDUserCaseManagementFolder Spanner table.
 
 - [Get All Assignments](#get-all-assignments)
 - [Create Assignment](#create-assignment)
 - [Delete Assignment By PK](#delete-assignment-by-pk)
 - [Delete Assignments By Folder](#delete-assignments-by-folder)
 - [Get Folder Users](#get-folder-users)
+- [Get User Folders](#get-user-folders)
 - [Remove User From Folder](#remove-user-from-folder)
 - [Bulk Remove Users From Folder](#bulk-remove-users-from-folder)
 - [Bulk Add Users To Folder](#bulk-add-users-to-folder)
@@ -484,6 +485,94 @@ content-type: application/json
 
 ```json
 {"error": "Folder not found"}
+```
+
+### Response 405
+
+> HTTP status 405 Method Not Allowed
+
+#### Body
+
+content-type: application/json
+
+##### Example
+
+```json
+{"error": "Method not allowed"}
+```
+
+---
+
+## Get User Folders
+
+### Request
+
+GET
+
+> http://`<ecddapi>`/api/ecdd/usercasemanagement/user/{userstatuspk}/folders
+
+#### Headers
+
+| header | description | possibleValues | required |
+|----|----|----|-----|
+| bet365-applicationname | the name of the application sending the request | Mobile | false |
+| bet365-correlationid | the unique id for the request | a2e70fe9-616d-471f-b6df-5807a166bea0 | false |
+| bet365-username | the bet365 username associated with the request | williamarmitage | false |
+
+#### Path Params
+
+| parameter | description | type | example | required |
+|----|----|----|----|----|
+| userstatuspk | the ecdd_user_status_pk of the user status record | string | u001-malta-134-001 | true |
+
+### Response 200
+
+> HTTP status 200 OK
+
+#### Body
+
+content-type: application/json
+
+Returns an array of case management folder objects assigned to the user status. Returns an empty array if the user status has no folder assignments.
+
+| parameter | type | description | example | required |
+|----|----|----|----|----|
+| ecdd_case_management_folder_pk | string | primary key of the folder | "folder-high-risk-001" | true |
+| folder_name | string | name of the folder | "High Risk" | true |
+| logged_at | string | record logged date (RFC3339) | "2026-01-15T10:00:00Z" | true |
+| updated_by | string | last updated by | "compliance.admin@company.com" | true |
+
+##### Example
+
+```json
+[
+    {
+        "ecdd_case_management_folder_pk": "folder-high-risk-001",
+        "folder_name": "High Risk",
+        "logged_at": "2026-01-15T10:00:00Z",
+        "updated_by": "compliance.admin@company.com"
+    },
+    {
+        "ecdd_case_management_folder_pk": "folder-medium-risk-002",
+        "folder_name": "Medium Risk",
+        "logged_at": "2026-01-15T10:00:00Z",
+        "updated_by": "compliance.admin@company.com"
+    }
+]
+```
+
+### Response 404
+
+> HTTP status 404 Not Found
+
+#### Body
+
+content-type: application/json
+
+##### Example
+
+```json
+{"error": "User not found"}
 ```
 
 ### Response 405

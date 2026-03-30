@@ -1,6 +1,6 @@
 h2. ECDD User Case Management API - Implement User Case Management Endpoints
 
-Implement the ECDD User Case Management API endpoints for managing user-to-folder assignments in the ECDD system. The API provides CRUD operations on the ECDDUserCaseManagementFolder Spanner table, folder-scoped user management (list users, add/remove single and bulk), and folder assignment statistics.
+Implement the ECDD User Case Management API endpoints for managing user-to-folder assignments in the ECDD system. The API provides CRUD operations on the ECDDUserCaseManagementFolder Spanner table, folder-scoped user management (list users, add/remove single and bulk), user-scoped folder lookups, and folder assignment statistics.
 
 h3. Endpoints
 
@@ -10,6 +10,7 @@ h3. Endpoints
 |DELETE|/api/ecdd/usercasemanagement/\{usercasemanagementpk\}|Delete a single assignment by its primary key|
 |DELETE|/api/ecdd/usercasemanagement?case_management_folder_pk=\{case_management_folder_pk\}|Delete all assignments for a given folder|
 |GET|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users|Get users assigned to a folder (always paginated)|
+|GET|/api/ecdd/usercasemanagement/user/\{userstatuspk\}/folders|Get folders assigned to a user status|
 |DELETE|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users/\{userstatuspk\}|Remove a single user from a folder|
 |POST|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users/bulk-delete|Bulk remove users from a folder|
 |POST|/api/ecdd/usercasemanagement/folder/\{folderpk\}/users/bulk-add|Bulk add users to a folder|

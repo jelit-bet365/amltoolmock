@@ -21,8 +21,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Languages to distribute across records
-	langs := []string{"EN", "DE", "FR", "ES", "IT"}
+	// Language IDs to distribute across records (English=1, German=5, French=4, Spanish=3, Italian=6)
+	langs := []int{1, 5, 4, 3, 6}
 
 	for i := range records {
 		records[i]["language"] = langs[i%len(langs)]

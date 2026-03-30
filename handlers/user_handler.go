@@ -19,8 +19,8 @@ func GetAllUsers(w http.ResponseWriter, r *http.Request) {
 
 	// Parse optional query params
 	query := r.URL.Query()
-	countryParam := query.Get("country_ids")
-	ecddStatusParam := query.Get("ecdd_status")
+	countryParam := query.Get("countryIds")
+	ecddStatusParam := query.Get("ecddStatus")
 	searchParam := query.Get("search")
 
 	// Build country set for O(1) lookups
@@ -58,7 +58,7 @@ func GetAllUsers(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "user_id")
+	sp := utils.GetSortParams(r, "userId")
 	sortUsers(filtered, sp)
 
 	// Optional pagination
@@ -82,21 +82,21 @@ func sortUsers(users []*models.ECDDUserStatus, sp utils.SortParams) {
 	sort.Slice(users, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "user_id":
+		case "userId":
 			less = users[i].UserID < users[j].UserID
-		case "user_name":
+		case "userName":
 			less = strings.ToLower(users[i].UserName) < strings.ToLower(users[j].UserName)
-		case "country_id":
+		case "countryId":
 			less = users[i].CountryID < users[j].CountryID
-		case "ecdd_status":
+		case "ecddStatus":
 			less = users[i].ECDDStatus < users[j].ECDDStatus
-		case "ecdd_threshold":
+		case "ecddThreshold":
 			less = users[i].ECDDThreshold < users[j].ECDDThreshold
-		case "ecdd_multiplier":
+		case "ecddMultiplier":
 			less = users[i].ECDDMultiplier < users[j].ECDDMultiplier
-		case "logged_at":
+		case "loggedAt":
 			less = users[i].LoggedAt.Before(users[j].LoggedAt)
-		case "ecdd_user_status_pk":
+		case "ecddUserStatusPk":
 			less = users[i].ECDDUserStatusPK < users[j].ECDDUserStatusPK
 		default:
 			less = users[i].UserID < users[j].UserID

@@ -8,12 +8,12 @@ type SortParams struct {
 	SortDir string // "asc" or "desc"
 }
 
-// GetSortParams extracts sort_by and sort_dir query parameters from the HTTP
-// request. If sort_by is not provided, defaultSortBy is used. If sort_dir is
+// GetSortParams extracts sortBy and sortDir query parameters from the HTTP
+// request. If sortBy is not provided, defaultSortBy is used. If sortDir is
 // not provided or invalid, "asc" is used.
 func GetSortParams(r *http.Request, defaultSortBy string) SortParams {
-	sortBy := r.URL.Query().Get("sort_by")
-	sortDir := r.URL.Query().Get("sort_dir")
+	sortBy := r.URL.Query().Get("sortBy")
+	sortDir := r.URL.Query().Get("sortDir")
 
 	if sortBy == "" {
 		sortBy = defaultSortBy

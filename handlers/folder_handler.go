@@ -15,26 +15,33 @@ import (
 
 // FolderAndStats holds the computed statistics for a single folder.
 type FolderAndStats struct {
-	FolderPK       string     `json:"folder_pk"`
-	FolderName     string     `json:"folder_name"`
+	FolderPK       string     `json:"folderPk"`
+	FolderName     string     `json:"folderName"`
 	Region         string     `json:"region"`
-	UserCount      int        `json:"user_count"`
-	OldestUserDate *time.Time `json:"oldest_user_date"` // nil serialises as JSON null
+	UserCount      int        `json:"userCount"`
+	OldestUserDate *time.Time `json:"oldestUserDate"` // nil serialises as JSON null
 }
 
 // parseFilterParams extracts the language, country, and region query
 // parameters from the request. It returns an error message string if the
 // country parameter is present but not a valid int64. On success the error
 // string is empty.
-func parseFilterParams(r *http.Request) (language string, countryID *int64, region string, errMsg string) {
+func parseFilterParams(r *http.Request) (language *int64, countryID *int64, region string, errMsg string) {
 	query := r.URL.Query()
-	language = query.Get("language")
 	region = query.Get("region")
 
-	if countryParam := query.Get("country_id"); countryParam != "" {
+	if langParam := query.Get("language"); langParam != "" {
+		parsed, err := strconv.ParseInt(langParam, 10, 64)
+		if err != nil {
+			return nil, nil, "", "Invalid language parameter"
+		}
+		language = &parsed
+	}
+
+	if countryParam := query.Get("countryId"); countryParam != "" {
 		parsed, err := strconv.ParseInt(countryParam, 10, 64)
 		if err != nil {
-			return "", nil, "", "Invalid country parameter"
+			return nil, nil, "", "Invalid country parameter"
 		}
 		countryID = &parsed
 	}
@@ -55,7 +62,7 @@ func parseFilterParams(r *http.Request) (language string, countryID *int64, regi
 func computeFolderAndStats(
 	ds *services.DataService,
 	folder *models.ECDDCaseManagementFolder,
-	language string, countryID *int64, region string,
+	language *int64, countryID *int64, region string,
 	assignmentIndex map[string][]*models.ECDDUserCaseManagementFolder,
 	userMap map[string]*models.ECDDUserStatus,
 ) FolderAndStats {
@@ -149,7 +156,7 @@ func GetAllFolders(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "folder_name")
+	sp := utils.GetSortParams(r, "folderName")
 	sortFolders(allFolders, sp)
 
 	// Optional pagination
@@ -173,11 +180,11 @@ func sortFolders(folders []*models.ECDDCaseManagementFolder, sp utils.SortParams
 	sort.Slice(folders, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "folder_name":
+		case "folderName":
 			less = strings.ToLower(folders[i].FolderName) < strings.ToLower(folders[j].FolderName)
-		case "ecdd_case_management_folder_pk":
+		case "ecddCaseManagementFolderPk":
 			less = folders[i].ECDDCaseManagementFolderPK < folders[j].ECDDCaseManagementFolderPK
-		case "logged_at":
+		case "loggedAt":
 			less = folders[i].LoggedAt.Before(folders[j].LoggedAt)
 		case "region":
 			less = strings.ToLower(folders[i].Region) < strings.ToLower(folders[j].Region)
@@ -244,7 +251,7 @@ func UpdateFolder(w http.ResponseWriter, r *http.Request) {
 }
 
 // GetFolderAndStats handles GET /api/ecdd/usercasemanagement/folder/{id}/stats
-// Returns user_count and oldest_user_date for a single folder with optional
+// Returns userCount and oldestUserDate for a single folder with optional
 // language, country, and region filters.
 func GetFolderAndStats(w http.ResponseWriter, r *http.Request) {
 	// Extract folder ID from path: /api/ecdd/usercasemanagement/folder/{id}/stats
@@ -309,7 +316,7 @@ func GetAllFolderAndStats(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "folder_name")
+	sp := utils.GetSortParams(r, "folderName")
 	sortFolderAndStats(results, sp)
 
 	// Optional pagination
@@ -333,11 +340,11 @@ func sortFolderAndStats(stats []FolderAndStats, sp utils.SortParams) {
 	sort.Slice(stats, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "folder_name":
+		case "folderName":
 			less = strings.ToLower(stats[i].FolderName) < strings.ToLower(stats[j].FolderName)
-		case "folder_pk":
+		case "folderPk":
 			less = stats[i].FolderPK < stats[j].FolderPK
-		case "user_count":
+		case "userCount":
 			less = stats[i].UserCount < stats[j].UserCount
 		case "region":
 			less = strings.ToLower(stats[i].Region) < strings.ToLower(stats[j].Region)

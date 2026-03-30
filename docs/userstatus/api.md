@@ -1,13 +1,12 @@
 # ECDD User Status API
 
-The ECDD User Status API provides endpoints for managing ECDD user statuses. It supports listing user statuses with filtering, sorting, and pagination, as well as update, patch, delete operations, and retrieving a user status's assigned folders.
+The ECDD User Status API provides endpoints for managing ECDD user statuses. It supports listing user statuses with filtering, sorting, and pagination, as well as update, patch, and delete operations.
 
 - [Get All User Statuses](#get-all-user-statuses)
 - [Get User Status By PK](#get-user-status-by-pk)
 - [Update User Status](#update-user-status)
 - [Patch User Status](#patch-user-status)
 - [Delete User Status](#delete-user-status)
-- [Get User Status Folders](#get-user-status-folders)
 
 ---
 
@@ -551,108 +550,6 @@ content-type: application/json
 {
     "message": "User deleted successfully. 3 folder assignment(s) cascade-deleted."
 }
-```
-
-### Response 404
-
-> HTTP status 404 Not Found
-
-#### Body
-
-content-type: application/json
-
-##### Example
-
-```json
-{"error": "User not found"}
-```
-
-### Response 405
-
-> HTTP status 405 Method Not Allowed
-
-#### Body
-
-content-type: application/json
-
-##### Example
-
-```json
-{"error": "Method not allowed"}
-```
-
----
-
-## Get User Status Folders
-
-### Request
-
-GET
-
-> http://`<ecddapi>`/api/ecdd/userstatus/{userstatuspk}/folders
-
-#### Headers
-
-| header | description | possibleValues | required |
-|----|----|----|-----|
-| bet365-applicationname | the name of the application sending the request | Mobile | false |
-| bet365-correlationid | the unique id for the request | a2e70fe9-616d-471f-b6df-5807a166bea0 | false |
-| bet365-username | the bet365 username associated with the request | williamarmitage | false |
-
-#### Path Params
-
-| parameter | description | type | example | required |
-|----|----|----|----|----|
-| userstatuspk | the ecdd_user_status_pk of the user status record | string | u001-malta-134-001 | true |
-
-### Response 200
-
-> HTTP status 200 OK
-
-#### Body
-
-content-type: application/json
-
-Returns an array of case management folder objects assigned to the user status. Returns an empty array if the user status has no folder assignments.
-
-| parameter | type | description | example | required |
-|----|----|----|----|----|
-| ecdd_case_management_folder_pk | string | primary key of the folder | "folder-high-risk-001" | true |
-| folder_name | string | name of the folder | "High Risk" | true |
-| logged_at | string | record logged date (RFC3339) | "2026-01-15T10:00:00Z" | true |
-| updated_by | string | last updated by | "compliance.admin@company.com" | true |
-
-##### Example
-
-```json
-[
-    {
-        "ecdd_case_management_folder_pk": "folder-high-risk-001",
-        "folder_name": "High Risk",
-        "logged_at": "2026-01-15T10:00:00Z",
-        "updated_by": "compliance.admin@company.com"
-    },
-    {
-        "ecdd_case_management_folder_pk": "folder-medium-risk-002",
-        "folder_name": "Medium Risk",
-        "logged_at": "2026-01-15T10:00:00Z",
-        "updated_by": "compliance.admin@company.com"
-    }
-]
-```
-
-### Response 400
-
-> HTTP status 400 Bad Request
-
-#### Body
-
-content-type: application/json
-
-##### Example
-
-```json
-{"error": "User ID required"}
 ```
 
 ### Response 404

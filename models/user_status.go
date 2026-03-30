@@ -4,31 +4,31 @@ import "time"
 
 // ECDDUserStatus represents a user's ECDD status
 type ECDDUserStatus struct {
-	ECDDUserStatusPK            string     `json:"ecdd_user_status_pk"`
-	UserID                      int64      `json:"user_id"`
-	UserName                    string     `json:"user_name"`
-	CountryID                   int64      `json:"country_id"`
-	Language                    string     `json:"language"` // ISO 639-1 language code, e.g. "EN"
-	StateID                     *int64     `json:"state_id,omitempty"`
-	ECDDStatus                  int64      `json:"ecdd_status"` // 1=Not Required, 2=In progress, 3=Complete, 4=Suspended-Manual, 5=Suspended-Auto, 6=Closed, 7=Block Process
-	ECDDThreshold               float64    `json:"ecdd_threshold"`
-	ECDDReviewTrigger           int64      `json:"ecdd_review_trigger"`
-	ECDDSuspensionDueDate       *time.Time `json:"ecdd_suspension_due_date,omitempty"`
-	ECDDMultiplier              float64    `json:"ecdd_multiplier"`
-	ECDDMultiplierRGFlag        bool       `json:"ecdd_multiplier_rg_flag"`
-	UserLtNetDepositThresholdGBP   float64    `json:"user_lt_net_deposit_threshold_gbp"`
-	UserLtDepositThresholdGBP     float64    `json:"user_lt_deposit_threshold_gbp"`
-	User12MonthNetDepositThresholdGBP float64 `json:"user_12month_net_deposit_threshold_gbp"`
-	InfoSource                  int64      `json:"info_source"`
-	SignOffStatus               int64      `json:"sign_off_status"`
-	DateLastECDDSignOff         *time.Time `json:"date_last_ecdd_sign_off,omitempty"`
-	ECDDRGReviewStatus          int64      `json:"ecdd_rg_review_status"`
-	DateLastECDDRGSignOff       *time.Time `json:"date_last_ecdd_rg_sign_off,omitempty"`
-	ECDDReportStatus            int64      `json:"ecdd_report_status"`
-	ECDDReviewStatus            int64      `json:"ecdd_review_status"`
-	ECDDDocumentStatus          int64      `json:"ecdd_document_status"`
-	ECDDEscalationStatus        int64      `json:"ecdd_escalation_status"`
-	UARStatus                   int64      `json:"uar_status"`
-	LoggedAt                    time.Time  `json:"logged_at"`
-	UpdatedBy                   string     `json:"updated_by"`
+	ECDDUserStatusPK            string     `json:"ecddUserStatusPk"`
+	UserID                      int64      `json:"userId"`
+	UserName                    string     `json:"userName"`
+	CountryID                   int64      `json:"countryId"`
+	Language                    int64      `json:"languageId"` // Language ID from gopkgs/enums/languages (1=English, 5=German, etc.)
+	StateID                     *int64     `json:"stateId,omitempty"`
+	ECDDStatus                  int64      `json:"ecddStatus"` // 1=Not Required, 2=In progress, 3=Complete, 4=Suspended-Manual, 5=Suspended-Auto, 6=Closed, 7=Block Process
+	ECDDThreshold               float64    `json:"ecddThreshold"`
+	ECDDReviewTrigger           int64      `json:"ecddReviewTrigger"`
+	ECDDSuspensionDueDate       *time.Time `json:"ecddSuspensionDueDate,omitempty"`
+	ECDDMultiplier              float64    `json:"ecddMultiplier"`
+	ECDDMultiplierRGFlag        bool       `json:"ecddMultiplierRgFlag"`
+	UserLtNetDepositThresholdGBP   float64    `json:"userLtNetDepositThresholdGbp"`
+	UserLtDepositThresholdGBP     float64    `json:"userLtDepositThresholdGbp"`
+	User12MonthNetDepositThresholdGBP float64 `json:"user12monthNetDepositThresholdGbp"`
+	InfoSource                  int64      `json:"infoSource"`
+	SignOffStatus               int64      `json:"signOffStatus"`
+	DateLastECDDSignOff         *time.Time `json:"dateLastEcddSignOff,omitempty"`
+	ECDDRGReviewStatus          int64      `json:"ecddRgReviewStatus"`
+	DateLastECDDRGSignOff       *time.Time `json:"dateLastEcddRgSignOff,omitempty"`
+	ECDDReportStatus            int64      `json:"ecddReportStatus"`
+	ECDDReviewStatus            int64      `json:"ecddReviewStatus"`
+	ECDDDocumentStatus          int64      `json:"ecddDocumentStatus"`
+	ECDDEscalationStatus        int64      `json:"ecddEscalationStatus"`
+	UARStatus                   int64      `json:"uarStatus"`
+	LoggedAt                    time.Time  `json:"loggedAt"`
+	UpdatedBy                   string     `json:"updatedBy"`
 }

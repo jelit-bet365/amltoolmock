@@ -18,8 +18,8 @@ func GetAllThresholds(w http.ResponseWriter, r *http.Request) {
 
 	// Parse optional query params
 	query := r.URL.Query()
-	isActiveParam := query.Get("is_active")
-	countryParam := query.Get("country_id")
+	isActiveParam := query.Get("isActive")
+	countryParam := query.Get("countryId")
 	typeParam := query.Get("type")
 
 	// Filter thresholds based on query params
@@ -47,7 +47,7 @@ func GetAllThresholds(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Sort the results
-	sp := utils.GetSortParams(r, "ecdd_threshold_config_pk")
+	sp := utils.GetSortParams(r, "ecddThresholdConfigPk")
 	sortThresholds(filtered, sp)
 
 	// Optional pagination
@@ -71,11 +71,11 @@ func sortThresholds(thresholds []*models.ECDDThresholdConfig, sp utils.SortParam
 	sort.Slice(thresholds, func(i, j int) bool {
 		var less bool
 		switch sp.SortBy {
-		case "ecdd_threshold_config_pk":
+		case "ecddThresholdConfigPk":
 			less = thresholds[i].ECDDThresholdConfigPK < thresholds[j].ECDDThresholdConfigPK
 		case "title":
 			less = strings.ToLower(thresholds[i].Title) < strings.ToLower(thresholds[j].Title)
-		case "country_id":
+		case "countryId":
 			less = thresholds[i].CountryID < thresholds[j].CountryID
 		case "type":
 			less = thresholds[i].Type < thresholds[j].Type
@@ -83,7 +83,7 @@ func sortThresholds(thresholds []*models.ECDDThresholdConfig, sp utils.SortParam
 			less = thresholds[i].Value < thresholds[j].Value
 		case "hierarchy":
 			less = thresholds[i].Hierarchy < thresholds[j].Hierarchy
-		case "logged_at":
+		case "loggedAt":
 			less = thresholds[i].LoggedAt.Before(thresholds[j].LoggedAt)
 		default:
 			less = thresholds[i].ECDDThresholdConfigPK < thresholds[j].ECDDThresholdConfigPK

@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "mcp__jiramcp__get_issue"
+      "mcp__jiramcp__get_issue",
+      "mcp__jiramcp__update_issue"
     ]
   }
 }

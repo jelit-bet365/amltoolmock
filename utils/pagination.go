@@ -16,21 +16,20 @@ type PaginationParams struct {
 }
 
 // PaginationResponse wraps paginated data with metadata.
-// JSON keys use snake_case to follow Go/JSON conventions.
 type PaginationResponse struct {
 	Data       interface{} `json:"data"`
 	Page       int         `json:"page"`
-	PageSize   int         `json:"page_size"`
-	TotalCount int         `json:"total_count"`
-	TotalPages int         `json:"total_pages"`
+	PageSize   int         `json:"pageSize"`
+	TotalCount int         `json:"totalCount"`
+	TotalPages int         `json:"totalPages"`
 }
 
 // GetPaginationParams extracts pagination parameters from HTTP request.
-// If neither page nor page_size is provided the returned Enabled field is
+// If neither page nor pageSize is provided the returned Enabled field is
 // false, signalling to the caller that all results should be returned.
 func GetPaginationParams(r *http.Request) PaginationParams {
 	pageStr := r.URL.Query().Get("page")
-	pageSizeStr := r.URL.Query().Get("page_size")
+	pageSizeStr := r.URL.Query().Get("pageSize")
 
 	// No pagination requested
 	if pageStr == "" && pageSizeStr == "" {
